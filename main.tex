@@ -1,0 +1,214 @@
+%-------------------------------------------------------------------------------
+% Arquivo: 		Ivan's PhD thesis.tex
+% Autor:			Ivan Ramos Pagnossin
+% Descrição:	arquivo principal de minha tese de doutorado
+%
+% File:			Ivan's PhD thesis.tex
+% Author:		Ivan Ramos Pagnossin
+% Description:	main file of my PhD thesis
+%-------------------------------------------------------------------------------
+\documentclass[a4paper,10pt]{scrbook}					% Sub-classe koma-script
+%\documentclass[a4paper,12pt]{scrbook}
+
+	%
+	% Pacotes necessários.
+	%
+
+	\usepackage[brazil]{babel}								% Idioma português
+	\usepackage[latin1]{inputenc}							% Caracteres acentuados
+	\usepackage[T1]{fontenc}								% Fontes de 16 bits
+	\usepackage{color}										% Cores
+	\usepackage[a4paper]{geometry}						% Formatação de página
+	\usepackage{makeidx}										% Índice remissivo
+	%\usepackage[colorlinks=false]{hyperref}			% Hiper-texto
+	\usepackage{graphicx}									% Figuras
+	\usepackage{indentfirst}								% Indentação do primeiro parágrafo de cada seção
+	\usepackage{psfrag}										% Manuseio de figuras EPS
+	\usepackage{setspace}									% Espaçamento entre-linhas
+	\usepackage[squaren,binary]{SIunits}				% Sistema internacional de unidades
+	\usepackage{ccaption}									% Captions personalizados
+	\usepackage{capt-of}										% Junção de figuras e tabelas num único float
+	\usepackage{subfigure}									% Sub-figuras, e.g., fig.1(a), fig.3(c)
+	\usepackage{quotchap}									% Melhora o visual dos capítulos
+	\usepackage{mathrsfs}									% Comando \mathscr
+	\usepackage{bbm}											% Comando \mathbbr
+	\usepackage{textcomp}									% Comando \textasciicaron
+	\usepackage{stmaryrd}									% Comandos \llbracket e \rrbracket
+	\usepackage{amsmath}										% Environments e comandos da American Mathematical Society	
+	\usepackage{upgreek}										% Símbolo \uptau
+	\usepackage{pifont}										% Símbolos \ding{172} até \ding{176}
+	\usepackage{amssymb}										% Símbolos da American Mathematical Society
+	\usepackage{paralist}									% Environment "compactitem"
+	\usepackage{icomma}										% Retira o espaço entre a vírgula e a parte decimal de um número
+	\usepackage{colortbl}									% Cores em tabelas
+	\usepackage{irpagnossin}
+	\usepackage[innercaption]{sidecap}
+	\usepackage{wasysym}
+	\usepackage{pxfonts}
+	\usepackage{wrapfig}
+	\usepackage[square,numbers]{natbib}
+
+\usepackage{amsfonts}
+
+%\numberwithin{equation}{chapter}
+%\numberwithin{table}{chapter}
+%\numberwithin{figure}{chapter} 
+
+
+	%
+	% Definições úteis.
+	%
+
+	% Redefine a área ocupada pelo texto.
+	\setlength\textheight{615pt}
+	\setlength\textwidth{435pt}
+	\setlength\oddsidemargin{37pt}
+	\setlength\evensidemargin{-16.54pt}
+	\setlength\marginparwidth{26pt}
+	\renewcommand\footnoterule{\noindent\rule[1pt]{\textwidth}{0.2pt}}
+
+	% Símbolos para as amostras de QDIPs
+	\def\QDcornerSQW{\sqcup\mkern-6mu\bullet}
+	\def\QDcenterTQW{\vee\mkern-10.3mu\bullet}
+	\def\QDcenterSQW{\sqcup\mkern-10.2mu\bullet}
+
+	% Insere minhas definições de formato (REORGANIZAR).
+	\input{myPortuges.ldf}
+
+	% Impede que o texto seja uniformemente distribuído na vertical.
+	\raggedbottom
+
+	% Espaço entre-linhas: 30% maior que o normal.
+	\setstretch{1.3}
+
+	% Configuração manual da divisão silábica de algumas palavras.
+	\hyphenation{}
+
+	% Macros úteis.
+	\newcommand\resumo[1]		{\par\vspace{\parindent}{\sffamily\bfseries\upshape\Large #1}\par\vspace{\parindent}}	
+	\newcommand\vetor[1]			{\ensuremath{\boldsymbol{#1}}}
+	\newcommand\tensor[1]		{\ensuremath{\text{\sffamily\bfseries #1}}}
+	\newcommand\meff				{\ensuremath{m^*}}
+	\newcommand\boltzmann		{\ensuremath{k_B}}
+	\newcommand\cargaeletron	{\ensuremath{\mathrm{e}}}
+	\newcommand\echarge			{\ensuremath{\mathrm{e}}}
+	\newcommand\massaeletron	{\ensuremath{m_e}}
+	\newcommand\planck			{\ensuremath{h}}
+	\newcommand\transicao[1]	{\ensuremath{\mathrm{#1}}}
+	\newcommand\media[1]			{\ensuremath{\langle#1\rangle}}
+	\newcommand\FT[1]				{\ensuremath{\mathscr F\left[#1\right]}}
+	\newcommand\rhoxx				{\ensuremath{\rho^{(r)}(t)}}
+	\newcommand\verif				{\ensuremath{\color{red}??}}
+	\newcommand\refer				{\ensuremath{\color{red}REF}}
+	\newcommand\formFactor		{\ensuremath{\gimel}}
+	\newcommand\dInAs				{\ensuremath{d_\text{InAs}}}
+
+	\newcommand\novotermo[1]	{\textbf{#1}}
+	\newcommand\enfase[1]		{\textit{#1}}
+	\newcommand\termo[1]			{\textsl{#1}}
+	\newcommand\monocamadas		{\text{MC}}
+	\newcommand\amostra[1]		{\unit{#1}{\monocamadas}}
+
+	%\newcommand\monolayer{\text{MC}}
+	%\newcommand\etal{\textsl{et al}}
+	\newcommand\tauSO{\ensuremath{\tau_\text{\tiny SO}}}
+	\newcommand\FLiquid{\ensuremath{F_0^\sigma}}
+	\newcommand\tauphi{\ensuremath{\tau_\varphi}}
+	\newcommand\tauEE{\ensuremath{\tau_\text{ee}}}
+
+	\newcommand\todo[1]			{\textcolor{red}{#1}}
+
+	\DeclareMathOperator{\senh}{senh}
+
+	\newcounter{observacao}
+	\setcounter{observacao}{1}	
+	\newcommand\obs{%
+									{\ensuremath{\boldsymbol{\sharp\theobservacao}}}%
+									\stepcounter{observacao}%
+									}
+	\newcommand\Obs[1]{{\ensuremath{\boldsymbol{\sharp #1}}}}
+	\newcommand\zero				{{\color[cmyk]{0,0,0,0.5}0}}
+
+	% Separação de palavras.
+	\hyphenation{bor-da e-va-po-ra-do La-bo-ra-tó-ri-o pro-xi-mi-da-des e-ner-gi-a re-tro-es-pa-lha-men-to es-pa-lha-do-res in-te-ra-ções e-xis-tên-ci-a re-si-du-ais pró-xi-mo res-pon-si-vi-da-de in-te-res-se}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%	Aqui começa o documento propriamente dito.
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+	\pagenumbering{roman}
+
+	% Dedicatória.
+	\input{dedicatoria}
+	\pagebreak
+
+	% Agradecimentos.
+	\section*{Agradecimentos}
+	\input{agradecimentos}
+	\pagebreak
+
+	% Resumo.
+	\addcontentsline{toc}{chapter}{Resumo/\foreign{Abstract}}
+	\input{resumo}\pagebreak
+
+	% Sumário.
+	\tableofcontents
+
+	% Prefácio
+	\pagebreak
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+
+	% Capítulo 1: introdução
+	\chapter{Introdução}
+	\label{cap:introducao}
+	\input{cap1-introducao}
+
+	% Capítulo 2: conceitos e métodos
+	\chapter{Conceitos e métodos}
+	\label{cap:metodos}
+	\input{cap2-metodos}
+
+	% Capítulo 3: processos e equipamentos
+	\chapter{Processos e equipamentos}
+	\label{cap:amostras}
+	\input{cap3-amostras}
+
+	% Capítulo 4: resultados experimentais
+	\chapter{Resultados}
+	\label{cap:resultados}
+	\input{cap4-resultados}
+	
+	% Capítulo 5: conclusões e perspectivas
+	\chapter{Conclusões e perspectivas}
+	\label{cap:conclusoes}
+	\input{cap5-conclusoes}
+
+	% Apêndices
+	\appendix
+
+	\chapter{Lista de símbolos}
+	\label{ap:A}
+	\input{apA}
+
+	\chapter{Lista de siglas}
+	\label{ap:B}
+	\input{apB}
+
+	\chapter{Súmula curricular}
+	\label{ap:C}
+	\input{apC}
+
+
+	% Bibliografia
+	\pagebreak
+	\addcontentsline{toc}{chapter}{Bibliografia}
+	\bibliographystyle{Science}
+	\bibliography{referencias}
+
+\end{document}
+%-------------------------------------------------------------------------------

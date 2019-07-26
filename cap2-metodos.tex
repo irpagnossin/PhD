@@ -1,0 +1,516 @@
+	Apresentaremos neste capítulo conceitos e métodos importantes para o desenvolvimento deste trabalho: o efeito Hall clássico (ou ordinário), ferramenta importante para qualquer estudo de transporte de cargas; o efeito Hall quântico inteiro, essencial para a compreensão do primeiro resultado experimental, e o formalismo de Landauer-Büttiker, que completa a explicação. Em seguida, veremos brevemente o efeito Subnikov-de Haas (também uma ferramenta) e, por fim, o fenômeno da localização-fraca. Conceitos adjacentes serão introduzidos brevemente quando necessários.
+
+%--------------------------------------------------------------
+\section{O efeito Hall clássico}\label{sec:HE}
+
+	O fenômeno, descoberto em 1879 por Edwin Herbert Hall, refere-se ao aparecimento de um campo elétrico perpendicular ao fluxo de corrente em um condutor (ou semicondutor) submetido a um campo magnético ($\vetor B$) de baixa intensidade\rlap{.}\footnote{A rigor, $B$ é de baixa intensidade se $\omega_c\tau \apprle 1$, com $\omega_c = eB/\meff$.} A diferença de potencial associada a este campo, conhecida como tensão Hall ($V_H \approx E_y\, l_y$ na figura~\ref{fig:efeito-Hall}), é diretamente proporcional a $B$ e, a partir dela, podemos calcular a concentração de portadores de corrente e suas mobilidades de transporte. Daí sua importância.
+
+	A explicação mais simples, baseada no modelo clássico de Drude, é a seguinte (acompanhe pela figura~\ref{fig:efeito-Hall}): devido ao campo elétrico $E_x$ aplicado, os elétrons, impelidos pela força elétrica ($-\cargaeletron\,E_x$), dão origem à densidade de corrente $j_x$. Ao aplicarmos um campo magnético perpendicularmente a esta corrente (na direção $z$, por exemplo), a força magnética ($-\cargaeletron\,\vetor v\times\vetor B$, onde $\vetor v$ é a velocidade de arrasto dos elétrons) passa a agir sobre esses elétrons, empurrando-os para o lado direito da amostra. Mas este movimento é limitado pela dimensão da amostra nesta direção e, por isso, os elétrons vão se acumulando ali. À medida que isso ocorre, o excesso de elétrons à direita e o conseqüente déficit à esquerda geram um campo elétrico $E_y$ no sentido de conter este movimento. O equilíbrio ocorre quando a força elétrica gerada pelo desequilíbrio de cargas dentro da amostra balanceia a força magnética:
+	\begin{equation}\label{eq:Drude}
+	\vetor F = -\cargaeletron(\vetor E+\vetor v\times\vetor B) = \vetor 0,
+	\end{equation}
+com $\vetor E = (E_x, E_y, 0)$. Lembrando que $\vetor j = n \cargaeletron \vetor v$ ($n$ é a concentração de portadores), que $\vetor v \doteq \mu \vetor E$ ($\mu$ é a mobilidade de transporte dos portadores) e resolvendo a equação acima na direção $\hat y$, obtemos rapidamente um resultado bastante genérico (veja~\cite[p.~23]{Datta:1995} para um outro enfoque):
+	\begin{equation}\label{eq:efeito-Hall}
+	n = \frac{I}{\cargaeletron \left(V_H/B\right)} \qquad\text{e}\qquad \mu = \frac{1}{n \cargaeletron \rho_0},
+	\end{equation}
+	onde $I$ é a corrente elétrica e $\rho_0$, a resistividade da amostra quando $B = 0$.
+
+	Assim, uma vez que controlamos $I$ e $B$ conforme a configuração ilustrada na figura~\ref{fig:efeito-Hall}, basta medirmos $V_H$ (veja a fig. \ref{fig:bH} na página \pageref{fig:bH}) e $\rho_0$ (a seguir) para podermos calcular $n$ e $\mu$: veja um exemplo na figura~\ref{fig:IQHE}.
+
+	\begin{SCfigure}[][tb]
+		\centering
+		\psfrag{a}[][]{\colorbox{white}{\LARGE $l_x$}}
+		\psfrag{b}[][]{\LARGE $l_z$}
+		\psfrag{c}[][]{\LARGE $l_y$}
+		\psfrag{x}[][]{\LARGE $x$}
+		\psfrag{y}[][]{\LARGE $y$}
+		\psfrag{z}[][]{\LARGE $z$}
+		\psfrag{B}[][]{\LARGE $\vetor B$}
+		\psfrag{Ex}[][]{\LARGE $E_x$}
+		\psfrag{Ey}[][]{\LARGE $E_y$}
+		\psfrag{Jx}[][]{\LARGE $j_x$}
+		\psfrag{J3D}[][]{\LARGE $j_x \doteq I/(l_y l_z)$}
+		\psfrag{A}[l][l]{\LARGE $A$}
+		\psfrag{D}[l][l]{\LARGE $D$}
+		\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/EH.eps}}
+		\caption{\small vista em perspectiva da região de interesse (fig. da p.~\pageref{fig:bH}) ilustrando o efeito Hall: a força magnética gera um desequilíbrio na distribuição de cargas transversal à corrente elétrica ($j_x$), dando origem ao chamado campo Hall ($E_H$) e, por conseguinte, à tensão Hall ($V_H$). Para amostras tridimensionais, $ j_x \doteq I/(l_y l_z)$, e para amostras bidimensionais, $j_x \doteq I/l_y$.}
+		\label{fig:efeito-Hall}
+	\end{SCfigure}
+
+	A resistividade em campo nulo ($\rho_0$) pode ser obtida da versão microscópica da primeira lei de Ohm: $E_x = \rho_0\, j_x$. No caso de sistemas tridimensionais (fig.~\ref{fig:efeito-Hall}), $E_x \approx V_0 / l_x$ e $j_x \doteq I/\left(l_y\,l_z\right)$, donde concluímos que $\rho_0 = R_0\,\left(l_y\,l_z\right)/l_x$: a segunda lei de Ohm ($R_0 = V_0/I$); mas para sistemas bidimensionais, onde os portadores estão confinados num plano, $j_x \doteq I/l_y$, o que nos leva a $\rho_0 = R_0/\formFactor$,\footnote{Se preferir, faça $l_z = 1$ na última expressão para $\rho_0$.} onde $\formFactor \doteq l_x/l_y$ é o \textit{fator de forma}. Também podemos determinar $\rho_0$ através do método de Van-der Pauw \cite{Pauw:1958}. Neste caso, $\formFactor \doteq \ln(2)/\pi$.\footnote{O método de Van-der Pauw também pode ser utilizado para sistemas tridimensionais.}
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{X}{$B (T)$}
+		\psfrag{Y}{$V_H (\milli\volt)$}
+		\psfrag{Y2}{$V (\milli\volt)$}
+		\psfrag{N2}[][]{$\nu = 2$}
+		\psfrag{IQHE}[][]{IQHE}
+		\psfrag{CHE}[][]{\shortstack{Efeito\\ Hall\\ clássico}}
+		\psfrag{4.2K}[l][l]{\unit{4,2}{\kelvin}}
+		\psfrag{2K}[l][l]{\unit{2}{\kelvin}}
+		\includegraphics[width=0.7\textwidth]{figuras/Hall_and_SdH_sample.eps}
+		\caption{\small exemplo de medida dos efeitos Hall clássico, quântico (sec. \ref{sec:QHE}) e Shubnikov-de Haas (sec. \ref{sec:SdH}) num HEMT (\foreign{high electron-mobility transistor}). A corrente é \unit{1}{\micro\ampere}, $\rho_0=\unit{25,6}{\ohm}$ e a inclinação da curva (reta tracejada) é \unit{1,43}{\milli\volt\per\tesla}, de modo que $n = \unit{4,3\times\power{10}{15}}{\rpsquare\metre}$ e $\mu = \unit{54,3}{\squaren\metre\per\volt\second}$. Como das oscilações de magnetorresistência obtemos a mesma concentração (sec. \ref{sec:SdH}) obtida do efeito Hall, concluímos que há apenas uma sub-banda ocupada (\ref{sec:HE:2sb}). É recomendável que se faça um ajuste de reta no gráfico para obter o coeficiente angular correto ao invés de calculá-lo supondo que $V_H = 0$ quando $B = 0$. Isto é de fato verdade, mas experimentalmente podemos ter, como na figura acima, um $V_H \ne 0$ para $B = 0$. Isto acontece porque a bobina supercondutora possui uma magnetização residual. Ou seja, embora nosso equipamento meça $B = 0$, na verdade temos $B \approx 0$.}
+		\label{fig:IQHE}
+	\end{figure}
+
+		Vamos refinar um pouco. Na teoria semi-clássica de Sommerfeld (o passo seguinte em termos de refinamento físico e matemático), os elétrons são representados por ondas planas\footnote{Ou seja, os elétrons são livres de interações.} que satisfazem as condições de contorno de Born-Von Karman\rlap{.}\footnote{$\iprod{\vetor r + L_\iota\,\hat\iota}{\vetor k} = \iprod{\vetor r}{\vetor k}$, sendo $L_\iota$ a dimensão da amostra na direção $\iota = \{x,y,z\}$.} Agora a dinâmica do efeito Hall, ilustrada pela figura~\ref{fig:efeito-Hall}, é regida pelas equações
+		\begin{equation}\label{eq:semi-classica}
+		\dot{\vetor r} = \frac{1}{\hbar}\,\vetor\nabla_{\vetor k}\varepsilon(\vetor k) \qquad\text{e}\qquad 
+			\hbar\,\dot{\vetor k} = -\eCharge\,\left( \vetor E + \dot{\vetor r}\,\times \vetor B\right) = \vetor 0.
+		\end{equation}
+
+		A energia do estado $\ket{\vetor k}$ é $\varepsilon(\vetor k) = \hbar^2\,k^2/\left(2\,m_0\right)$, o que nos leva de volta a \eqref{eq:Drude}, posto que $\vetor v = \hbar\,\vetor k/m_0$ neste caso. Portanto, as equações~\ref{eq:efeito-Hall} não sofrem alteração.
+
+		Podemos melhorar ainda mais. A teoria de Bloch procura descrever os efeitos do material no qual os elétrons se encontram inserindo na equação de Schrödinger um potencial $U(\vetor r)$ com a periodiciadade da rede cristalina, assim: $U(\vetor r +\vetor R) = U(\vetor r)$, onde $\vetor R$ é um vetor da rede de Bravais. Assim, um autoestado $\ket{b,\vetor k}$ é definido pelo índice da \textbf{b}anda $b \in \mathbb{N}$ e pelo vetor de onda $\vetor k$, que pertence à primeira zona de Brillouin\footnote{Esta é a chamada representação da zona (de Brillouin) reduzida. Alternativamente, podemos escrever $\ket{\vetor k}$ se não limitarmos $\vetor k$ (mas esta representação não é utilizada).} (ignoramos o \foreign{spin}). A relação de dispersão $\varepsilon_b(\vetor k)$ é não-trivial, mas em geral $\vetor k_F$ (o vetor de onda de Fermi) é muito menor que os limites da zona de Brillouin. Por este motivo, podemos expandir $\varepsilon_b(\vetor k)$ em torno de $\vetor k_0$ e utilizar a aproximação da massa efetiva, obtendo
+		$$
+		\varepsilon_b(\vetor k) \approx \varepsilon_b(\vetor k_0) + \frac{\hbar^2}{2\mEff_b}\,\left( \vetor k - \vetor k_0 \right)\rlap{,}^2
+		$$
+		onde $\mEff_b$ é a massa efetiva da banda $b$. No nosso caso (GaAs, AlGaAs, \etc), $\vetor k_0 = 0$ (ponto $\Gamma$ da primeira zona de Brillouin) e fazemos $\varepsilon_b(\vetor k_0) = 0$ para simplificar. E como antes, utilizando a equação acima em~\eqref{eq:semi-classica}, obtemos o resultado~\eqref{eq:efeito-Hall}.
+
+		Mas há um detalhe importante que deixamos de lado: ao deduzir~\eqref{eq:efeito-Hall}, avaliamos somente a componente $\hat y$ das equações \ref{eq:Drude} e~\ref{eq:semi-classica}. Em $\hat x$ temos $-\eCharge\,E_x = 0$, o que implica em $I = 0$. Se isso fosse verdade, $\vetor v = \vetor 0$ e também a força magnética. Logo, não haveria efeito Hall. E de fato não há quando $I = 0$, mas este não é o caso. O problema aqui é que não incluimos a influência dos espalhamentos (colisões) dos elétrons. Isso é feito incluindo em~\eqref{eq:Drude} [ou~\eqref{eq:semi-classica}] a força de espalhamento $-\vetor p/\tau$:
+		$$
+		\vetor F = -\cargaeletron(\vetor E+\vetor v\times\vetor H) - \frac{\vetor p}{\tau} = \vetor 0.
+		$$
+
+		$\vetor p = m\,\vetor v$ na teoria de Drude e igual a $\hbar\,\dot{\vetor k}$ nas semi-clássicas (Sommerfeld e Bloch). $\tau$ é chamado de o tempo de relaxação do momento e interpretado como o tempo médio no qual um elétron perde ou ganha o momento $\vetor p$ (conseqüentemente, $1/\tau$ é a taxa de relaxação\footnote{``Relaxação'' significa justamente isso: ``troca\rlap{.}''} do momento). As teorias de Drude e Sommerfeld atribuem incorretamente aos íons da rede cristalina a responsabilidade por essa troca de momento (espalhamentos ou, se preferir, colisões). Por outro lado, na teoria de Bloch uma rede perfeita não promove espalhamento, de modo que $1/\tau = 0$. Isto tampouco é verdadeiro, já que $\tau$ é finito. Então, ocorre que os espalhamentos se devem às imperfeições na rede, como dopagens (que podemos controlar), impurezas, defeitos, fônons, \etc.
+
+		A despeito dessas distinções teóricas importantes\rlap{,}\footnote{E de fato são. Por exemplo, a base e o coletor de um transístor bipolar são qualitativamente idênticas, distinguindo-se pelo tamanho e pela dopagem (um tipo de defeito controlável na estrutura cristalina), ou seja, por $\tau$. Se essa relação entre dopagem e $\tau$ não existisse, como sugere Drude, não poderíamos construir tais dispositivos.} o resultado~\eqref{eq:efeito-Hall} permanece inalterado.
+
+	\subsection{Efeito Hall em mais de uma sub-banda}\label{sec:HE:2sb}
+
+	Quando mais de uma sub-banda participa da condução da corrente, $n$ e $\mu$ obtidos das equações~\ref{eq:efeito-Hall} representam valores efetivos, assim relacionados com $n_s$ e $\mu_s$ de cada sub-banda~\cite{Look:1992}:
+	\begin{equation}\label{eq:nH2sb}
+	n = \frac{\left(\sum_s n_s\,\mu_s\right)^2}{\sum_s n_s\, \mu_s^2} \qquad\text{e}\qquad
+		\mu = \frac{\sum_s n_s\, \mu_s^2}{\sum_s n_s\, \mu_s}.
+	\end{equation}
+
+	Isso dificulta bastante a análise (veja, \eg, \cite[ap.~C]{Pagnossin:2004}). Mas quando a distância entre a dopagem e o sistema bidimensional de elétrons é maior que o comprimento de onda de de Broglie de qualquer das sub-bandas envolvidas (como é o caso em muitas de nossas amostras), a sobreposição (\foreign{overlap}) delas com a distribuição de cargas da dopagem é a mesma. Disto resulta que $\mu_s$ é igual para qualquer sub-banda~\cite{Hai:1996}. Usando isto na equação anterior, concluimos que
+	$$
+	n = n_1 + n_2 + \cdots \qquad\text{e}\qquad \mu = \mu_1 = \mu_2 = \cdots,
+	$$
+	ou seja, a concentração obtida do efeito Hall é a concentração total de portadores e a mobilidade é a mesma para qualquer sub-banda. Os valores de $n_s$ individualmente podem ser obtidos a partir do efeito Shubnikov-de Haas, conforme veremos.
+
+%--------------------------------------------------------------
+\section{O efeito Hall quântico}\label{sec:QHE}
+
+	O efeito Hall quântico inteiro (IQHE, \foreign{integer quantum Hall effect}), descoberto em 1980 por Klaus von Klitzing \etal~\cite{Klitzing:1980}, refere-se à quantização da resistência (e da condutância) Hall que ocorre para certos intervalos de campo magnético intenso (platôs na fig.~\ref{fig:IQHE}):
+	\begin{equation}\label{eq:IQHE}
+	R_H = \frac{R_K}{N}.
+	\end{equation}
+
+	$R_K \doteq h/e^2 = \unit{25\,812,807}{\ohm}$ é a constante de von Klitzing e $N \equiv N(B)$ é a quantidade de níveis de Landau (a seguir) abaixo do de Fermi. Nos anos seguintes à sua descoberta, à medida que o conhecimento acerca deste fenômeno crescia, outros fenômenos correlatos foram descobertos. Hoje o termo ``efeito Hall quântico'' refere-se a um ``conjunto de fenômenos com profundas implicações teóricas'' \cite{Girvin:2000}, dentre os quais os efeitos Hall quântico fracionário e ferromagnético.
+
+	Duas observações importantes: \textbf{(a)} a quantização ocorre na \emph{resistência} R (\emph{condutância}), não na resistividade $\rho$ (condutividade $\sigma$). Isto ocorre porque, conforme veremos, quando vale~\eqref{eq:IQHE} o fluxo de corrente reside exclusivamente nas bordas da amostra, revogando de $\rho$ a característica de representar o material (a equação acima independe dele); \textbf{(b)} o IQHE \emph{não} é um fenômeno de muitos corpos pois podemos explicá-lo resolvendo a equação de Schrödinger para \emph{um} elétron (a seguir). Mais: é justamente devido a ausência de interações que explica o IQHE.
+
+	\subsection{O problema quântico}
+
+	Para compreendermos o efeito Hall quântico precisamos resolver a equação de Schrödinger independente do tempo de \emph{um} elétron sujeito ao campo magnético $\vetor B = \vetor\nabla \times \vetor A$ perpendicular ao plano dos elétrons, conforme a configuração da figura~\ref{fig:efeito-Hall}, cuja hamiltoniana é
+	\begin{equation}\label{eq:H}
+	\hat H = \frac{1}{2m}\left(\vetor{\hat p} - \echarge \vetor{\hat A}\right)^2 + V(\vetor{\hat r}).
+	\end{equation}
+
+	Utilizando o calibre de Landau, $\vetor A = (0,xB,0)$, e assumindo $V(\vetor r) = V(x,y) + V(z)$, a equação de Schrödinger pode ser separada numa componente em $z$ e outra em $x$ e $y$, que representa o sistema bidimensional propriamente dito. Assim, independentemente de $V(z) = 0$ (modelo de Landau, a seguir) ou ser dado por algum potencial de confinamento (poços-quânticos, como no nosso caso), a solução no plano $xy$ é a mesma.
+
+	O caso mais simples, proposto inicialmente por Landau, é considerar $V(x,y) = 0$. Isto feito, a solução é uma função de onda localizada ao redor de $x_0 = -l_B^2 k$, sendo $l_B = \sqrt{\hbar/(eB)}$ o \textit{comprimento magnético} e $k = 2\pi r/l_y$, com $r \in \mathbb{N}$; em $y$, é uma onda plana (delocalizada): veja, por exemplo, \cite[p.~9]{Prange:1990}. Mas o importante aqui é que as autoenergias são $\epsilon_\ell = (\ell + \frac{1}{2})\hbar\omega_c$ e são chamadas de \textbf{níveis de Landau} (LL, \foreign{Landau level}), com $\ell \in \mathbb{N}$. Eles têm degenerescência $eB/h$ \cite[p.~10]{Prange:1990} e distam entre si de $\hbar\omega_c$, de modo que a densidade de estados pode ser escrita como (fig.~{\ref{fig:LL}a})
+	$$
+	\varrho(\epsilon) = \frac{eB}{h}\sum_\ell \delta(\epsilon - \epsilon_\ell).
+	$$
+
+	Logo, se temos $n$ elétrons (por unidade de área) e em cada nível de Landau cabem $eB/h$, precisamos de $N$ níveis de Landau (abaixo do nível de Fermi, $\zeta$) para acomodá-los. Formalmente,
+	\begin{equation}\label{eq:n}
+	n = \int_0^{\zeta} \frac{eB}{h} \sum_\ell \delta( \epsilon - \epsilon_\ell ) d\epsilon = \frac{eB}{h} N.
+	\end{equation}
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{A}[][]{\large(a)}
+		\psfrag{B}[][]{\large(b)}
+		\psfrag{C}[][]{\large(c)}
+		\psfrag{1/2}[r][r]{\large$\varepsilon_s + \frac{1}{2} \hbar\omega_c$}
+		\psfrag{3/2}[r][r]{\large$\varepsilon_s + \frac{3}{2} \hbar\omega_c$}
+		\psfrag{5/2}[r][r]{\large$\varepsilon_s + \frac{5}{2} \hbar\omega_c$}
+		\psfrag{E}[][]{\large$\epsilon$}
+		\psfrag{EF}[][]{\large$\zeta$}
+		\psfrag{N1}[][]{\large$\nu = 2,5$}
+		\psfrag{N2}[][]{\large$\nu = N = 2$}
+		\psfrag{LLC}[l][l]{\large\foreign{LL core}}
+		\psfrag{T}[l][l]{\large\foreign{LL tail}}
+		\psfrag{G}[][]{\large$\Gamma_\ell$}
+		\psfrag{0}[][]{\large$\ell = 0$}
+		\psfrag{1}[][]{\large$\ell = 1$}
+		\psfrag{2}[][]{\large$\ell = 2$}
+		\psfrag{E0}[][]{\large$\varepsilon_s$}
+		\psfrag{B0}[][]{\large$B = 0$}
+		\psfrag{D1}[][]{\large$\frac{\mEff}{\pi\hbar^2}$}
+		\psfrag{D2}[][]{\large$\frac{eB}{h}$}
+		\psfrag{DOS}[][]{\large$\varrho(\epsilon)$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/LL.eps}}
+		\caption{\small \textbf{(a)} densidade de estados dos LL sem a influência da desordem. $\epsilon_s$ é a energia do fundo da sub-banda $s$. \textbf{(b)} A desordem quebra a degenerescência desses níveis [$=eB/h$ em (a)], distribuindo os estados numa faixa de energia (representada por $\Gamma_\ell$) ao redor de $\epsilon_\ell$. Na situação ilustrada, há dois níveis de Landau completamente ocupados (abaixo do de Fermi, $\zeta$), enquanto o terceiro está apenas parcialmente ocupado: $\nu = 2,5$. Em \textbf{(c)}, o nível de Fermi encontra-se entre dois de Landau, de modo que os dois primeiros LL estão plenamente ocupados: $\nu = N = 2$. No centro dos níveis de Landau (\foreign{LL core}), os estados são estendidos e, portanto, podem conduzir corrente elétrica, mas nas perifeiras (\foreign{LL tail}) eles são localizados. O degradê ilustra a transição de estados estendidos (branco) para localizados (cinza).}
+		\label{fig:LL}
+	\end{figure}
+
+	Observe que se utilizarmos $n$ obtido do efeito Hall clássico (eq.~\ref{eq:efeito-Hall}) na equação acima, lembrando que $\omega_c = eB/m$ e $R_H \doteq V_H/I$, obtemos~\eqref{eq:IQHE}. Podemos ver isto na figura~\ref{fig:IQHE}: o prolongamento para altos campos magnéticos (reta tracejada) do efeito Hall clássico ($B < \unit{1}{\tesla}$) cruza o centro dos platôs do efeito Hall quântico. Mas isto nem sempre é verdadeiro \cite{Marquez:2007} e esclarece pouco.
+
+	Ademais, a equação anterior permite-nos concluir, erroneamente, que $n$ tem de ser um múltiplo inteiro de $eB/h$, a degenerescência dos níveis de Landau. Isto ocorre porque $\varrho$ acima não leva em consideração a presença da \textit{desordem} nas amostras, \ie, de potenciais espalhadores aleatórios como impurezas, defeitos na rede cristalina, \etc. Fazer isso não é uma tarefa fácil [e perceba que isto equivale a fazer $V(x,y) \ne 0$]. Primeiro porque a forma desse potencial não é conhecido e, segundo, porque mesmo no caso mais simples (arranjo aleatório de potenciais puntuais) o trabalho matemático é enorme. Mas a despeito dessas dificuldades, é fenomelogicamente evidente que $V(x,y)$ destrói a degenerescência dos níveis de Landau, distribuindo os $eB/h$ estados numa banda de energia ao redor de $\epsilon_\ell$ que pode ser satisfatoriamente representada por uma gaussiana~\cite{Gerhardts:1975}:
+	\begin{equation}\label{eq:DOS}
+	\varrho(\epsilon) = \frac{eB}{h} \sum_\ell \frac{\sqrt{2/\pi}}{\Gamma_\ell} \exp\left[ -\frac{2(\epsilon - \epsilon_\ell)^2}{\Gamma_\ell^2} \right],
+	\end{equation}
+onde $\Gamma_\ell$ é a \textit{largura natural} dos níveis de Landau, da ordem de \milli\electronvolt~\cite{Ensslin:1993}: veja a fig.~{\ref{fig:LL}b}.
+
+	É possível também representar a densidade de estados dos LLs por elipsóides, conforme a aproximação autoconsistente de Born (veja, por exemplo, a equação $3.9$ da referência~\citealt{Huckestein:1995}), que só considera espalhamentos de primeira ordem\footnote{Isto significa que ela considera todos os estados inicias e finais possíveis ligados por apenas \textbf{um} espalhamento, qualquer que seja ele.} \cite[p.~12]{Weiss:2004}. Talvez por isso essa representação não seja muito adequada, conforme verificaram Gobsch \etal~\cite{Gobsch:1988} (no caso, para descrever as oscilações do nível de Fermi em função de $B$). A mesma inadequação foi verificada para $\varrho$ representada por funções delta de Dirac.
+
+	De qualquer forma, quando o nível de Fermi estiver como na figura~{\ref{fig:LL}b}, o LL estará parcialmente ocupado (considere, por simplicidade, que $T = 0$). Representamos esta situação dizendo que temos $\nu = 2,5$ níveis de Landau ocupados e chamamos $\nu$ de o \textbf{fator de preenchimento}. Ele substitui $N$ na eq.~\ref{eq:n}, de modo que $\nu \doteq n/(eB/h)$. Além disso, $\nu = N$ sempre que o nível de Fermi está entre dois de Landau (fig.~{\ref{fig:LL}c}), situação na qual vale \eqref{eq:IQHE}. Mas note que em geral não é correto substituir $N$ por $\nu$ na equação~\ref{eq:IQHE}, embora isto seja muito utilizado.
+
+	\begin{figure}[ptb]
+		\centering
+		\psfrag{A}[][]{\LARGE(a)}
+		\psfrag{B}[][]{\LARGE(b)}
+		\psfrag{C}[][]{\LARGE(c)}
+		\psfrag{EF}[l][l]{\LARGE$\zeta$}
+		\psfrag{GAP}[][]{\colorbox{white}{\LARGE $\hbar\omega_c$}}
+		\psfrag{L}[l][l]{\LARGE Estado localizado}
+		\psfrag{D}[l][l]{\LARGE Estado estendido}
+		\psfrag{H}[][]{\LARGE$\vetor B$}
+		\psfrag{X}[][]{\LARGE$x$}
+		\psfrag{Y}[][]{\LARGE$y$}
+		\psfrag{E}[][]{\LARGE$\epsilon$}
+		\psfrag{EDGE}[][]{\LARGE Estado de borda}
+		\psfrag{N1}[][]{\LARGE$\nu = N = 1$}
+		\psfrag{N2}[][]{\LARGE$\nu \approx 1,5$}
+		\psfrag{N3}[][]{\LARGE$\nu \approx 2$}
+		\psfrag{T}[l][l]{\LARGE\foreign{LL tail}}
+		\psfrag{LLC}[l][l]{\LARGE\foreign{LL core}}
+		\psfrag{L0}[][]{\LARGE$\ell=0$}
+		\psfrag{L1}[][]{\LARGE$\ell=1$}
+		\psfrag{DOS}[][]{\LARGE$\varrho(\epsilon)$}
+		\psfrag{EL0}[][]{\LARGE$\epsilon_1$}
+		\psfrag{EL1}[][]{\LARGE$\epsilon_1(x,y)$}
+		\resizebox{!}{0.9\textheight}{\includegraphics{figuras/LL3D.eps}}
+		\caption{\small a relação entre os níveis de Landau e de Fermi no plano $xy$ da figura~\ref{fig:efeito-Hall}. \textbf{(a)} Quando o nível de Fermi encontra-se na periferia de um LL, todos os estados com energia $\zeta$ no interior da amostra são localizados. Neste caso a condução da corrente elétrica ocorre sem dissipação de energia através dos estados de borda. \textbf{(b)} Por outro lado, quando o nível de Fermi está no centro de um de Landau, há estados estendidos tanto no interior da amostra como nas bordas. Neste caso a condução é dissipativa. \textbf{(c)} Mesmo quando não há estados com energia $\zeta$ (nos \foreign{gaps} entre LLs) os estados de borda transportam cargas de um extremo ao outro da amostra.}
+		\label{fig:LL3D}
+	\end{figure}
+
+	$V(x,y)$ perturba $\epsilon_\ell$, aumentando-o se o centro de espalhamento for repulsivo, ou reduzindo-o, em caso contrário. Por esta forma, $\epsilon_\ell \to \epsilon_\ell(x,y) = \epsilon_\ell + \delta\epsilon(x,y)$ em todo o plano $xy$, conforme ilustramos na figura~\ref{fig:LL3D}. E como os elétrons percorrem trajetórias equipotenciais $\epsilon_\ell(x,y) = \epsilon$ nesse plano \cite[p.~13]{Weiss:2004}, segue que se o nível de Fermi estiver na borda de um nível de Landau (\foreign{LL tail}) a trajetória será fechada: fig.~{\ref{fig:LL3D}a}. Um elétron neste estado não pode ir da fonte para o dreno (cap. \ref{cap:amostras}) e, portanto, não conduz corrente; ele está num \textbf{estado localizado}. Por outro lado, se o nível de Fermi cruzar o centro de um nível de Landau (\foreign{LL core}), a trajetória é aberta; um elétron neste estado conduz corrente e está num estado dito \textbf{estendido}: fig.~{\ref{fig:LL3D}b}.
+
+	Aproveitando o ensejo, é conceitualmente importante notar que os elétrons no centro dos níveis de Landau (em estados estendidos, portanto) abaixo do de Fermi também conduzem corrente elétrica. Mas a sua influência na \emph{corrente total} é nula, já que há tantos elétrons percorrendo a amostra da fonte para o dreno como no sentido oposto. Mais: é incorreta a afirmação de que ``elétrons que não estão no nível de Fermi não conduzem corrente\rlap{,}'' embora seja correto dizer que ``elétrons que não estão no nível de Fermi não contribuem para a corrente \emph{total}'' \cite{Datta:1995}.
+
+	\subsection{Estados de borda}
+
+	Agora, observe a figura~\ref{fig:LL3D}: nas bordas da amostra (na direção $y$) $\epsilon_\ell(x,y) \to \infty$\footnote{Na verdade, $V(x,y) \to -e\phi$, onde $\phi$ é a função-trabalho, a energia necessária para retirar um elétron da amostra.} por conta do potencial de confinamento dos elétrons na amostra. Conseqüentemente, sempre haverá $N$ \emph{estados estendidos} $\epsilon_\ell(x,y) = \zeta$ nas bordas da amostra; os chamados de \textbf{estados de borda} (\foreign{edge-states}), inicialmente sugeridos por Halperin em 1982~\cite{Halperin:1982}. Mesmo quando o nível de Fermi está entre dois de Landau (fig.{~\ref{fig:LL3D}c}) e nem mesmo estados localizados têm energia igual à de Fermi, os estados de borda conectam a fonte e o dreno, garantindo a condução de corrente elétrica.
+
+	A condução de corrente elétrica pelos estados de borda tem uma característica especial: ela é não-dissipativa. Por conseguinte, não há queda de tensão, razão pela qual sempre que $R_H$ apresenta um platô, $R = 0$ (fig.~\ref{fig:IQHE}). Veja a figura~\ref{fig:IQHE-LB} (p. \pageref{fig:IQHE-LB}): isto acontece porque os elétrons que deixam o contato $1$ (com energia $\mu_1$, o potencial eletroquímico deste contato), em direção ao $4$ (dreno), percorrem a amostra pela borda superior, enquanto que os elétrons que partem do contato $4$ (energia $\mu_4$) percorrem a amostra pela borda inferior. Esta separação espacial (igual à largura da amostra) torna nulo o espalhamento entre esses estados, e mesmo os espalhamentos produzidos por impurezas próximas não mudam o estado inicial simplesmente por inexistência de outros estados.
+
+	\subsection{Transição entre platôs}
+
+	Por outro lado, quando o nível de Fermi está no centro de um LL, há estados estendidos por todo o plano $xy$ (inclusive nas bordas). Neste caso, a corrente percorre toda a amostra através de estados estendidos com energia $\epsilon \approx \zeta$. E por se sobreporem, o espalhamento é finito e, com ele, a resistência (e a resistividade).
+
+	Teoricamente, a transição entre platôs é descrita como uma transição de fase contínua com parâmetro de ordem $\xi$ \cite{Sethna:1992}, o \emph{comprimento de localização}, que corresponde ao diâmetro médio de uma trajetória fechada do elétron: à medida que o nível de Fermi aproxima-se do centro de um nível de Landau, $\xi$ aumenta e as diversas trajetórias fechadas se aproximam uma da outra até o ponto em que um elétron pode pular de uma trajetória para a outra, via tunelamento. Neste \emph{ponto crítico}, a teoria prevê que $\xi$ divirge conforme $|\epsilon - \epsilon_c|^\lambda$, com $\lambda = 7/3$ \cite{Chalker:1988}. $\epsilon_c$ é a energia do ponto de cela.
+
+	\subsection{O efeito do \foreign{spin}}
+
+	Sob a ação do campo magnético $B$, elétrons com \foreign{spins} opostos ocupam estados que diferem de $\Delta_z = \varg \mu_B B$ em energia (\foreign{single-electron Zeeman splitting}), onde $\varg$ é o fator de Landè ($= -0,44$ para elétrons no GaAs) e $\mu_B \approx \unit{0,06}{\milli\electronvolt\per\tesla}$, o magneton de Bohr. Matematicamente,
+	$$
+	\epsilon_{\ell,\varsigma}(x,y) = \epsilon_\ell + \delta\epsilon(x,y) + \varsigma\Delta_z,
+	$$
+com $\varsigma = \pm 1/2$ representado o número quântico de \foreign{spin}. Desta forma, observe que $\nu$ é ímpar quando o nível de Fermi está num \foreign{gap} $\Delta_z$ (qualquer que seja $\ell$), e é par quando $\zeta$ está num \foreign{gap} $\hbar\omega_c$ (qualquer que seja $\varsigma$): fig.~\ref{fig:LLspin} (isto é verdadeiro se houver apenas uma sub-banda ocupada).
+
+	\begin{SCfigure}[][tb]
+		\centering
+		\psfrag{L0}[][]{\large$\ell = 0$}
+		\psfrag{L1}[][]{\large$\ell = 1$}
+		\psfrag{L2}[][]{\large$\ell = 2$}
+		\psfrag{N1}[l][l]{\large$\nu = 1$}
+		\psfrag{N2}[l][l]{\large$\nu = 2$}
+		\psfrag{N3}[l][l]{\large$\nu = 3$}
+		\psfrag{N4}[l][l]{\large$\nu = 4$}
+		\psfrag{N5}[l][l]{\large$\nu = 5$}
+		\psfrag{U}[][]{\large$\uparrow$}
+		\psfrag{D}[][]{\large$\downarrow$}
+		\psfrag{DZ}[l][l]{\large\colorbox{white}{$\Delta_z$}}
+		\psfrag{HW}[r][r]{\large$\hbar\omega_c$}
+		\psfrag{KET}[][]{\large$\ket{\ell,\varsigma} = \ket{2,\uparrow}$}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figuras/LLspin.eps}}
+		\caption{\small representação dos níveis de Landau, $\epsilon_\ell + \Delta_z$. Ao considerarmos o \foreign{spin} ($\uparrow$ para $\varsigma = +1/2$ e $\downarrow$ para $\varsigma = -1/2$, por exemplo), o fator de preenchimento ($\nu$) assume valores ímpares quando o nível de Fermi encontra-se num \foreign{gap} de energia entre dois estados com o mesmo número quântico orbital (mesmo $\ell$), mas com \foreign{spins} opostos ($\Delta_z$). E é par quando $\zeta$ estiver num \foreign{gap} de energia entre dois níveis com $\ell$ consecutivos. Quando $\Delta_z \approx \Gamma_\ell$ ($B$ pouco intenso) os estados $\ket{\ell,\uparrow}$ e $\ket{\ell,\downarrow}$ comportam-se como se fossem apenas um, com degenerescência $2eB/h$. Neste caso, apenas os platôs associados a $\nu = N$ pares são visíveis.}
+		\label{fig:LLspin}
+	\end{SCfigure}
+
+	A densidade de estados ainda é dada por~\eqref{eq:DOS} e como $\Delta_z \ll \hbar\omega_c$, quando $B$ é suficientemente pouco intenso, $\Delta_z \approx \Gamma_\ell$ e os estados $\ket{\ell,\uparrow}$ e $\ket{\ell,\downarrow}$ se sobrepõem (em energia), formando uma banda de estados estendidos que nos impede de distinguí-los experimentalmente: não haverá em $R_H$ ($R$) um platô (zero) associado a $\Delta_z$. Além disso, $\varrho = 0$ apenas nos \foreign{gaps} $\hbar\omega_c$, de sorte que ao variarmos $B$ entre dois platôs sucessivos dois níveis de Landau (um com \foreign{spin} para cima e outro, para baixo) serão preechidos (ou desocupados). Assim, apenas os platôs associados a $\nu = N$ pares aparecem ($B < \unit{3}{\tesla}$ na figura~\ref{fig:IQHE}). Por outro lado, à medida que intensificamos $B$, a densidade de estados nos \foreign{gaps} $\Delta_z$ aproxima-se de zero (pois $\Delta_z$ torna-se maior que $\Gamma_\ell$)\footnote{A rigor, $\Gamma_\ell \propto B^{1/2}$ \cite{Ensslin:1993}, de modo que $\Delta_z$ cresce mais rapidamente que $\Gamma_\ell$ à medida que $B$ torna-se mais intenso.} e em $R \times B$ aparecem mínimos locais que se aproximam de $R = 0$. Paralelamente, em $R_H \times B$ os platôs com $\nu$ impares começam a aparecer ($B > \unit{3}{\tesla}$ na figura~\ref{fig:IQHE}).
+
+	Alguns autores representam este fenômeno reescrevendo~\eqref{eq:IQHE} assim:
+	$$
+	R_H = \begin{cases}
+		R_K/(2N') = \unit{12\,906,403}{\ohm}/N' & \text{(sem resolução de \foreign{spin});} \\
+		R_K/N     = \unit{25\,812,807}{\ohm}/N  & \text{(com resolução de \foreign{spin});}
+	\end{cases}
+	$$
+outros preferem escrever $R_H = R_K/(\flat N)$, onde $\flat$ é degenerescência de \foreign{spin}. Embora corretas, essas expressões podem confundir, pois dão a impressão de que $R_H$ obedece relações de quantização diferentes para baixos (com $N'$) e altos (com $N$) campos magnéticos.
+
+	Agora que a fenomenologia básica está compreendida, faz-se necessário refiná-la. Isto pode ser feito matematicamente trocando $\varg$ por $\varg^*(B)$ na expressão de $\Delta_z$, o fator $\varg$ amplificado pelas interações de troca~\cite{Janak:1969}. Ocorre que $\varg \mu_B B$ é a energia de interação de \textbf{um} elétron com o campo magnético (a autoenergia da hamiltoniana de Heisenberg de \textbf{um} elétron), ou seja, ela não leva em consideração a presença de outros elétrons; particularmente, a interação de troca. Quando o 2DES não está polarizado, \ie, quando há tantos elétrons com \foreign{spin} para cima quanto para baixo, essa influência é pequena, mas quando $\nu$ é ímpar $\varg^*$ chega a ser vinte vezes superior a $\varg$~\cite{Piot:2005}.
+
+	Observe que $\varg^*$ depende do campo magnético e é diferente de zero mesmo que $\varg = 0$, ao menos para $B$ suficientemente intenso. Em verdade, conforme o modelo proposto por Fogler e Shklovskii~\cite{Fogler:1995} em 1995, à medida que o campo magnético torna-se menos intenso, a desordem no sistema destrói continuamente as interações de troca até que $\varg^* = 0$ (transição de fase de segunda ordem), de forma análoga à destruição do ferromagnetismo pela temperatura~\cite{Ashcroft:1976}. Alternativamente, Piot \etal~\cite{Piot:2005} descrevem o mesmo fenômeno no sentido oposto, como uma transição do estado paramagnético do 2DES~\cite{Ando:1982} para o ferromagnético (transição de Stoner), conforme $B$ é intensificado e comparando os custos energéticos de cada fase.
+
+	Outros fenômenos decorrentes das interações entre os elétrons (\foreign{many-body}) têm sido previstos e observados, especialmente para $\nu = 1$, onde o 2DES é dito estar num estado ferromagnético itinerante~\cite{Jungwirth:2000}, já que todos os elétrons têm a mesma orientação de \foreign{spin} e ainda assim mantém sua mobilidade no plano $xy$. Talvez o mais famoso desses fenômenos seja o Skyrmion~\cite{Fertig:1994,Tsitsishvili:2005}, um estado excitado do 2DES cuja energia é mais baixa que a do estado $\nu = 2$ e que consiste numa perturbação localizada na orientação dos \foreign{spins} (veja a fig.~3 da ref.~\citealt{Girvin:2000}).
+
+	\subsection{IQHE em duas sub-bandas}
+
+	Conforme vimos há pouco, quando o 2DES é composto por apenas uma sub-banda, $\nu$ ímpares estão associados aos \foreign{gaps} $\Delta_z$ (amplificado por $\varg^*$ ou não), enquanto $\nu = \text{par}$, aos $\hbar\omega_c$. É simples assim. Mas quando duas (ou mais) sub-bandas estão presentes, isto deixa de ser verdadeiro. Particularmente, a presença da segunda sub-banda torna a associação platô/\foreign{gap} dependente da amostra (veja, \eg, a ref. \citealt{Ensslin:1993}). Observe a figura~\ref{fig:LLfan}, conhecida como \foreign{Landau-level fan}, por exemplo. Ela esquematiza a energia de \textbf{um} elétron (\foreign{single-particle}) sujeito ao campo magnético,
+	$$
+	\epsilon_{s\ell\varsigma}(B) = \epsilon_s + \epsilon_\ell(B) + \varsigma \Delta_z(B),
+	$$
+para um 2DES com duas sub-bandas. $\epsilon_s$ é a energia do fundo da $s$-ésima sub-banda.
+
+	Na figura esquematizamos dois 2DES, um com nível de Fermi $\zeta_0^0$ e outro, com $\zeta_1^0 > \zeta_0^0$. Ou seja, temos dois 2DES com concentrações diferentes. Observe, por exemplo, a situação em que $\nu = 8$. Para o sistema bidimensional $\zeta_0^0$, isto ocorre quando $B = B_1$; para o 2DES com $\zeta_1^0$, ocorre em $B_4$. A diferença no campo magnético não é o que importa, pois a concentração é diferente e, por conseguinte, a quantidade de níveis de Landau para acondicionar os elétrons. A questão é que no primeiro caso o nível de Fermi encontra-se no \foreign{gap} entre os estados $\ket{s,\ell,\varsigma} = \ket{0,2,\downarrow}$ e $\ket{1,1,\uparrow}$, mas no segundo, está entre os estados $\ket{0,2,\uparrow}$ e $\ket{1,1,\downarrow}$. Se se tratasse de um 2DES com apenas uma sub-banda, não importaria qual fosse a concentração, fatores de preenchimento ímpares estariam relacionados aos \foreign{gaps} de \foreign{spin}, enquanto fatores de preenchimento pares, aos \foreign{gaps} $\hbar\omega_c$.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{B1}[l][l]{$B_1$}
+		\psfrag{B2}[r][r]{$B_2$}
+		\psfrag{B3}[][]{$B_3$}
+		\psfrag{B4}[][]{$B_4$}
+		\psfrag{B}[l][l]{$B$}
+		\psfrag{EF10}[l][l]{$\zeta_0^0$}
+		\psfrag{EF20}[l][l]{$\zeta_1^0$}
+		\psfrag{0}[r][r]{$\varepsilon_0$}
+		\psfrag{SAS}[r][r]{$\varepsilon_1$}
+		\psfrag{N7}[l][l]{$\nu = 7$}
+		\psfrag{N8}[r][r]{$\nu = 8$}
+		\psfrag{EG1}[][]{$\ket{0,0,\uparrow}$}
+		\psfrag{2}[][]{$\ket{1,0,\uparrow}$}		
+		\psfrag{Z}[][]{\colorbox{white}{$\hbar\omega_c$}}
+		\psfrag{S}[][]{$\Delta_z$}
+		\psfrag{E}[][]{$\epsilon$}
+		\psfrag{W}[][]{\colorbox{white}{$\zeta(B)$}}
+		\includegraphics[width=0.8\textwidth]{figuras/LLfan.eps}
+		\caption{\small \foreign{LL fan} para o 2DES com duas sub-bandas. As retas contínuas (tracejadas) representam os níveis de Landau com \foreign{spin} para cima (baixo), ao passo que a cor representa a sub-banda: preto para a primeira e vermelho para a segunda. Esta figura representa \textbf{dois} 2DES, um com nível de Fermi em campo nulo igual a $\zeta_0^0$ e o outro, $\zeta_1^0$ (neste exemplo, portanto, eles diferem pela concentração de portadores). Para o primeiro, $\nu = 7$ (os círculos e quadrados em preto auxiliam a contagem dos níveis de Landau abaixo do de Fermi) quando o nível de Fermi estiver entre os estados $\ket{s,\ell,\varsigma} = \ket{1,1,\uparrow}$ e $\ket{0,2,\uparrow}$, mas no segundo, o nível de Fermi encontra-se entre os estados $\ket{0,2,\uparrow}$ e $\ket{0,2, \downarrow}$ (num \foreign{gap} de \foreign{spin}). Situação análoga acontece para $\nu = 8$. Concluímos daí que a associação entre \foreign{gap} e o fator de preenchimento num 2DES com duas (ou mais) sub-bandas torna-se dependente da amostra. As linhas verdes ilustram pictoricamente as oscilações dos níveis de Fermi em função do campo magnético [$\zeta_s(B)$]. $\varepsilon_s$ é a energia de fundo da sub-banda $s$.}
+		\label{fig:LLfan}
+	\end{figure}
+
+	Ainda na figura \ref{fig:LLfan}, as linhas sinuosas em verde representam as oscilações do nível de Fermi em função do campo magnético, sem levar em conta a largura natural dos níveis de Landau \cite{Gobsch:1988}. Observe que no limite em que $B$ tende a zero, $\zeta_s(B) \approx \zeta_s^0$. Nesta situação a depopulação dos níveis de Landau ocorre independentemente \cite{Millard:1999} e a posição dos platôs (em $B$) depende do fator de preenchimento de cada sub-banda: $\nu_s \doteq n_s / (\text{degenerescência dos \foreign{LLs}})$. Contudo, como isto ocorre perto de $B = 0$ (lembre-se, a escala de $B$ depende de $\omega_c$), os platôs não são visíveis. Mas este fenômeno pode ser verificado através das oscilações da magnetorresistência (efeito Shubnikov-de Haas, a seguir): as oscilações recebem contribuições independentes das sub-bandas e isto nos permite determinar $n_s$ para cada uma das sub-bandas.
+
+	Por outro lado, quando $B$ é intenso, na região em que os platôs se manifestam, a depopulação dos níveis de Landau não ocorre independentemente em cada sub-banda. Visando sempre reduzir sua energia, o 2DES redistribui cargas entre os níveis de Landau de cada sub-banda, e disto resulta que os platôs relacionam-se não com $\nu_s$, mas com o \textbf{fator de preenchimento total}: $\nu = \nu_1 + \nu_2$.
+
+\section{O efeito Shubnikov-de Haas}\label{sec:SdH}
+
+	O efeito Shubnikov-de Haas (SdH), descoberto em 1920 por Lev Vasiljevich Shubnikov e Wander Johannes de Haas, refere-se ao comportamento oscilatório da magnetorresistividade (fig.~\ref{fig:SdH}), conforme modela a equação de Lifshitz-Kosevich~\cite{Ridley:1993}:
+	\begin{equation}\label{eq:SdH-LK}
+	\rho(B) = \rho_0 + A \frac{\Lambda}{\senh\Lambda}\exp\left(-\frac{\pi}{\omega_c\tau_s}\right)\cos\left( \frac{2\pi\zeta}{\hbar\omega_c} + \phi \right),
+	\end{equation}
+onde $\rho_0$ é a resistividade em campo nulo (veja o parágrafo após a equação~\ref{eq:efeito-Hall}), $\Lambda = 2\pi^2 k_B T/(\hbar\omega_c)$ e $\tau_s$ é o tempo de vida do \foreign{quasi}-elétron no 2DES (\emph{tempo quântico})\rlap{.}\footnote{Em geral não nos preocupamos com isto, mas todas as propriedades estudadas num 2DES referem-se não ao elétron propriamente dito, mas ao \foreign{quasi}-elétron.} $A$ e $\phi$ são constantes. O fator $\Lambda/\senh(\Lambda)$ representa a influência da temperatura, enquanto a exponencial representa o alargamento dos níveis de Landau devido às colisões~\cite{Ridley:1993}.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{X}[][]{$B$ (\tesla)}
+		\psfrag{Y}[][]{$V$ (\milli\volt)}
+		\psfrag{N2}[][]{\shortstack{$\nu = 2$\\ \colorbox{white}{(\foreign{gap} $\hbar\omega_c$)}}}
+		\psfrag{N3}[][]{\shortstack{$\nu = 3$\\ \colorbox{white}{(\foreign{gap} de \foreign{spin})}}}
+		\psfrag{4.2K}[][]{\unit{4,2}{\kelvin}}
+		\psfrag{2K}[][]{\unit{2}{\kelvin}}
+		\psfrag{E1}[][]{$\Delta\left(\frac{1}{B}\right)_1 = \unit{0,107}{\reciprocal\tesla}$}
+		\psfrag{E2}[][]{$\Delta\left(\frac{1}{B}\right)_2 = \unit{0,055}{\reciprocal\tesla}$}
+		\includegraphics[width=0.7\textwidth]{figuras/SdH_sample.eps}
+		\caption{\small exemplo de medida do efeito Shubnikov-de Haas num HEMT (o mesmo da fig. \ref{fig:IQHE}). Para $B$ pouco intenso ($\lesssim \unit{0,5}{\tesla}$ na figura) o 2DES pode ser descrito pelo modelo de Drude, que prevê nenhuma magnetorresistência. Para valores intermediários ($0,5 \lesssim B \lesssim \unit{2}{\tesla}$) vale a equação de Lifshitz-Kosevich e podemos facilmente obter a concentração a partir de $\Delta\left(\frac{1}{B}\right)_1$: conforme a equação \ref{eq:n:SdH}, obtemos $n = \unit{4,5\times\power{10}{15}}{\rpsquare\metre}$. Compare com aquele obtido do efeito Hall clássico, na figura \ref{fig:IQHE}. Já para $B \gtrsim \unit{2}{\tesla}$, $V$ chega a zero, como resultado de não haver estados estendidos sobre o nível de Fermi. Nesta situação a equação de Lifshitz-Kozevich deixa de valer, mas ainda é possível obter a concentração a partir da equação \ref{eq:n:SdH:spin}: de $\Delta\left(\frac{1}{B}\right)_2$, $n = \unit{4,4 \times \power{10}{15} }{\rpsquare\metre}$.}
+		\label{fig:SdH}
+	\end{figure}
+
+	Mas o efeito propriamente dito, representado pelo cosseno na equação anterior, pode ser facilmente compreendido através do que expusemos na seção~\ref{sec:QHE}: quando $\hbar\omega_c \approx \Gamma_\ell$ (e, portanto, $\Delta_z \to 0$), a \emph{oferta} de estados estendidos oscila conforme o nível de Fermi percorre os de Landau, atingindo máximos quando está no centro de um LL, o que corresponde a um máximo em $\rho(B)$, e mínimos quando entre eles.
+
+	O período dessas oscilações pode ser determinado se definirmos $B_\ell$ como o campo magnético no qual $\zeta = \epsilon_\ell$ [máximo em $\rho(B)$]: podemos reescrever esta igualdade como $B_\ell^{-1} = \left(\ell + 1/2\right) \hbar e/(\mEff \zeta)$, de modo que o período das oscilações, a distância em $\reciprocal\tesla$ entre dois máximos consecutivos\rlap{,}\footnote{Poderiamos ter utilizado os mínimos de $\rho(B)$, associados a $\zeta = \epsilon_\ell + \hbar\omega_c/2$, de forma análoga à que faremos na seção seguinde, quando considerarmos o \foreign{spin}.} é
+	\begin{equation}\label{eq:periodo}
+	\Delta\left(\frac{1}{B}\right) \doteq \frac{1}{B_{\ell}} - \frac{1}{B_{\ell+1}} = \frac{\hbar e}{\mEff \zeta};
+	\end{equation}
+precisamente o período do argumento do cosseno na expressão de $\rho(B)$. Realmente, este cosseno decorre de uma aproximação válida quando $\zeta \gg \hbar\omega_c$ \cite{Ridley:1993}, que geralmente ocorre para campos magnéticos de intensidade ``intermediária'' ($0,5 \lesssim B \lesssim \unit{2}{\tesla}$ na figura~\ref{fig:SdH}), onde a oferta de estados estendidos oscila, mas nunca se anula.
+
+	Quando $B$ é pouco intenso, os LLs estão muito próximos ($\hbar\omega_c \ll \Gamma_\ell$) e se sobrepõem; $\varrho(\epsilon)$ aproxima-se da densidade de estados em campo nulo (constante) e o 2DES pode ser descrito pelo modelo de Drude, donde $\rho(B) = \text{constante}$, conforme ilustra a região $B \lesssim \unit{0,5}{\tesla}$ da figura~\ref{fig:SdH}.
+
+	No outro extremo, quando $B$ é muito intenso ($\gtrsim \unit{4}{\tesla}$ na figura~\ref{fig:SdH}), os níveis de Landau estão muito distantes uns dos outros ($\hbar\omega_c > \Gamma_\ell$). Então, quando $\zeta$ estiver entre os LLs ($\nu = N$), apenas os estados de borda conduzirão corrente, sem perda de energia, cf.~sec.~\ref{sec:QHE}. Logo a resistência é nula. E perceba que agora falamos da \emph{resistência} ao invés de resistividade. Isto porque como a corrente --- total --- é nula dentro da amostra, $\rho(B)$ não representa uma propriedade do material; ela não é uma quantidade escalonável\rlap{.}\footnote{Isto significa que $R$ e $\rho$ não podem ser relacionados por uma regra de escala (dimensões da amostra), como na segunda lei de Ohm, por exemplo: $R \propto \rho$.} Mas quando o nível de Fermi está sobre o centro de um LL, a condução ocorre normalmente por toda a amostra e $\rho$ (podemos utilizá-lo agora) é finito, como ilustram os picos na fig.~\ref{fig:SdH}.
+
+	Retornando à expressão~\eqref{eq:periodo}, como $\zeta = \pi\hbar^2 n/\mEff$ no 2DES,
+	\begin{equation}\label{eq:n:SdH}
+	n = \frac{2e/h}{\Delta\left(\frac{1}{B}\right)} \approx \frac{\unit{4,8\times\power{10}{14}}{\rpsquare\metre}} {\Delta\left(\frac{1}{B}\right)}.
+	\end{equation}
+
+	Assim, quando o 2DES possui apenas uma sub-banda, podemos determinar a concentração de portadores (igual àquela obtida do efeito Hall clássico) através das oscilações SdH: basta tomarmos os valores de $B$ de dois máximos (ou mínimos) consecutivos e aplicarmos na expressão acima (veja um exemplo na figura~\ref{fig:SdH}). Esta expressão é válida mesmo quando~\eqref{eq:SdH-LK} não vale.
+
+	Outra forma de se calcular a concentração de portadores é executar uma transformada de Fourier sobre $\rho(\frac{1}{B})$, cujo resultado é uma lorentziana na posição $B_i$ tal que $n = 2eB_i/h$ (compare com a equação~\ref{eq:n:SdH})~\cite[ap.~A]{Pagnossin:2004}. Este método é especialmente útil quando o 2DES é composto por mais de uma sub-banda, onde a segunda parcela em~\eqref{eq:SdH-LK} é substituída por uma somatória de termos análogos, um para cada sub-banda ocupada~\cite{Ridley:1993}. Este método só pode ser utilizado no intervalo de validade de~\eqref{eq:SdH-LK}.
+
+	\subsection{O efeito do \foreign{spin}}
+
+	Quando $\Delta_z \gtrsim \Gamma_\ell$ ($B$ intenso), zeros consecutivos em $R$ estão associados a diferentes \foreign{gaps} sobre os quais $\zeta$ se localiza. Na figura~\ref{fig:LLspin}, por exemplo, quando $\nu = 1$ o nível de Fermi está no \foreign{gap} $\Delta_z$; quando $\nu = 2$, $\zeta$ está no \foreign{gap} $\hbar\omega_c$; $\nu = 3$ ocorre quando o nível de Fermi no \foreign{gap} $\Delta_z$ seguinte. E assim sucessivamente. Assim, para $\nu = 1$ na figura~\ref{fig:LLspin}, $\zeta = \epsilon_0$, donde $B_{\nu = 1}^{-1} = e\hbar/(2 \mEff \zeta)$, e observe que agora o índice de $B$ indica o fator de preenchimento ao invés de $\ell$. Para $\nu = 2$, $\zeta = \epsilon_0 + \hbar\omega_c/2$, resultando em $B_{2}^{-1} = e\hbar/(\mEff \zeta)$. Então, $\Delta\left(1/B\right) \doteq B_2^{-1} - B_1^{-1} = e/hn$ e
+	\begin{equation}\label{eq:n:SdH:spin}
+	n = \frac{e/h}{\Delta\left(\frac{1}{B}\right)} \approx \frac{\unit{2,4\times\power{10}{14}}{\rpsquare\metre}} {\Delta\left(\frac{1}{B}\right)}.
+	\end{equation}
+
+	O raciocínio vale para todos os $\nu$ e, por conseguinte, a expressão acima vale sempre que se puder distinguir experimentalmente os estados $\ket{\ell,\uparrow}$ e $\ket{\ell, \downarrow}$ (diz-se que há \emph{resolução de \foreign{spin}}).
+
+\section{O formalismo de Landauer-Büttiker}
+
+	O formalismo de Landauer-Büttiker (LB) é uma descrição do transporte de cargas que expressa a corrente elétrica entre dois (ou mais) pontos em termos da probabilidade de o elétron ir de um para o outro. Trata-se de uma alternativa às descrições de Kubo, Boltzmann e Drude, especialmente útil quando essa probabilidade aproxima-se da unidade. Isto ocorre geralmente em amostras mesoscópicas\rlap{,}\footnote{Segundo S. Datta~\cite[p.~1]{Datta:1995} uma amostra mesoscópica é aquela cujas dimensões estão entre as microscópicas e macroscópicas.} mas no nosso caso a fórmula de LB permite-nos compreender a condução num estado Hall quântico (num platô).
+
+	A segunda lei de Ohm para sistemas bidimensionais estabelece que a condutância ($G$) de uma amostra condutora retangular é dada pela lei de escalonamento $\sigma W/L$, onde $\sigma$ é uma propriedade do material que independe de suas dimensões (a condutividade) e $L$ e $W$ são o comprimento e a largura da amostra, respectivamente\rlap{.}\footnote{Rigorosamente, $L$ e $W$ são as dimensões da amostra nas direções paralela e perpendicular ao fluxo de portadores.} Todavia, isto é verdade desde que $L$ e $W$ sejam muito maiores que \textbf{(i)} o comprimento de onda de de Broglie, \textbf{(ii)} o caminho livre médio e \textbf{(iii)} o comprimento de relaxação de fase dos portadores \cite{Datta:1995}. Quando um dos critérios acima não é atendido, a segunda lei de Ohm não vale e a amostra é dita \emph{mesoscópica}.
+
+	Particularmente, quando $L$ torna-se demasiadamente pequeno, a condutância aproxima-se de um limite (a resistência dos contatos); quando $W$ é muito pequeno, $G$ varia discretamente \cite{Datta:1995}. Para uma amostra qualquer com dois contatos, ambos os fenômenos podem ser compreendidos através da fórmula de Landauer,
+	$$
+	G = \frac{\flat}{R_K}MT,
+	$$
+onde $G$ é a condutância entre esses dois contatos, $\flat$ é a degenerescência de \foreign{spin}, $T$ é a \emph{probabilidade de transmissão} de um contato ao outro (a probabilidade de um elétron partir de um contato e chegar ao outro) e $M$ é a quantidade de \emph{modos transversais} (a seguir) que participam do transporte de cargas (um número inteiro).
+
+	O confinamento dos elétrons na direção do crescimento através de poços-quânticos, por exemplo, dá origem a estados de energia discretos chamados de sub-bandas (ou, se preferir, os níveis de energia do QW), que distam de alguns $\milli\electronvolt$. No plano perpendicular à direção de crescimento (plano $xy$) também há o confinamento dos elétrons, mas devido aos limites da amostra (\eg, dimensão $l_y$ na fig.~\ref{fig:efeito-Hall}), que também dá origem a níveis discretos de energia, desta vez alcunhados de \textit{modos transversais}.
+
+	Note que $M \equiv M(W)$: à medida que $W$ é reduzido, a distância em energia entre dois modos transversais aumenta (como os níveis de energia de um QW afastam-se conforme o poço-quântico torna-se mais e mais estreito). Com isso, a quantidade de modos transversais ocupados no nível de Fermi reduz mantendo $\Delta M = 1$ ($M$ é um número inteiro). Por conseguinte, $G$ também varia discretamente a passos de $\flat T/R_K$. Este resultado foi observado experimentalmente por B. J. van Wees \etal~\cite{Wees:1988} e D. Wharam \etal~\cite{Wharam:1988}. A largura da amostra foi controlada através de um \foreign{split-gate} (conforme a configuração ilustrada pela figura da página~\pageref{fig:R-LB}).
+
+	Ademais, $T \equiv T(L)$ e é possível demonstrar que $R \doteq G^{-1} = \rho L/W + R_0$ \cite[p.~62]{Datta:1995}, onde a primeira parcela é a 2ª lei de Ohm e $R_0$ é a \textbf{resistência do contato}. Enquanto a amostra tem alguns poucos $M$ modos transversais, os contatos --- macroscópicos --- a ela conectados têm $M \gg 1$. Então, um elétron que cruza a junção amostra-contato, deixando a amostra em direção ao contato, tem uma infinidade de estados disponíveis para assumir ali. O mesmo não se pode dizer quando este elétron é injetado na amostra: como há pouca disponibilidade de estados (de modos transversais), a probabilidade de o elétron ser refletido na junção é grande e inevitável. Resulta daí a resistência do contato.
+
+	\begin{SCfigure}
+		\psfrag{1}[][]{\large \shortstack{Contato $1$\\ $\mu_1 = -e V_1$}}
+		\psfrag{2}[][]{\large \shortstack{Contato $2$\\ $\mu_2 = -e V_2$}}
+		\psfrag{N}[][]{\large $N_1$}
+		\psfrag{R}[][]{\large $R_1$}
+		\psfrag{T}[][]{\large $T_{21}$}
+		\psfrag{A}[][]{\large Amostra}
+		\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/LB-correntes.eps}}
+		\caption{\small os elementos da equação \eqref{eq:LB}: $N_i$ é a quantidade de modos de condução injetados pelo contato $i$ na amostra (corrente injetada); $R_i$ é a quantidade de modos refletidos dentro da amostra e de volta para o contato $i$ (corrente de reflexão); $T_{ij}$ é a quantidade de modos que atingem o contato $i$, vindo de todos os outros $j \ne i$ contatos (corrente transmitida).}
+		\label{fig:LB-correntes}
+	\end{SCfigure}
+
+	Mas em amostras ``grandes'' como as nossas (da ordem de \unit{100}{\micro\metre}) os modos transversais distam entre si de alguns $\micro \electronvolt$ e em geral podemos ignorá-los, como o fizemos até agora. O conceito de modo transversal é importante porque no nosso caso são os estados de borda que fazem as vezes deles, quando $\nu = N \in \mathbb{N}$: nossas amostras não são mesoscópicas, mas quando a condução ocorre através dos estados de borda sem dissipação de energia, podemos descrevê-la facilmente através do formalismo de Landauer-Büttiker. Mas antes de vermos isso, convém apresentar a generalização da fórmula de Landauer, introduzida por M. Büttiker~\cite{Buttiker:1986}:
+	\begin{equation}\label{eq:LB}
+		I_i = -\frac{e}{h}\left(N_i - R_i\right)\mu_i + \frac{e}{h} \sum_{j \ne i} T_{ij} \mu_j.
+	\end{equation}
+
+	Para um dado contato $i$, $I_i$ é a corrente através dele, $N_i$ é a quantidade de modos de condução (modos transversais, níveis de Landau) que são \emph{injetados} na amostra (corrente injetada), $R_i$ é a quantidade de modos de condução refletidos pela amostra de volta para o contato $i$ (corrente refletida) e $T_{ij}$ é a quantidade de modos transmitidos (corrente transmitida) de todos os outros contatos $j$ para o $i$ (note a ordem dos índices). $\mu_i$ é o potencial eletroquímico desse contato.
+
+	Vejamos um exemplo: considere a figura~\ref{fig:LB-correntes}. Ela ilustra uma amostra com dois contatos (índice $i$), cada qual mantido externamente a um potencial eletroquímico $\mu_i$. Suponha que o contato $1$ injete $M$ ($= N_1$) modos de condução com energia $\mu_1$ na amostra. Se a probabilidade de um elétron atingir o contato $2$ for $T$, então $TM$ ($= T_{21}$) modos chegarão lá e $R_1 = (1-T)M$ retornarão para $1$ (não há acúmulo de cargas na amostra). Neste cenário, a equação~\ref{eq:LB} aplicada ao contato $1$ fica
+	$$
+	I_1 = \frac{1}{R_K} \left[ M - \left( 1-T \right)M \right] V_1 - \frac{1}{R_K} TM V_2,
+	$$
+onde $V_i$ é o potencial eletrostático do contato $i$, que atende a relação $\mu_i = -e V_i$. Analogamente para o contato $2$ ($N_2 = M$ e $T_{12} = T$), $R_K I_2 = \left[ M - \left( 1-T \right)M \right] V_2 - TM V_1$.
+
+	A corrente que percorre a amostra é $I$, de tal forma que $I_1 = I$ e $I_2 = -I$ (o sinal é escolhido arbitrariamente). Disto resulta duas equações linearmente dependentes, e de qualquer uma delas obtemos
+	$$
+	I = \frac{MT}{R_K} \left( V_1 - V_2 \right) \quad\Rightarrow\quad G \doteq \frac{I}{V_1 - V_2} = \frac{1}{R_K} MT.
+	$$
+
+	Esta é a equação de Landauer apresentada a pouco, com $\flat = 1$. Se o \foreign{spin} não estiver resolvido no problema, podemos simplesmente integrar $\flat$ a $M$, fazendo a transformação $M \to \flat M'$ na equação anterior.
+
+	Cuidado para não confundir $T$ com $T_{ij}$. O primeiro é a \emph{probabilidade} de transmissão e o segundo, a \emph{quantidade} de modos transmitidos; $T_{ij} = MT$ na expressão de $G$ acima e $T \in [0,1]$.
+
+	\subsection{O efeito Hall quântico revisitado}\label{sec:IQHE-LB}
+
+	No regime clássico do efeito Hall, a densidade de corrente na amostra é bastante complexa~\cite{Oswald:2006}, o que torna sua descrição sob a perspectiva do formalismo de LB numericamente trabalhosa~\cite[p.~127]{Barnes}. Mas quando o nível de Fermi encontra-se entre quaisquer dois de Landau, o transporte de cargas ocorre (quase) balisticamente pelas bordas da amostra (fig.~\ref{fig:IQHE-LB}), através de $N$ estados de borda e podemos usar facilmente a fórmula de Landauer-Büttiker para descrever esta situação.
+
+	Acompanhe pela figura~\ref{fig:IQHE-LB}, que representa a geometria da barra-Hall de nossas amostras: o transporte entre dois contatos é balístico quando a probabilidade de transmissão é máxima. Então, o contato $1$ injeta $N$ estados de borda com energia $\mu_1$ na amostra (corrente injetada) e \textbf{todos} eles atingem o contato $2$ exclusivamente (ou seja, $T = 1$). O contato $1$ também recebe $N$ estados de borda com energia $\mu_6$ do contato $6$ (corrente transmitida), de modo que $T_{21} = T_{16} = N$ (probabilidade de transmissão é igual a um). E como não há ``comunicação'' entre $1$ e qualquer outro contato, todos os outros $T_{ij} = 0$. Analogamente, o contato $2$ recebe os $N$ estados de borda com $\mu_1$ do contato $1$ e transmite outros $N$ com $\mu_2$ para o $3$: $T_{21} = T_{32} = N$ e, nas outras combinações de $i$ e $j$, $T_{ij} = 0$. $R_i = 0$ para todos os contatos. Fazendo o mesmo para os outros contatos, obtemos a seguinte matriz de transmissão (as colunas indexam os contatos de origem e as linhas, os de destino):
+	$$	
+	T = 
+	\left(\begin{matrix}
+		\zero & \zero & \zero & \zero & \zero & N \\
+		N & \zero & \zero & \zero & \zero & \zero	\\
+		\zero	& N & \zero & \zero & \zero & \zero \\	
+		\zero	& \zero & N & \zero & \zero & \zero \\
+		\zero	& \zero & \zero & N & \zero & \zero \\
+		\zero	& \zero & \zero & \zero & N & \zero
+  \end{matrix}\right).
+	$$
+
+	\begin{figure}[tb]
+		\psfrag{1}[][]{\rotatebox{90}{\huge Contato $1$}}
+		\psfrag{2}[][]{\huge$2$}
+		\psfrag{3}[][]{\huge$3$}
+		\psfrag{4}[][]{\huge$4$}
+		\psfrag{5}[][]{\huge$5$}
+		\psfrag{6}[][]{\huge$6$}
+		\psfrag{I}[][]{\huge Corrente elétrica, $I$}
+		\psfrag{N1}[][]{\huge$N$, $\mu_1$}
+		\psfrag{N2}[][]{\huge$N$, $\mu_2$}
+		\psfrag{N3}[][]{\huge$N$, $\mu_3$}
+		\psfrag{N4}[][]{\huge$N$, $\mu_4$}
+		\psfrag{N5}[][]{\huge$N$, $\mu_5$}
+		\psfrag{N6}[][]{\huge$N$, $\mu_6$}
+		\psfrag{H}[][]{\huge$B$}
+		\centering
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/IQHE-LB.eps}}
+		\caption{\small quando $\nu$ é um inteiro $N$, o transporte de cargas ocorre pelas bordas da amostra sem dissipação de energia: são os chamados estados de borda. Esta configuração pode ser facilmente descrita através do formalismo de Landauer-Büttiker e prevê corretamente que a resistência Hall é $R_K/N$.}
+		\label{fig:IQHE-LB}
+	\end{figure}
+
+	Agora, suponha (como no nosso caso) que apliquemos a corrente $I$ através dos contatos $1$ (\foreign{drain} ou dreno) e $4$ (\foreign{source} ou fonte). Esta corrente é conhecida, de modo que podemos escrever $I_1 = -I_4 = I$. Os outros contatos ou não são utilizados (diz-se que estão ``em aberto'') ou estão conectados a circuitos de alta impedância, como multímetros e \foreign{lock-ins}. Qualquer que seja o caso, a corrente através deles é nula: $I_2 = I_3 = I_5 = I_6 = 0$. Isto tudo posto em~\eqref{eq:LB} resulta em
+	$$
+			\left(\begin{matrix}
+					I \\ 0 \\ 0 \\ -I \\ 0 \\ 0
+			\end{matrix}\right) = 
+		\frac{N}{R_K}
+			\left(\begin{matrix}
+				V_1 \\ V_2 \\ V_3 \\ V_4 \\ V_5 \\ V_6
+			\end{matrix}\right) -
+		\frac{N}{R_K}
+			\left(\begin{matrix}
+					\zero & \zero & \zero & \zero & \zero & 1 \\
+					1 & \zero & \zero & \zero & \zero & \zero	\\
+					\zero	& 1 & \zero & \zero & \zero & \zero \\	
+					\zero	& \zero & 1 & \zero & \zero & \zero \\
+					\zero	& \zero & \zero & 1 & \zero & \zero \\
+					\zero	& \zero & \zero & \zero & 1 & \zero
+			  \end{matrix}\right)\cdot
+			\left(\begin{matrix}
+				V_1 \\ V_2 \\ V_3 \\ V_4 \\ V_5 \\ V_6
+			\end{matrix}\right),
+	$$
+	onde $V_i = -\mu_i/\cargaeletron$ é o potencial eletrostático do $i$-ésimo contato. E para \emph{simplificar} as contas, podemos aterrar o contato $1$, impondo $V_1 = 0$. Com isso obtemos o seguinte resultado:
+	$$
+	V_1 = V_2 = V_3 = 0 \qquad\text{e}\qquad V_4 = V_5 = V_6 = \frac{R_K}{N}I.
+	$$
+
+	Assim, quando medimos a resistência Hall (entre os contatos $2$ e $6$, por exemplo) obtemos $(V_6 - V_2)/I = R_K/N$: o efeito Hall quântico inteiro. Adicionalmente, quando medimos a tensão longitudinal (\eg, contatos $2$ e $3$), obtemos zero.
+
+	Portanto, o formalismo de Landauer-Büttiker fornece uma descrição simples e elegante do transporte de cargas quando $\nu = N$: a resistência Hall é simplesmente a resistência do contato $4$ (na fig.~\ref{fig:IQHE-LB}), que depende exclusivamente da quantidade de modos transversais (estados de borda; níveis de Landau) que conduzem a corrente elétrica; e a resistência longitudinal é nula porque não há espalhamento entre os contatos $2$ e $3$.
+
+\section{Localização fraca}\label{sec:WL}
+
+	Em todos os fenômenos explicados até agora a fase da função de onda do elétron era um parâmetro ignorável. Isto porque todos eles têm como parâmetro físico básico o \textbf{tempo de espalhamento elástico} ou \textbf{tempo de relaxação do momento} ($\tau$), que é o tempo de vida do elétron num autoestado do momento. A teoria do transporte de cargas de Boltzmann ignora interferências entre as ondas parciais espalhadas e assume que seu momento anula-se após $\tau$. Sob essas condições não há qualquer correlação estatística entre a fase do elétron antes e após o espalhamento, o que de fato é válido para metais ou semicondutores a altas temperaturas. Mas acontece que em baixas temperaturas o \textbf{tempo de espalhamento inelástico} (ou \textbf{tempo de relaxação da fase}: $\tauphi$), o tempo de vida do elétron num autoestado de energia, pode ser muito maior que $\tau$ e, com isso, ele pode sofrer inúmeros espalhamentos \textit{elásticos} antes de perder sua fase \cite{Bergmann:1984}.
+
+	A localização-fraca, inicialmente explicada por P. W. Anderson \cite{Abrahams:1979} através da teoria de Kubo, é justamente uma conseqüência  dessas interferências: durante um processo de $n$ espalhamentos \textit{elásticos}, desde $\ket{\vetor k_i}$ até $\ket{\vetor k_f}$, o elétron troca momento com os agentes espalhadores, passando por vários autoestados do momento:
+	$$
+	\vetor k_i \to \vetor k_1 \to \vetor k_2 \to \cdots \vetor k_n = \vetor k_f.
+	$$
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{K1N}[][]{$-\vetor k_i$}
+		\psfrag{K2N}[][]{$-\vetor k_1$}
+		\psfrag{K3N}[][]{$-\vetor k_2$}
+		\psfrag{K4N}[][]{$-\vetor k_3$}
+		\psfrag{K6N}[][]{$-\vetor k_1$}
+		\psfrag{K7N}[][]{$-\vetor k_2$}
+		\psfrag{K8N}[][]{$-\vetor k_3$}
+		\psfrag{K1}[][]{$\vetor k_i$}
+		\psfrag{K2}[][]{$\vetor k_1$}
+		\psfrag{K3}[][]{$\vetor k_2$}
+		\psfrag{K4}[][]{$\vetor k_3$}
+		\psfrag{K5}[r][r]{$\vetor k_4 = \vetor k_f$}
+		\psfrag{K6}[][]{$\vetor k_1$}
+		\psfrag{K7}[][]{$\vetor k_2$}
+		\psfrag{K8}[][]{\colorbox{white}{$\vetor k_3 = \vetor k_f$}}
+		\psfrag{1}[][]{\shortstack{\ding{172}\\$\Delta\varphi \propto 4$}}
+		\psfrag{2}[][]{\shortstack{\ding{173}\\$\Delta\varphi \propto 4$}}
+		\psfrag{3}[][]{\shortstack{\ding{174}\\$\Delta\varphi \propto 3$}}
+		\psfrag{4}[][]{\shortstack{\ding{175}\\$\Delta\varphi \propto 5$}}
+		\psfrag{A}[][]{\textbf{(a)}}
+		\psfrag{B}[][]{\textbf{(b)}}
+		\includegraphics[width=0.95\textwidth]{figuras/WL.eps}
+		\caption{\small comparação entre as sequências de espalhamento elástico quando o estado (vetor de onda) final é \textbf{(a)} oposto ao inicial e \textbf{(b)} qualquer outro. O primeiro é duas vezes mais provável que o segundo, donde origina-se a localização-fraca. A defasagem $\Delta\varphi$ é proporcional ao número de espalhamentos elásticos desde o estado inicial ($\vetor k_i$) até o final ($\vetor k_f$).}
+		\label{fig:WL}
+	\end{figure}
+
+	A probabilidade desse elétron terminar num estado $\ket{\vetor k_f}$ qualquer é a mesma, qualquer que seja $\vetor k_f$, exceto se ele for igual a $-\vetor k_i$. Neste caso, existe outra seqüencia igualmente provável:
+	$$
+	\vetor k_i = -\vetor k_n \to -\vetor k_{n-1} \to \cdots -\vetor k_1 \to -\vetor k_i,
+	$$
+que é oposta à primeira. Como as trocas de momento são simétricas, as mudança de fase nestes dois processos é idêntica: $\varepsilon t/\hbar$, sendo $\varepsilon$ a energia (que se conserva) e $t$ o tempo decorrido desde $\ket{\vetor k_i}$ até $\ket{\vetor k_f}$. Além disso, a amplitude de probabilidade do primeiro processo é igual à do segundo \cite[p. 6]{Bergmann:1984}. Isso não acontece com nenhum outro estado final diferente de $-\vetor k_i$ e, por conta disso, a probabilidade desses dois processos acontecerem aos pares é precisamente o dobro de qualquer outro.
+
+	Como o estado final é $-\vetor k_i$ (ou seja, o elétron que inicialmente se deslocava numa direção, agora desloca-se na direção oposta), esta seqüência de espalhamento tem um nome especial: retroespalhamento ou \foreign{backscattering}. Essa tendência de sempre retornar mantém o elétron parcialmente localizado, daí o nome \textsl{localização-fraca}. Como conseqüência, a resistência para $B = 0$ é maior que aquela prevista pela teoria de Drude.
+
+	A figura \ref{fig:WL} compara duas seqüência de espalhamento, começando em $\vetor k_i$: em (a) o estado final é o oposto do inicial; em (b), um qualquer. No primeiro, tanto o processo \ding{172} como o \ding{173} é composto por $4$ espalhamentos elásticos. Assim, a diferença de fase por um ou por outro é precisamente a mesma: $\Delta\varphi = 4\tau \varepsilon/\hbar$. Por conseguinte, os elétrons estão em fase. Em (b), há $3$ espalhamentos elásticos no processo \ding{174} ($\Delta\varphi \propto 3$) e $5$ no \ding{175} ($\Delta\varphi \propto 5$). Há, portanto, uma diferença de fase de $2\tau \varepsilon/\hbar$ entre as duas funções de onda em $\vetor k_f$.
+
+	Para temperaturas maiores, os espalhamentos se tornam parcialmente inelásticos e $\Delta\varphi$ sofre influência das variações em $\varepsilon$. Conseqüentemente, mesmo o retroespalhamento se torna incoerente e o a localização-fraca é destruída após $\tauphi$. Logo, a dependência da resistividade com a temperatura permite-nos determinar o \textbf{tempo de coerência} da função de onda dos elétrons (outro nome para $\tauphi$).
+
+	Campos magnéticos também destroem a localização-fraca. Para uma seqüência de espalhamento que engloba uma área qualquer cujo fluxo magnético é $\Phi$, a função de onda do elétron receberá uma fase adicional igual a $2e\Phi/\hbar$. Como resultado, o retroespalhamento deixa de ser o mais favorável, em detrimento de algum outro estado $\vetor k_f$. Assim, a tendência de retornar desaparece e a resistência elétrica diminui.

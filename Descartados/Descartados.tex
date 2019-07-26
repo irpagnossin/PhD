@@ -1,0 +1,159 @@
+	\begin{SCfigure}[][!Hb]
+		\centering
+		\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/sample-structure.eps}}
+		\caption{\footnotesize perfil de potencial da região-ativa das amostras utilizadas neste trabalho, obtido por auto-consistência para a amostra de referência (sem pontos-quânticos, a seguir). As amostras foram crescidas sobre um substrato de GaAs(100). Após a dopagem planar ($\delta$-silício), seguem \unit{7}{\nano\metre} de GaAs, o poço-quântico de InGaAs com largura de \unit{10}{\nano\metre}, outros \unit{8}{\nano\metre} de GaAs e $d_\text{InAs}$ monocamadas (MC) de InAs, que distingue as amostras: \unit{0}{\monolayer} (amostra-referência), $1$, $1,5$, $1,75$, $2$ e \unit{2,5}{\monolayer} (cada monocamada de InAs corresponde a aproximadamente \unit{3}{\angstrom}). Os pontos-quânticos se formam para $d_\text{InAs} \ge \unit{1.5}{\monolayer}$.}
+		\label{fig:sample-structure}
+	\end{SCfigure}
+
+
+
+	%\begin{quotation}
+		%Resumindo: na ausência de campo magnético o transporte de cargas em todas as amostras deste conjunto ocorre no regime de difusão quântico e, por este motivo, não pode ser descrito pelo modelo de Drude. De fato, o fenômeno da localização-fraca e as interações elétron-elétron estão presentes. Isto posto, cabe um requinte de terminologia: como as interações entre os elétrons do sistema bidimensional são relevantes, não podemos chamá-lo de ``\emph{gás}\rlap{,}'' embora ainda se possa --- possivelmente --- utilizar o conceito de \foreign{quasi}-elétrons.
+	%\end{quotation}
+
+
+	%
+	% Amostra A: #2510
+	% Amostra B: #3154-2º
+	% Amostra C: #3146
+	%
+	\subsection*{de poços-quânticos duplos}
+
+
+
+	\subsection*{de pontos-quânticos}
+
+	A proposta deste conjunto de amostras é complementar o estudo iniciado durante o mestrado através de medidas de localização-fraca e interações entre elétrons. Em minha dissertação de mestrado apresentamos um estudo das concentrações dos elétrons e suas mobilidades (quântica e de transporte) num 2DES próximo de uma camada --- tensa --- de arseneto de índio, de espessura $\dInAs$. Quando $\dInAs \approx \unit{1,5}{\monolayer}$ a tensão acumulada (devido à diferença entre os parâmetros de rede do GaAs e do InGaAs) provoca a formação espontânea de pontos-quânticos, que se reflete no 2DES através de variações (anômalas) nos tempos quântico\footnote{Conhecido na literatura por \foreign{single-particle relaxation time}, já que representa o tempo de vida do \foreign{quasi}-elétron no 2DES.} e de relaxação de momento~\cite{Sakaki:1995,Pagnossin:2005}.
+
+	Os métodos de extração das concentrações de elétrons e suas mobilidades (cap.~\ref{cap:metodos}) baseiam-se na suposição de que os campos magnéticos aplicados não alteram apreciavelmente as propriedades do 2DES, o que nem sempre é verdade~\cite{Sergio:2003}. Por outro lado, os efeitos de localização-fraca e interações entre elétron constituem métodos alternativos no limite $B \to 0$ que podem corroborar ou não os resultados obtidos dos efeitos Hall e Shubnikov-de Haas. Ademais, eles são sensíveis ao tempo de relaxação de fase dos (\foreign{quasi}-) elétrons, característica geralmente ignorada no transporte de cargas.
+
+	Assim, a idéia aqui é verificar se a formação dos pontos-quânticos também influi no tempo de relaxação de fase ($\tauphi$), e veremos no capítulo~\ref{cap:resultados} que isto de fato ocorre.
+
+	As várias amostras deste conjunto diferem entre si pelo estágio evolutivo em que os pontos-quânticos (QD, \foreign{quantum-dots}) se encontram e referir-nos-emos a esse estágio em termos da espessura nominal da camada de InAs ($d_\text{InAs}$, dada em monocamadas) depositada durante o crescimento das amostras (a seguir). Desta forma, pudemos abranger todos os estágios evolutivos dos QDs auto-organizados~\cite[cap.~2]{Pagnossin:2004}, desde as primeiras estruturas precursoras até a sua completa formação, quando já apresentam grande regularidade de tamanho e forma~\cite{Duarte:2002}. Utilizaremos seis amostras com espessuras nominais de $0$ (amostra-referência) a \unit{2,5}{\monocamadas}, todas com a seguinte estrutura básica:
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{BC}[][]{\LARGE BC}
+		\psfrag{BV}[][]{\LARGE BV}
+		\psfrag{GaAs}[][]{\LARGE GaAs}
+		\psfrag{InGaAs}[][]{\LARGE InGaAs}
+		\psfrag{InAs}[][]{\LARGE InAs}
+		\psfrag{7}[][]{\LARGE \colorbox{white}{\unit{7}{\nano\metre}}}
+		\psfrag{10}[][]{\LARGE \colorbox{white}{\unit{10}{\nano\metre}}}
+		\psfrag{8}[][]{\LARGE \colorbox{white}{\unit{8}{\nano\metre}}}
+		\psfrag{dSi1}[][]{\LARGE $\delta$-Si}
+		\psfrag{d}[l][l]{\LARGE $\dInAs$}
+		\psfrag{Substrato}[][]{\LARGE Substrato}
+		\psfrag{Superfície}[][]{\LARGE Superfície}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/profileQDs.eps}}
+		\caption{\label{fig:profile:QD}\footnotesize Representação do perfil de potencial da heteroestrutura das amostras contendo pontos-quânticos. O parâmetro que distingue as amostras é a espessura da camada de InAs: $\dInAs = 0$ (amostra-referência), \unit{1}{\monolayer}, \unit{1,5}{\monolayer} (os QDs se formam a partir daqui), \unit{1,75}{\monolayer}, \unit{2}{\monolayer} e \unit{2,5}{\monolayer}.}
+	\end{figure}
+
+	\begin{compactitem}
+		\item \textbf{Substrato} comercial semi-isolante de \especie{GaAs} com orientação cristalográfica $(001)$;
+		\item \foreign{buffer} de \unit{50}{\nano\metre} de \especie{GaAs};
+		\item \textbf{super-rede} composta por 10 períodos de \especie{AlAs/GaAs}, cada qual com 5 monocamadas de \especie{AlAs} e 10 de \especie{GaAs}. Esta camada tem aproximadamente \unit{84}{\nano\metre} de espessura;
+		\item outro \foreign{buffer} com \unit{200}{\nano\metre} de \especie{GaAs} afasta a região-ativa (a seguir) do substrato;
+		\item	a \textbf{região-ativa} (fig.~\ref{fig:heteroestrutura}) inicia-se com uma monocamada de \especie{GaAs} (camada $\delta$-Si) dopada com \unit{4\times\power{10}{16}}{\rpsquare\metre} ($\pm 10\%$) átomos de silício;
+		\item \foreign{spacer-layer} com \unit{7}{\nano\metre} de \especie{GaAs}, separando a camada $\delta$-Si do poço-quântico de InGaAs;
+		\item o poço-quântico de $\especie{In_yGa_{1-y}As}$ ($\text{y} = 16\%$, proporção atômica), com espessura de \unit{10}{\nano\metre}, constitui o principal canal de condução da heteroestrutura. O índice de proporção atômica ($\text{y}$) será omitido daqui para frente pois é constante em todas as amostras utilizadas. Assim, quando escrevermos InGaAs estaremos, na verdade, querendo dizer $\especie{In_yGa_{1-y}As}$;
+		\item	segunda camada de espaçamento, de \unit{8}{\nano\metre} de \especie{GaAs}, separando o QW dos pontos-quânticos;
+		\item	a camada de InAs tem espessura nominal $\dInAs$ própria para cada amostra (veja a tabela~\ref{tab:heteroestrutura}) e é nela que se formam os pontos-quânticos, quando $\dInAs \gtrsim \unit{1,5}{\monolayer}$. Antes disso é apenas um poço-quântico muito delgado;
+		\item outro \foreign{buffer} (\unit{50}{\nano\metre} de \especie{GaAs}) separa a camada de InAs da cobertura (a seguir) e da superfície da amostra;
+		\item	finalmente, a \textbf{cobertura} consiste numa camada de \unit{10}{\nano\metre} de GaAs uniformemente dopada com aproximadamente $10^{17}$ átomos de silício por \centi\cubic\metre. Sua função é a mesma da camada $\delta_3$ da seção anterior (e, portanto, uma forma alternativa de evitar a depleção de portadores).
+	\end{compactitem}
+
+	O perfil de potencial das bandas de condução e de valência (ponto $\Gamma$) da região-ativa está representada na figura~\ref{fig:profile:QDs}.
+
+	Daqui para frente, referir-nos-emos a cada uma dessas amostras pela respectiva espessura nominal da camada de arseneto de índio. Então, \eg, por ``amostra \unit{1,5}{\monolayer}'' estaremos nos referindo à amostra deste conjunto cuja espessura nominal da camada de InAs é \unit{1,5}{\monolayer}. No caso da amostra $\dInAs = 0$, poderemos nos referir a ela alternativamente por ``amostra-referência\rlap{.}''
+
+
+----------------
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{GaAs}[][]{\large\unit{200}{\angstrom} de GaAs}
+		\psfrag{WL}[][]{\large\foreign{Wetting-layer}}
+		\psfrag{QD}[][]{\large\colorbox{white}{\shortstack{Ponto-quântico\\de InAs}}}
+		\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/QDIP-unidade-basica.eps}}
+		\caption{\small ilutração de um período da heteroestrutura $\unit{2}{\monocamadas}_\text{InAs}+ \unit{200}{\angstrom}_\text{GaAs}$: a quantidade de períodos introduzidos na região-ativa define a amostra: fig.~\ref{fig:QDIP-set1}. Obs.: \foreign{wetting-layer} é o filme residual de InAs que permanece abaixo dos pontos-quânticos.}
+		\label{fig:unidade-basica}
+	\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	{
+	\begin{table}[tb]
+		\begin{minipage}[c]{\textwidth}
+			\setlength{\abovecaptionskip}{0.5cm}
+			\setlength{\belowcaptionskip}{0.5cm}
+			\centering
+			\caption{\small concentrações de elétrons da primeira ($n_1$) e segunda ($n_2$) sub-bandas, em \unit{\terad}{\centi\rpsquare\metre}.}
+			\begin{tabular}{c|>{\columncolor[gray]{0.9}}cc|>{\columncolor[gray]{0.9}}cc}
+					 Amostra & \multicolumn{2}{|c|}{$n_1$} & \multicolumn{2}{|c}{$n_2$} \\				
+					 \hline
+					 0 &       0,86 &       0,94 &       0,10 &       0,40 \\
+					 1 &       0,86 &       0,84 &       0,11 &       0,11 \\
+					 3 &       0,86 &       0,91 &       0,07 &       0,26 \\
+					 5 &       0,91 &       1,00 &       0,11 &       0,21 \\
+					 7 &       0,94 &       0,96 &       0,11 &       0,29 \\
+	         \hline
+	         	 & \textsl{escuro} &	\textsl{claro}	&	\textsl{escuro} & \textsl{claro}
+			\end{tabular}				
+		\end{minipage}\vspace{1cm}
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/concentracao-SdH}}
+			\captionof{figure}{\small concentrações de elétrons da primeira ($n_1$) e da segunda ($n_2$) sub-banda. Os símbolos escuros referem-se ao \textsl{escuro}; os claros, ao \textsl{claro}.}
+			\label{fig:ns}
+		\end{minipage}
+	\end{table}
+	}
+	
+	{
+	\begin{table}[tb]
+		\begin{minipage}[c]{\textwidth}
+			\setlength{\abovecaptionskip}{0.5cm}
+			\setlength{\belowcaptionskip}{0.5cm}
+			\centering
+			\caption{\small mobilidades quânticas da primeira ($\mu_1$) e da segunda ($\mu_2$) sub-banda, em \squaren\metre\per\volt\usk\second.}
+			\begin{tabular}{c|>{\columncolor[gray]{0.9}}cc|>{\columncolor[gray]{0.9}}cc}
+			   Amostra & \multicolumn{2}{|c|}{$\mu_1$} & \multicolumn{2}{|c}{$\mu_2$} \\				
+				 \hline
+				 0 &       0,13 &       0,29 &       7,03 &       3,11 \\
+				 1 &       0,12 &       0,13 &       2,06 &       2,18 \\
+				 3 &       0,14 &       0,11 &       0,39 &       0,53 \\
+				 5 &       0,11 &       0,10 &       0,35 &       0,58 \\
+				 7 &       0,16 &       0,16 &       1,08 &       1,08 \\
+				 \hline
+				 & \textsl{escuro} &	\textsl{claro}	&	\textsl{escuro} & \textsl{claro}
+			\end{tabular}
+		\end{minipage}\vspace{1cm}	
+		\begin{minipage}[c]{\textwidth}
+			\centering
+			\psfrag{X}[][]{\LARGE Amostra}
+			\psfrag{Y}[][]{\LARGE \rotatebox{90}{Mobilidade quântica (\squaren\metre\per\volt\usk\second)}}
+			\psfrag{M1}[][]{\LARGE $\mu_{q_1}$}
+			\psfrag{M2}[][]{\LARGE $\mu_{q_2}$}
+			\psfrag{IL}[][]{\LARGE Iluminação}
+			\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/mobilidade-SdH}}
+			\captionof{figure}{\small mobilidades quânticas da primeira ($\mu_1$) e da segunda ($\mu_2$) sub-banda do poço-quântico. Os símbolos escuros referem-se à situação \textsl{escuro}; os claros, à \textsl{claro}.}
+			\label{fig:mus}
+		\end{minipage}
+	\end{table}
+	}

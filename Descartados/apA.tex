@@ -1,0 +1,35 @@
+
+		\begin{center}
+			\rule{0.5\textwidth}{0.1pt}
+		\end{center}
+
+		Vamos refinar um pouco. Na teoria semi-clássica de Sommerfeld (o passo seguinte em termos de refinamento físico e matemático), os elétrons são representados por ondas planas\footnote{Ou seja, os elétrons são livres de interações.} que satisfazem as condições de contorno de Born-Von Karman\rlap{.}\footnote{$\iprod{\vetor r + L_\iota\,\hat\iota}{\vetor k} = \iprod{\vetor r}{\vetor k}$, sendo $L_\iota$ a dimensão da amostra na direção $\iota = \{x,y,z\}$.} Agora a dinâmica do efeito Hall, ilustrada pela figura~\ref{fig:efeito-Hall}, é regida pelas equações
+		\begin{equation}\label{eq:semi-classica}
+		\dot{\vetor r} = \frac{1}{\hbar}\,\vetor\nabla_{\vetor k}\varepsilon(\vetor k) \qquad\text{e}\qquad 
+			\hbar\,\dot{\vetor k} = -\eCharge\,\left( \vetor E + \dot{\vetor r}\,\times \vetor H\right) = \vetor 0.
+		\end{equation}
+
+		A energia do estado $\ket{\vetor k}$ é $\varepsilon(\vetor k) = \hbar^2\,k^2/\left(2\,m_0\right)$, o que nos leva de volta a \eqref{eq:Drude}, posto que $\vetor v = \hbar\,\vetor k/m_0$ neste caso. Portanto, as equações~\ref{eq:efeito-Hall} não sofrem alteração.
+
+		\begin{center}
+			\rule{0.5\textwidth}{0.1pt}
+		\end{center}
+
+		Podemos melhorar ainda mais. A teoria de Bloch procura descrever os efeitos do material no qual os elétrons se encontram inserindo na equação de Schrödinger um potencial $U(\vetor r)$ com a periodiciadade da rede cristalina, assim: $U(\vetor r +\vetor R) = U(\vetor r)$, onde $\vetor R$ é um vetor da rede de Bravais. Assim, um autoestado $\ket{b,\vetor k}$ é definido pelo índice da \textbf{b}anda $b \in \mathbb{N}$ e pelo vetor de onda $\vetor k$, que pertence à primeira zona de Brillouin\footnote{Esta é a chamada representação da zona (de Brillouin) reduzida. Alternativamente, podemos escrever $\ket{\vetor k}$ se não limitarmos $\vetor k$ (mas esta representação não é utilizada).} (ignoramos o spin). A relação de dispersão $\varepsilon_b(\vetor k)$ é não-trivial, mas em geral $\vetor k_F$ (o vetor de onda de Fermi) é muito menor\footnote{Estimativa de vetor de onda de Fermi.} que os limites da zona de Brillouin\footnote{Estimativa.}. Por este motivo, podemos expandir $\varepsilon_b(\vetor k)$ em torno de $\vetor k_0$ e utilizar a aproximação da massa efetiva, obtendo
+		$$
+		\varepsilon_b(\vetor k) \approx \varepsilon_b(\vetor k_0) + \frac{\hbar^2}{2\mEff_b}\,\left( \vetor k - \vetor k_0 \right)\rlap{,}^2
+		$$
+		onde $\mEff_b$ é a massa efetiva da banda $b$. No nosso caso (GaAs, AlGaAs, \etc), $\vetor k_0 = 0$ (ponto $\Gamma$ da primeira zona de Brillouin) e fazemos $\varepsilon_b(\vetor k_0) = 0$ para simplificar. E como antes, utilizando a equação acima em~\eqref{eq:semi-classica}, obtemos o resultado~\eqref{eq:efeito-Hall}.
+
+		Mas há um detalhe importante que deixamos de lado: ao deduzir~\eqref{eq:efeito-Hall}, avaliamos somente a componente $\hat y$ das equações \ref{eq:Drude} e~\ref{eq:semi-classica}. Em $\hat x$ temos $-\eCharge\,E_x = 0$, o que implica em $I = 0$. Se isso fosse verdade, $\vetor v = \vetor 0$ e também a força magnética. Logo, não haveria efeito Hall. E de fato não há quando $I = 0$, mas este não é o caso. O problema aqui é que não incluimos a influência dos espalhamentos (colisões) dos elétrons. Isso é feito incluindo em~\eqref{eq:Drude} [ou~\eqref{eq:semi-classica}] a força de espalhamento $-\vetor p/\tau_0$:
+		$$
+		\vetor F = -\cargaeletron(\vetor E+\vetor v\times\vetor H) - \frac{\vetor p}{\tau_0} = \vetor 0.
+		$$
+
+		$\vetor p = m\,\vetor v$ na teoria de Drude e igual a $\hbar\,\dot{\vetor k}$ nas semi-clássicas (Sommerfeld e Bloch). $\tau_0$ é chamado de o tempo de relaxação do momento e interpretado como o tempo médio no qual um elétron perde ou ganha o momento $\vetor p$ (conseqüentemente, $1/\tau_0$ é a taxa de relaxação\footnote{``Relaxação'' significa justamente isso: ``troca\rlap{.}''} do momento). As teorias de Drude e Sommerfeld atribuem incorretamente aos íons da rede cristalina a responsabilidade por essa troca de momento (espalhamentos ou, se preferir, colisões). Por outro lado, na teoria de Bloch uma rede perfeita não promove espalhamento, de modo que $1/\tau_0 = 0$. Isto tampouco é verdadeiro, já que $\tau_0$ é finito. Então, ocorre que os espalhamentos se devem às imperfeições na rede, como dopagens (que podemos controlar), impurezas, defeitos, fônons, \etc.
+
+		Na teoria de Bloch, a inclusão do potencial $U(\vetor r)$ dá origem à relação de dispersão $\varepsilon_b(\vetor k)$
+
+		Uma outra conseqüência interessante do modelo Bloch aplicado é a distribuição
+
+		A despeito dessas distinções teóricas importantes\rlap{,}\footnote{E de fato são. Por exemplo, a base e o coletor de um transístor bipolar são qualitativamente idênticas, distinguindo-se pelo tamanho e pela dopagem (um tipo de defeito controlável na estrutura cristalina), ou seja, por $\tau_0$. Se essa relação entre dopagem e $\tau_0$ não existisse, como sugere Drude, não poderíamos construir tais dispositivos.} o resultado~\eqref{eq:efeito-Hall} permanece inalterado. Ao leitor interessado, sugerimos as referências~\cite[p.~23]{Datta:1990} e~\cite[p.~32]{Pagnossin:2004} para maiores detalhes.

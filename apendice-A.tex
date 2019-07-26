@@ -1,0 +1,52 @@
+	Na figura da página \pageref{fig:R-LB} assumimos que os elétron nos estados de borda desgarrados (em vermelho na figura) percorrem o interior da amostra sem interagir com outros estados de borda até atingirem o contato $i$, onde as energias se equilibram em $\mu_i$. Supomos isso por simplicidade e porque a presença dos platôs Hall indica condução não-dissipativa. Ademais, esta configuração explica nossos resultados, conforme expusemos naquele capítulo. Mas curiosamente, aceitar que os elétrons interagem nas regiões circuladas da figura \ref{fig:R-LB} (nessas regiões, a probabilidade de sobreposição dos estados de borda é maior e, com ela, a de espalhamento) não afeta o resultado. O objetivo deste apêndice é demonstrar isso e ilustrar ao leitor como escrever e resolver a equação de Landauer-Buttiker de forma fácil.
+
+	A figura \ref{fig:cfg-alternativa} ilustra a nova configuração, onde introduzimos quatro ``contatos virtuais'' dentro da rede de antipontos (representada pelo retângulo tracejado, por simplicidade). O fluxo de corrente é igual àquele da figura \ref{fig:R-LB}, exceto que agora permitimos haver $\mu_A \ldots \mu_D$.
+
+	Assim, o contato $2$ injeta $N$ estados de borda na amostra e todos chegam no \textit{contato} $A$. O contato $A$ também injeta $N$ ($ = N + M$) estados, dos quais $M$ atingem $D$ e $N-M$, o contato $B$. E assim por diante. Observe que não há acúmulo de cargas na amostra, posto que todos os contatos injetam e recebem $N$ estados na amostra, mesmo os virtuais. Com isso em mente, o primeiro passo é definir a matriz de transmissão ($T$).
+
+	Faça uma tabela com $10$ linhas e $10$ colunas (pois temos dez contatos), conforme abaixo. As colunas indexam os contatos de origem e as linhas, os de destino. Preenchemos a tabela da esquerda para a direita, coluna após coluna. Por exemplo, o contato $1$ ``envia'' $N$ estados para o $2$, de modo que o elemento $T_{21} = N$; o contato $2$ envia $N$ estados para o $A$: $T_{A2} = N$. Já o contato $A$ envia $N-M$ para o $B$ e $M$ para o $D$. Logo, $T_{BA} = N - M$ e $T_{DA} = M$. E assim sucessivamente. Isto nos leva à matriz de transmissão.
+
+	\begin{center}
+	\begin{tabular}{c|cccccccccc}
+		     & 1   & 2   & $A$   & $B$ & 3   & 4   & 5   & $C$   & $D$ & 6   \\
+		 \hline
+		 1   &     &     &       &     &     &     &     &       &     & $N$ \\
+ 		 2   & $N$ &     &       &     &     &     &     &       &     &     \\
+ 		 $A$ &     & $N$ &       &     &     &     &     &       &     &     \\
+ 		 $B$ &     &     & $N-M$ &     &     &     &     &  $M$  &     &     \\
+ 		 3   &     &     &       & $N$ &     &     &     &       &     &     \\
+ 		 4   &     &     &       &     & $N$ &     &     &       &     &     \\
+ 		 5   &     &     &       &     &     & $N$ &     &       &     &     \\
+ 		 $C$ &     &     &       &     &     &     & $N$ &       &     &     \\
+ 		 $D$ &     &     &  $M$  &     &     &     &     & $N-M$ &     &     \\
+ 		 6   &     &     &       &     &     &     &     &       & $N$ &
+	\end{tabular}
+	\end{center}
+
+	Agora colocamos o termo $-(N_i + R_i)$ da equação \ref{eq:LB} em todos os elementos da diagonal principal. No nosso caso, como nenhum estado é refletido de volta para o contato que o emitiu, $R_i = 0$ sempre. Além disso, todos os contatos injetam $N$ estados na amostra, de modo que $N_i = N$, qualquer que seja $i$. Logo, basta colocarmos $-N$ em todos os elementos da diagonal principal.
+
+	Finalmente, escrevemos a tabela em forma matricial, multiplicando-a à direita pela matriz de potenciais dos contatos (elementos $V_i$) e igualando-a à de correntes:
+
+	$$
+	\left(\begin{matrix}
+	I \\ 0 \\ 0 \\ 0 \\ 0 \\ -I \\ 0 \\ 0 \\ 0 \\ 0 \\
+	\end{matrix}\right) 
+   =
+	\left(\begin{matrix}
+		 $-N$ &       &       &     &     &     &     &       &     & $N$ \\
+ 		 $N$  & $-N$  &       &     &     &     &     &       &     &     \\
+ 		      &  $N$  & $-N$  &     &     &     &     &       &     &     \\
+ 		      &       & $N-M$ & $-N$&     &     &     &  $M$  &     &     \\
+ 		      &       &       & $N$ & $-N$&     &     &       &     &     \\
+ 		      &       &       &     & $N$ & $-N$&     &       &     &     \\
+ 		      &       &       &     &     & $N$ & $-N$&       &     &     \\
+ 		      &       &       &     &     &     & $N$ & $-N$  &     &     \\
+ 		      &       &  $M$  &     &     &     &     & $N-M$ & $-N$&     \\
+ 		      &       &       &     &     &     &     &       & $N$ & $-N$
+	\end{matrix}\right) \cdot
+	\left(\begin{matrix}
+	V_1 \\ V_2 \\ V_A \\ V_B \\ V_3 \\ V_4 \\ V_5 \\ V_C \\ V_D \\ V_6 \\
+	\end{matrix}\right)
+	$$
+
+, sendo que $I_1 = -I_4 = I$ e os outros elementos são nulos

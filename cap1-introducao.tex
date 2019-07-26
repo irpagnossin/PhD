@@ -1,0 +1,96 @@
+
+		%O primeiro deles visa criar uma rede periódica de potencial espalhador através da qual podemos estudar muitos fenômenos, como espalhamento de spins~\cite{yuriy}, efeito Hall ferromagnético, comensurabilidade entre campo magnético e estrutura cristalina (Hofstadter \foreign{Hofstadter:1976})~\cite{Geisler:2004}, caos determinístico~\cite{Choque:2002} e o formalismo de Landauer-Büttiker como uma visão alternativa para o efeito Hall quântico~\cite{Johnson:1992-1,Johnson:1992-2,Ishizaka:1993}.
+
+	Segundo A.~J.~Severino~\cite[p.~150]{Severino:2000}, ``a tese de doutorado (...) trata da abordagem de \emph{um único} tema\rlap{,}'' mas por diversas razões desenvolvemos não um, mas três tópicos neste trabalho, todos envolvendo pontos-quânticos \cite{Duarte:2002}. Por esta razão este capítulo e o de resultados serão fracionados em três partes: ``fotodetectores de infravermelho\rlap{,}'' ``localização-fraca'' e ``estados de borda contra-rotativos\rlap{.}''
+
+	\section{Fotodetectores de infravermelho (QDIPs)}\label{sec:intro:QDIP}
+
+	Na última década as fibras ópticas de sílica vêm substituindo os antigos fios de cobre e possibilitando uma nova gama de aplicações, desde procedimentos cirúrgicos até simples decorações domésticas. As fibras ópticas atuais apresentam um mínimo local de atenuação para radiações com comprimento de onda de \unit{1,3}{\micro\metre} e um mínimo absoluto para de \unit{1,5}{\micro\metre}, isto é, sinais com estas freqüências podem percorrer distâncias muito maiores (dezenas a centenas de vezes) nas fibras ópticas antes de serem perdidos em meio aos ruídos. Para as telecomunicações, isto implica não só na redução da energia utilizada, mas também na redução significativa do número de repetidores numa longa linha de transmissão de dados e, conseqüentemente, na redução dos custos de instalação e manutenção. Isto afeta os preços praticados e, por conseguinte, a economia de um país e do mundo.
+
+	Todavia, foi só há alguns poucos anos que as primeiras emissões em \unit{1,3}{\micro\metre} foram atingidas \cite{Joyce:2001,Mike:2003-1}, e apenas ainda mais recentemente (em meados de 2002), o LNMS conseguiu fabricar pontos-quânticos (QD, \foreign{quantum-dots}) que emitem fótons de \unit{1,5}{\micro\metre} \cite{Mike:2003-2}, tornando-se um dos primeiros laboratórios no mundo a obter tal resultado, e a despeito de alguns trabalhos que impossibilitavam a obtenção de pontos-quânticos com o tamanho necessário para isso \cite{Joyce:2001}.
+
+	Além disso, devido ao confinamento tridimensional dos elétrons nos QDs, os QDIPs (\foreign{quantum-dots infrared photodetector}) oferecem uma série de vantagens, como baixa corrente de escuro e temperaturas de operação mais elevadas \cite{Tang:2002,Phillips:2002,Ryzhii:2001}. Por essas razões diversos grupos de pesquisa estão em busca de otimizações.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{1}[][]{\Large \ding{172}}
+		\psfrag{2}[][]{\Large \ding{173}}
+		\psfrag{E}[r][r]{\Large $\varepsilon$}
+		\psfrag{X}[l][l]{\Large $x$ ou $y$}
+		\psfrag{Z}[][]{\Large $z$}
+		\resizebox{\textwidth}{!}{\includegraphics{figuras/QDIP.eps}}
+		\caption{\small (a) seqüência de crescimento das camadas semicondutoras de um QDIP; (b) representação esquemática do perfil de potencial da banda de condução da \emph{unidade básica}. Esta não é a estrutura estudada neste trabalho.}
+		\label{fig:QDIP}
+	\end{figure}
+
+	Embora atualmente vários grupos de pesquisa tenham um excelente domínio da tecnologia de crescimento de diferentes tipos de sistemas contendo pontos-quânticos (o nosso inclusive), suas aplicações têm sido previstas e experimentadas apenas recentemente, não apenas como detectores de radiação infravermelha \cite{Chu:2001,Yusa:1997,Chen:2002,Raghvan:2002,Feng:2002}, mas também como lasers \cite{Fafard:1996,Bimberg:1999}, memórias ópticas \cite{Lee:1999,Shields:1999}, transistores monoeletrônicos \cite{Kim:2000}, traçadores biológicos \cite{Dubertret:2002} e LEDs orgânicos \cite{Coe:2002}.
+
+	A primeira demonstração de que os pontos-quânticos são eficientes detectores de radiação infravermelha foi reportada em 1998 por S. J. Xu \etal~\cite{Xu:1998}. A partir desta data, estruturas com diferentes arquiteturas têm sido propostas para a confecção destes fotodetectores e suas potencialidades estão sendo testadas (veja, eg, a ref.~\citealt{Su:2004}). Este também é o nosso intuito.
+
+	A função de um fotodetector é transformar excitações ópticas específicas em sinais elétricos. Isto é feito através dos três seguintes processos, nesta ordem: \textbf{(i)} geração de portadores pela luz incidente, \textbf{(ii)} transporte dos portadores e \textbf{(iii)} interação da corrente fotogerada com o circuito externo. A figura~\ref{fig:QDIP} ilustra o perfil de potencial da região-ativa de um QDIP transversal\footnote{Os QDIPs podem ser de dois tipos: verticais \cite{Ryzhii:1996}, quando a corrente elétrica percorre as diversas camadas da heteroestrutura; ao longo da direção do crescimento ($z$), ou transversais, quando a corrente elétrica percorre a amostra no plano $xy$.} típico \cite{Lee:1999}, que consiste na repetição de uma \emph{unidade básica}, composta de um poço-quântico (InGaAs na figura) contendo pontos-quânticos (InAs, por exemplo) no seu interior. As dopagens planares fornecem elétrons para o canal (poço-quântico), onde são armadilhados pelos pontos-quânticos até que fótons de energia específica os retirem de lá.
+
+	O material semicondutor de que são formados os pontos-quânticos tem um \foreign{gap} entre as bandas de valência e condução menor que o do material hospedeiro (InGaAs), de sorte que os níveis de energia dos pontos-quânticos estão abaixo daquele(s) do poço-quântico. Essa diferença de energia ($=h\nu$) deve ser ajustada, através da largura do poço-quântico e do tamanho dos pontos-quânticos, de modo que $\nu$ seja a freqüência do sinal que queremos medir com o fotodetector. Assim, quando um fóton com energia $h\nu$ incidir sobre a heteroestrutura, ele promoverá a transição de um elétron no nível \emph{localizado} \ding{172} para o \ding{173}, \emph{estendido} (figura). Ali o elétron será transportado na direção $x$ por um campo elétrico (aplicado externamente) até a extremidade da estrutura, estabelecendo uma corrente elétrica que pode ser medida externamente.
+
+	Para ter bom desempenho, os fotodetectores devem ter alta sensitividade, alta velocidade de resposta e ruído mínimo. Além disso, devem ser compactos, devem utilizar baixas voltagens e correntes e ser confiáveis sob as condições de operação. O ganho fotocondutivo de um fotodetector pode ser expresso como $\mu\tau E/L$, onde $E$ é o campo elétrico no canal condutor, $L$ é o espaçamento entre os eletrodos e $\mu$ e $\tau$ são a mobilidade de transporte e o tempo de vida dos portadores fotoexcitados, respectivamente \cite{Lee:1999}. Esta equação nos indica que para melhorar o desempenho de um fotocondutor devemos ter portadores com alta mobilidade e longo tempo de vida no canal condutor. Em particular, o bom desempenho de fotodetectores de pontos-quânticos depende das seguintes características ideais:
+
+	\begin{compactitem}
+
+		\item a \textbf{concentração de dopantes} e a \textbf{distância} deles ao poço-quântico devem ser dimensionadas de tal modo que na ausência de fótons com energia $h\nu$ todos os elétrons estejam armadilhados pelos pontos-quânticos. A presença de um sistema bidimensional de elétrons (2DES) residual no poço-quântico dá origem à chamada \emph{corrente de escuro} (\foreign{dark current}), que reduz a sensibilidade do dispositivo. Esta adequação, por sua vez, dependerá também da \textbf{densidade dos pontos-quânticos} e do tamanho deles;
+
+		\item o \textbf{tamanho dos pontos-quânticos} deve ser tal que eles tenham apenas um estado ligado. Isto garante, primeiro, que depois de excitados pela radiação infravermelha eles não agem mais como centros espalhadores coulombianos, posto que agora estão neutros; e segundo, que não sejam sensíveis a outros fótons que não os $h\nu$ (esta condição deve ser satisfeita em conjunto com a seguinte). Para se obter pontos-quânticos de InAs, por exemplo, com dimensões adequadas deve-se adotar baixas temperaturas de crescimento e baixas taxas de deposição de InAs ($\sim\unit{0,3}{\angstrom\per\second}$);
+
+		\item a \textbf{largura} e/ou a \textbf{altura do poço-quântico} devem ser tais que ele contenha apenas um estado, garantindo que não haja outra transição diferente da \ding{172}$\to$\ding{173}, ou seja, que o QDIP não seja sensível a outros comprimentos de onda;
+
+		\item o \textbf{tempo de vida} ($\tau$) dos portadores no estado \ding{173} e sua \textbf{mobilidade} ($\mu$) devem ser longos para que possam gerar corrente elétrica antes de serem novamente capturados pelos pontos-quânticos. Isto pode ser feito afastando-se o 2DES tanto da dopagem como dos pontos-quânticos. Alternativamente, a dopagem pode ser feita nos próprios pontos-quânticos \cite{Lee:2006};
+
+		\item a \textbf{intensidade da corrente} fotogerada deve ser maximizada, o que pode ser feito empilhando-se várias \emph{unidades básicas} (figura). No entanto, esta arquitetura pode gerar tensões internas que ocasionam degradação da morfologia dos pontos-quânticos. Este tipo de efeito foi recentemente observado em algumas estruturas utilizadas para o desenvolvimento de fotodetectores transversais \cite{Chen:2002} e a sua influência no desempenho deles começa a ser testada;
+
+	\end{compactitem}
+
+	Outras complicações são a inomogeneidade de tamanho e da distribuição dos pontos-quânticos. O primeiro transforma o nível \ding{172} numa banda de energia de largura proporcional à inomogeneidade de tamanho; o segundo reduz o tempo de vida do elétron no estado \ding{173}.
+
+	Portanto o dimensionamento e a otimização dos QDIPs depende de uma série de parâmetros e é nossa intenção investigar as propriedades dos portadores fotogerados para várias combinações deles, procurando otimizar estruturas já apresentadas e/ou mesmo propor outras. A construção de um fotodetector completo \textbf{não} é o nosso objetivo atual, haja vista que isto requer infra-estrutura da qual não dispomos.
+
+	\section{Localização-fraca}
+
+	Nos últimos quinze anos, trabalhos teóricos e experimentais sobre a condutividade de amostras desordenadas em baixíssimas temperaturas levaram a avanços na teoria quântica do transporte de cargas, proposta por Boltzmann \cite[p.~319]{Ashcroft:1976}\rlap{.}\footnote{Esta teoria institui que a função de distribuição dos elétrons num estado de condução de corrente elétrica difere da função de Fermi por um valor proporcional à taxa de troca de momento do elétron. Assim, dado um mecanismo de espalhamento que leve um elétron de um estado $\vetor k$ para outro, é possível determinar a função de distribuição fora do equilíbrio e, daí, as propriedades estatísticas dos elétrons (corrente, tensão, mobilidade, \etc).} Além disso, na última década este trabalho tem sido extendido para amostras com alta mobilidade \cite{Eshkol:2006,Thillosen:2006,Desrat:2006}.
+
+	Para sistemas bidimensionais, a condutividade elétrica em campo magnético nulo em baixas temperaturas decresce logaritmicamente com o decréscimo na temperatura. Este aspecto não-clássico dos portadores têm sido interpretado através de dois mecanismos distintos, a saber: a localização-fraca (WL, \foreign{weak-localization}) e interações elétron-elétron (EEI, \foreign{electron-electron interaction}).
+
+	O primeiro deles tem origem na interferência construtiva das funções de onda de portadores percorrendo um mesmo percurso, mas em sentidos opostos. Na presença de campos magnéticos ($B$) pouco intensos, as funções de onda adquirem uma fase adicional que destrói a coerência inicial ($B = 0$), o que resulta na magnetorresistência negativa (\ie, magnetocondutância positiva). Partículas com \foreign{spin} comportam-se de modo diferente e a magnetorresistência anômala resulta de uma competição da localização-fraca com a assim chamada antilocalização-fraca: acoplamentos \foreign{spin}-órbita introduzem transições aleatórias entre os estados de \foreign{spin} dos elétrons que são espalhados através das trajetórias temporalmente inversas. Daí resulta a supressão da localização-fraca e, eventualmente, até mesmo a presença de um comportamento oposto, evidenciado pela presença do ``pico de anti-localização'' em $B = 0$. A largura deste pico é determinada pelo tempo de coerência de fase do elétron e sua amplitude, pela razão entre este e o tempo de espalhamento \foreign{spin}-órbita. 
+
+	Hoje, a teoria da localização-fraca está bem estabelecida como um método eficiente de obter os tempos de relaxação de fase e de \foreign{spin} do elétron.
+
+	Devido ao rápido desenvolvimento da spintrônica, que visa manipular o \foreign{spin} ao invés da carga do elétron em dispositivos ``spintrônicos\rlap{,}'' o interesse nas propriedades de spin de poços-quânticos (QW, \foreign{quantum-well}) e de outras heteroestruturas semicondutoras vem crescendo entre os pesquisadores, particularmente no que tange a interação \foreign{spin}-órbita \cite{Studenikin:2003,Minkov:2004}. Por outro lado, o tempo de coerência de fase do elétron é uma das propriedades mais importantes desses sistemas, posto que determina o limite quântico dessas amostras. Ademais, provê informações acerca das interações elétron-elétron e elétron-fônon.
+
+	Mas ainda faltam estudos sistemáticos sobre o tempo de coerência em sistemas bidimensionais de elétrons com alta mobilidade. Por exemplo, ainda não há qualquer estudo experimental sobre a relação entre o tempo de coerência e o caminho livre médio, particularmente através do método da localização-fraca. De qualquer forma, a dependência do tempo de relaxação de fase com a temperatura e com a condutividade (ou, se preferir, com o caminho livre médio) é de fundamental importância para uma compreensão dos processos de espalhamento inelásticos em tais sistemas.
+
+	Nós empregamos os efeitos de localização-fraca e interações entre elétrons para obter os tempos de coerência e espalhamento \foreign{spin}-órbita de um sistema bidimensional de elétrons próximos a uma camada com pontos-quânticos autoformados. Observamos que o tempo de coerência depende do estágio evolutivo dos pontos-quânticos. Mais que isso, a variação observada sugere que a tensão mecânica acumulada durante o crescimento da camada que dá origem aos pontos-quânticos ``congela'' os elétrons do 2DES.
+
+	Esta parte do trabalho foi desenvolvida em parceria com o professor visitante A. K. Meikap.
+
+	\section{Estados de borda contra-rotativos}
+
+	Embora ainda haja controvérsias \cite{Prange:1990}, atualmente é bastante aceita a explicação do efeito Hall quântico inteiro com base nos chamados \textit{estados de borda}, proposta inicialmente por Halpering \cite{Halperin:1982}, em 1982. Segundo ela, quando o fator de preenchimento $\nu$ é um número inteiro, existem $\nu$ estados estendidos ao longo da periferia da amostra que conduzem a corrente elétrica sem dissipação de energia. Esta concepção do fenômeno permite utilizar o formalismo de Landauer-Buttiker \cite{Barnes} para equacioná-lo e obter corretamente o resultado experimental
+	$$
+	R_H = \frac{h}{e^2}\,\frac{1}{\nu},
+	$$
+onde $R_H$ é a resistência Hall.
+
+	Esta relação entre estados de borda e a resistência Hall ocorre devido à influência do campo magnético, que destrói a simetria temporal do transporte de cargas e impõe aos elétrons circularem pela amostra no sentido horário (campo magnético apontando para o leitor). Topologicamente, diz-se que um estado de borda é enantiomorfo (\foreign{chiral}), ou seja, ele e sua imagem refletida num espelho não se sobrepõem. 
+
+	Contudo, alguns trabalhos teóricos prevêem a existência de estados que percorrem a amostra no sentido oposto ao usual. Por exemplo, Thouless \etal\ \cite{Thouless:1982} estudaram a influência de campos magnéticos intensos e potenciais periódicos bidimensionais fracos sobre o 2DES. Tal potencial introduz nos níveis de Landau uma estrutura fractal chamada de borboleta de Hofstadter (\foreign{Hofstadter's butterfly}) \cite{Hofstadter:1976}, que pode resultar em resistências Hall negativas. Este fenômeno foi atribuído a estados de borda que percorrem a amostra no sentido oposto ao usual \cite{MacDonald:1984}. Outro exemplo: para uma tira bidimensional a resistência Hall é dada por 
+	$$
+	R_H = \frac{h}{e^2}\,\frac{1}{N-M},
+	$$
+onde $N$ é a quantidade de estados de borda ``normais'' e $M$, o de estados ``contra-rotativos'' \cite{MacDonald:1984,Ishizaka:1993}. Outra possibilidade é utilizar uma rede bidimensional de pontos-quânticos conectados sob a ação de campos magnéticos intensos: Johnson \etal\ \cite{Johnson:1992-1} utilizaram a equação de Landauer-Büttiker para mostrar que, na presença de estados de borda \textsl{normais} e \textsl{contra-rotativos}, este sistema apresenta platôs Hall dados por
+	$$
+	R_H = \frac{h}{e^2}\,\frac{N-M}{N^{2}+M^{2}},
+	$$
+desde que os estados sejam independentes e só interajam nos contatos.
+
+	Se a probabilidade de transmissão do elétron entre os pontos-quânticos for igual a um, ele poderá percorrer livremente o interior da rede de pontos-quânticos no sentido anti-horário (considerando o campo magnético apontando para o leitor). Por outro lado, quando a probabilidade de transmissão é próxima de zero, o elétron fica confinado no ponto-quântico, percorrendo-o no sentido horário. Em situações intermediárias podemos ter tanto estados normais como contra-rotativos \cite{Johnson:1992-2}.
+
+	Contudo, a fabricação dessas redes bidimensionais de pontos-quânticos conectados é muito difícil, posto que qualquer variação na taxa de transmissão entre pontos-quânticos pode destruir os estados contra-rotativos. Além disso, a escala de campo magnético na qual os estados contra-rotativos podem ser observados depende da razão entre o fluxo magnético através de uma célula da rede e o \foreign{quantum} de fluxo magnético ($\Phi_0 = h/e$), o que implica em pontos-quânticos tão próximos quanto \unit{100}{\nano\metre} para \unit{1}{\tesla}. Apenas recentemente redes como essas foram fabricadas em heteroestruturas de GaAs/AlGaAs e comportamentos anômalos na condutância Hall foram observadas, associados com a complexidade da estrutura espectral dos níveis de Landau \cite{Geisler:2004}.
+
+	Ao procurar pela ocorrência do efeito Hall ferromagnético \cite{Muraki:2001} em 2DES sujeitos a um potencial periódico, deparamo-nos com um comportamento anômalo do efeito Hall quântico inteiro, o qual atribuímos aos estados de borda contra-rotativos, conforme os trabalhos de Johnson \etal\ \cite{Johnson:1992-1,Johnson:1992-2}. Além deste trabalho e o do de Geisler \etal\ \cite{Geisler:2004}, temos notícia de apenas mais um trabalho experimental que reporta comportamento anômalo nos platôs do efeito Hall quântico: ref. \citealt{Takehana:2006}.

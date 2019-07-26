@@ -1,0 +1,126 @@
+
+\pagebreak
+\section[Para relaxar...]{Para relaxar:\\ uma abordagem não matemática da força de Coriolis}
+
+	As seções ``para relaxar'' não têm relação alguma com o trabalho apresentado. Sinta-se o leitor a vontade para pulá-los, se quiser.
+
+	A abordagem tradicional da força de Coriolis baseia-se inteiramente em cálculo vetorial, relacionando a representação do vetor de aceleração de um corpo em dois referenciais distintos, cada qual em rotação com relação ao outro. O objetivo sempre é mostrar que a representação da segunda lei de Newton no referencial em rotação requer um termo $-2m\vetor\omega \times \vetor v$, chamado de \textit{força de Coriolis}. Nesta expressão, $m$ é a massa do corpo, $\vetor\omega$ é o vetor de rotação do referencial e $v$ é a velocidade do corpo com relação ao referencial em movimento. E por se tratar de manipulações matemáticas, a compreensão do fenômeno fica limitada ao termo ``força fictícia\rlap{,}'' que só existe em referenciais com movimento de rotação entre si. Visando contornar esta situação, apresentamos abaixo uma explicação qualitativa.
+
+	Há quatro pontos que precisamos analisar, a saber: movimento em direção a cada um dos pontos cardeais, a partir de ambos os hemisférios.
+
+	Imagine-se parado em frente a uma esteira rolante (como aquelas nos caixas dos supermercados), movendo-se da direita para a esquerda a uma velocidade qualquer. Se você intensionalmente der um passo à frente com o intuito de subir na esteira, sentirá um ``empurrão'' para a direita, tentando derrubá-lo: trata-se da sua inércia; sua tendência de permanecer parado. Agora consideremos o contrário: você está na esteira, movendo-se com ela, e vê o chão mover-se da esquerda para a direita. Ao tentar descer (imagine que você faça isso de costas, apenas para simplificar a explicação) você sentirá uma força empurrando-o para a esquerda. Mais uma vez trata-se da inércia; agora, de permanecer em movimento com a esteira. Resumindo, se você vai de um local para o outro, com movimento relativo entre eles, fatalmente você sentirá a ação de uma força ``desconhecida'' que é, em verdade, sua inércia. Esta idéia explica os efeitos dos pontos norte e sul.
+
+	Agora suponha que você está no hemisfério sul do globo terrestre. O ponto da superfície em que você se encontra gira ao redor do eixo da Terra a uma certa velocidade. Ao mover-se para o norte (sul), você passa para um paralelo que gira a uma velocidade ligeiramente maior (menor) e ocorre o ilustrado no parágrafo anterior: você sente uma força empurrando-o para a oeste (leste). O oposto ocorre no hemisfério norte: ao mover-se para o sul (norte), você passa para um paralelo de maior (menor) velocidade e, conseqüentemente, sente uma força para oeste (leste).
+
+	Para compreendermos os outros dois pontos cardeais (leste e oeste), consideremos outro exemplo: imagine-se dirigindo um carro fazendo uma circunferência de raio constante, numa situação em que o carro está prestes a desgarrar-se da pista. Se você acelerar, certamente será jogado para uma circunferência de raio maior. Novamente, este é um efeito devido exclusivamente à inércia. Se, ao contrário, você diminuir a velocidade, o raio de sua circunferência diminuirá.
+
+	Agora suponha-se novamente no hemisfério sul (norte). Caso ande para leste, na direção do movimento da Terra, você aumentará sua velocidade de rotação e, com isso, será impelido a percorrer uma circunferência de raio maior, como no caso do carro acima. Esta tendência que você sente dirige-se radialmente para fora da circunferência, perpendicularmente ao \textit{eixo de rotação} da Terra, \ie, obliquamente à superfície. Decompondo esta ``força'' em componentes perpendicular e paralela à supefície, verificamos que no plano da superfície terrestre você será ``empurrado'' para o norte (sul). Situação inversa ocorre ao deslocar-se para oeste: você será ``empurrado'' para sul (norte).
+
+	Assim, no hemisfério sul (norte) a força de Coriolis age para a esquerda (direita) do deslocamento, conforme prevê a teoria vetorial.
+
+	É interessante observar que, nos casos dos movimentos para leste (oeste), a componente normal à superfície da ``força'' faz você sentir-se mais leve (pesado): é o efeito Eötvös.
+
+%----------------------------------------------------------------------------------------------------------------
+\section[Para relaxar...]{Para relaxar:\\OOP em Física e o argumento de Hofstadter}
+
+	Nas seções \textsl{para relaxar} anteriores falamos de didática e teoria de vôo. Agora, para finalizarmos este trabalho, vejamos um pouco de filosofia.
+
+	No capítulo IV de seu seu famoso livro \textit{Gödel, Escher, Bach: an eternal golden braid}, D.~R.~Hofstadter defende que qualquer conceito ou idéia perde significado conforme torna-se mais \textbf{formal}. Ele faz isso comparando os conceitos \emph{formais} de ponto e reta nas geometrias de Euclides, Riemann e Lobachevsky. Em suas palavras: ``\foreign{a full \textbf{formalization} of geometry would take the drastic step of making every term undefined}'' \cite[p.~94]{Hofstadter:1979}.
+
+	No desenvolvimento de seu argumento, mais do que formalizar conceitos, Hofstadter os generalizou, visando inserir significados novos em conceitos antigos. E isto nos leva à interpretação que queremos defender aqui: ``um conceito ou idéia perde significado (e utilidade) conforme torna-se mais \textbf{genérico}\rlap{.}'' Talvez ninguém duvide disso, mas isto não seria filosofia se não falassemos a respeito mesmo assim.
+
+	O livro de Hofstadter é um tratado filosófico sobre muitos assuntos, mas é instrutivo observar que este fenômeno tem utilidade prática para algumas disciplinas, como a informática, e particularmente no âmbito da programação orientada a objetos (OOP, \foreign{object oriented programming}), que utiliza massivamente os conceitos de herança e polimorfismo (veja, por exemplo, as referências \citealt{Deitel:cpp} ou \citealt{Deitel:Java}). Com efeito, podemos dizer que a super-classe de hierarquia máxima, totalmente generalizada, não representa nada, e possivelmente teria sequer um nome.
+
+	Conquanto não seja difícil observar este fenômeno, atingir a máxima generalização não é fácil. Isto porque este processo depende da nossa --- geralmente limitada --- compreensão dos conceitos envolvidos. Por exemplo: em Java qualquer classe deriva, em última instância, da classe \texttt{Object}, que define métodos (ou, se preferir, funções) requeridos pela JVM (\foreign{Java virtual machine}). Portanto, a generalização máxima de qualquer código Java reside no seu relacionamento com a máquina virtual, um recurso exclusivo do Java. Mas o conceito de classe propriamente dito não limita-se aí, pois podemos imaginar uma classe que não derive de \texttt{Object}... melhor: podemos escrevê-la em C++, por exemplo.
+
+	Vejamos um exemplo mais concreto: suponha que definimos a classe \texttt{Electron}. Esta classe tem como \emph{propriedades} a carga ($= \unit{1,602 \times\power{10}{-19}}{\coulomb}$), a massa ($= \unit{9,109\times\power{10}{-31}}{\kilo\gram}$), o \foreign{spin} ($=\pm 1/2$) e uma função de onda normalizada, que podemos representar pela matriz \texttt{psi[][]}, onde o primeiro índice representa a coordenada $x$ e o segundo, $\psi(x)$. Além disso, esta classe deve ter também o \emph{método} \texttt{normalize()}, que mantém \texttt{psi[][]} normalizada.
+
+	A generalização mais imediata que podemos fazer, visando reutilizar o código no futuro, é redefinir a classe \texttt{Electron} como uma classe derivada da classe \texttt{Particle}. Esta classe também define as \emph{propriedades} carga, massa e \foreign{spin}, mas sem atribuir-lhes um valor fixo. Ela também tem o \emph{método} \texttt{normalize()} porque as funções de onda devem ser sempre normalizadas. Devem mesmo? Embora não seja útil (a partir daqui usamos a imaginação), podemos definir uma função de onda que seja normalizada a $2$, ou $3$, ou simplesmente que não seja normalizada. Neste segundo passo de generalização, o \emph{método} \texttt{normalize()} perde o significado. Além disso, um objeto da classe \texttt{Particle} não precisa ter massa, carga ou \foreign{spin}. Logo essas \emph{propriedades} também perdem sentido nesta classe. E o que restou? Absolutamente nada.
+
+	Mas o exemplo acima não foi o mais realista. E dificilmente seria, qualquer que seja o ente \textbf{físico} que queremos modelar. Aparentemente a generalização é mais fácil de ser feita sobre conceitos inventados, pois baseiam-se em regras que, se num primeiro momento foram criadas para satisfazer alguns requisitos, em última instância podem ser generalizadas a pontos inúteis, ao bel prazer. No nosso exemplo acima é dificil imaginar uma partícula (objeto da classe \texttt{Particle}) que não tenha sequer uma função de onda!
+
+	A utilidade prática de \emph{conhecer} este fenômeno está em saber quando encerrar a generalização. Em qualquer situação podemos criar idéias ou ferramentas específicas para um determinado fim e, posteriormente, generalizá-las para atender também a outras necessidades. Mas a cada passo de generalização, perdemos significado ou funcionalidade. Imagine, \eg, que tenhamos escrito um \foreign{software} que executa algumas atividades, quaisquer que sejam elas, com base em alguns parâmetros definidos num arquivo. Cada passo de generalização deste aplicativo implica em acrescentar parâmetros no arquivo, de tal modo que se o generalizarmos demais obteremos, no final, um programa que \emph{interpreta} o arquivo; teríamos criado uma nova linguagem de programação, o que seria absolutamente inútil!
+
+	E nem é preciso ir tão longe: a certa altura, ainda muito aquém da generalização plena, teríamos um \foreign{software} de difícil manuseio, posto que requisitaria um sem número de parâmetros.
+
+	A discussão acima ainda é obscura? Talvez assim seja mais simples: como se diz, um super-especialista é alguém que sabe absolutamente tudo sobre absolutamente nada. Inversamente, um super-generalista é alguém que sabe absolutamente nada sobre absolutamente tudo.
+
+%----------------------------------------------------------------------------------------------------------------
+
+
+
+\pagebreak
+\section[Para relaxar...]{Para relaxar:\\ como voam os planadores}
+
+	Hoje em dia as pessoas aceitam a idéia de que um avião pode voar, mas erroneamente atribuem esta capacidade ao motor. Realmente, diante do termo \textit{planador} a reação imediata e mais comum é questionar sua possibilidade, dada a sua ausência.
+
+	Como um corpo em queda livre, um planador está sempre caindo, mas as suas asas lhe dão a possibilidade de deslocar-se horizontalmente à medida que isto ocorre. Para isso, é importante que o planador tenha velocidade suficiente para produzir sustentação, a força aerodinâmica produzida pela asa que visa contrabalançar o peso da aeronave (ela é proporcional ao quadrado da velocidade). Então um planador pode controlar sua velocidade horizontal através da sua velocidade vertical: quanto mais rápido ele desce (ou cai, se preferir), mais rápido ele voa.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{A}[][]{$(80;-0,52)$}
+		\psfrag{B}[l][l]{$(100;-0,58)$}
+		\psfrag{C}[r][r]{$(160;-1,3)$}
+		\psfrag{X}[][]{Velocidade horizontal (\kilo\metre\per\hour)}
+		\psfrag{Y}[][]{\rotatebox{90}{Velocidade vertical (\metre\per\second)}}
+		\includegraphics[width=0.6\textwidth]{figuras/polar.eps}
+		\caption{\small o gráfico polar do planador ASW-27, fabricado pela Alexander Schleicher GmbH \& Co, relaciona as velocidades horizontal e vertical do planador. \unit{80}{\kilo\metre\per\hour} é a velocidade de mínimo afundamento e \unit{100}{\kilo\metre\per\hour}, a de máximo alcance.}
+		\label{fig:polar}
+	\end{figure}
+
+	A relação entre as velocidades vertical e horizontal é uma característica de cada modelo de planador e recebe o nome de \textit{polar}: fig. \ref{fig:polar}. Então, para voar a \unit{160}{\kilo\metre\per\hour} o planador da figura deve ter uma velocidade vertical de \unit{1,3}{\metre \per\second}. Mas esta escolha geralmente não é aleatória. A polar é um instrumento importantíssimo para o piloto de planador porque lhe permite definir a melhor velocidade para uma dada condição atmosférica ou situação. Por exemplo, se um piloto precisa pousar num aeródromo e, naquele momento, há outros aviões em procedimento de pouso, o piloto deve escolher voar a 75--\unit{85}{\kilo\metre\per\hour}, pois é nessa velocidade que o planador desce mais devagar, a \unit{0,52}{\metre\per\second}. Esta é a chamada \textit{velocidade de mínimo afundamento}.
+
+	Existe também a \textit{velocidade de máximo alcance}, na qual o planador percorre a maior distância horizontal possível. Ela é dada pelo ponto da polar cuja tangente intersepta a origem do gráfico (a reta que passa pela origem ). No nosso caso, \unit{100}{\kilo\metre\per \hour}: o planador percorrerá 48 unidades de distância horizontal para cada uma na vertical. Então, se o piloto estiver a \unit{1}{\kilo\metre} de altura e o aeródromo mais próximo, a \unit{48}{\kilo\metre}, ele deve voar a \unit{100}{\kilo\metre\per \hour} para chegar lá, e levará 29 minutos para isso. Se ele voar mais lentamente, a \unit{80}{\kilo\metre\per\hour} por exemplo, ficará mais tempo voando ($\unit{1000}{\metre} / \unit{0,52}{\metre \per\second} = \unit{32}{\minute}$), mas só conseguirá voar 43 quilômetros [inclinação da reta que passa pela origem e pelo ponto $(\unit{80}{\kilo\metre}; \unit{0,52}{\metre\per\second})$ da polar]. Ir mais rápido também não resolverá o problema.
+
+	Como vimos, tipicamente um planador pode deslocar-se horizontalmente 40 ou 50 unidades para cada uma na vertical. Por mais impressionante que seja essa capacidade, se fosse apenas isso os planadores fariam vôos curtos: 30 minutos de vôo para cada 1000 metros de altura no caso do planador da figura.
+
+	Devido aos processos de aquecimento e resfriamento convectivo da superfície e da atmosfera, o piloto de planador conta com correntes de ar ascendentes e descendentes para lhe ajudar (e prejudicar). O exemplo mais claro é o das \textit{térmicas}, colunas de ar quente que dão origem às nuvens do tipo cumulus. Elas têm de dezenas a centenas de metros de diâmetro e podem içar planadores tão pesados quanto \unit{800}{\kilo \gram}. Quando encontra uma dessas, o planador pode girar dentro dela (exatamente como fazem os urubus), subindo até a base da nuvem, e dali para a próxima. Assim, enquanto houver térmicas, o planador pode voar. Outro recurso são os ventos que sopram perpendicularmente a uma cadeia de montanhas (\textit{ventos orográficos}). A massa de ar é obrigada a elevar-se e neste processo, carrega com ela o planador.
+
+	Atualmente a performance dos vôos de planador são limitadas apenas pela fadiga do piloto. O recorde de altura é de 16000 metros (tão alto quanto as aerovias comerciais); o de tempo de vôo, 14 horas; o de distância, 2000 quilômetros.
+
+
+%----------------------------------------------------------------------------------------------------------------
+	Neste capítulo vamos apresentar três resultados distintos: o primeiro deles (sec. \ref{sec:CRES}) foi apresentado na \emph{28th International Conference on the Physics of Semiconductors} (na Áustria, em julho de 2006) e publicado no \foreign{proceedings} deste evento sob o título \emph{Quantum Hall effect in bilayer system with array of antidots}; o segundo (sec. \ref{sec:WL-QDs}) foi apresentado no \emph{13th Brazilian Workshop on Semiconductor Physics} (em São Paulo, em abril de 2007) e publicado no \foreign{Brazilian Journal of Phycics} \cite{Pagnossin:2007}: \emph{Weak localization and interaction effects in GaAs/InGaAs heterostructures with nearby quantum-dots}. O terceiro (sec. \ref{sec:QDIPs}) trabalho ainda está em fase imatura para publicações.
+
+%----------------------------------------------------------------------------------------------------------------
+
+\section{Resumo}
+
+	Para resumir o que expusemos neste capítulo, apresentamos a figura~\ref{fig:regimes}. Ela ilustra a manifestação dos diversos fenômenos aqui apresentados nos gráficos de $R$ e $R_H \times B$ para um 2DES com apenas uma sub-banda. Geralmente eles não aparecem todos num mesmo gráfico, razão pela qual a figura é uma \emph{representação} dessas curvas, \ie, não são medidas verídicas. Ao leitor recomendamos verificar as referências \cite{Ando:1982} e \cite{Shayegan:2005} para muitos outros fenômenos.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{A}[][]{\Large \textbf{A}}
+		\psfrag{B}[][]{\Large \textbf{B}}
+		\psfrag{C}[][]{\Large \textbf{C}}
+		\psfrag{D}[][]{\Large \textbf{D}}
+		\psfrag{H}[][]{\Large $B$}
+		\psfrag{RXX}[r][r]{\Large $R$ ou $\rho$}
+		\psfrag{RXY}[l][l]{\Large $R_H$ ($R_K$)}
+		\psfrag{R0}[r][r]{\Large $\rho_0$}
+		\psfrag{P}[][]{\Large $\nu$ par}
+		\psfrag{I}[][]{\Large $\nu$ par e ímpar}
+		\psfrag{Dh}[][]{\Large $\hbar\omega_c$}
+		\psfrag{Dz}[][]{\Large $\Delta_z$}
+		\psfrag{DB1}[][]{\Large $\Delta\left(\frac{1}{B}\right) \to$ eq. \ref{eq:n:SdH}}
+		\psfrag{DB2}[][]{\Large $\Delta\left(\frac{1}{B}\right) \to$ eq. \ref{eq:n:SdH:spin}}
+		\psfrag{1//2}[l][l]{\Large $1/2$}
+		\psfrag{1/3}[l][l]{\Large $1/3$}
+		\psfrag{1/4}[l][l]{\Large $1/4$}
+		\psfrag{0}[][]{\Large $0$}
+		\psfrag{2}[][]{\Large $\nu = 2$}
+		\psfrag{3}[][]{\Large $3$}
+		\psfrag{4}[][]{\Large $4$}
+		\psfrag{5}[][]{\Large $5$}
+		\psfrag{6}[][]{\Large $6$}
+		\psfrag{7}[][]{\Large $7$}
+		\psfrag{8}[][]{\Large $8$}
+		\psfrag{10}[][]{\Large $10$}
+		\psfrag{12}[][]{\Large $12$}
+		\psfrag{NU}[][]{\Large $\nu$}
+		\psfrag{B1}[][]{\Large\colorbox{white}{$\omega_c\tau \sim 1$}}
+		\psfrag{B2}[][]{\Large\colorbox{white}{$\hbar\omega_c \gtrsim \Gamma_\ell$}}
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/regimes.eps}}
+		\caption{\small representação dos diversos regimes de transporte de cargas, conforme são observados em $R$ (ou $\rho$) e $R_H$. Na região \textbf{A} ($B \lesssim \unit{20}{\milli\tesla}$) manifestam-se os fenômenos da localização e antilocalização-fracas. Em \textbf{B} $\rho$ é independente do campo magnético, ou seja, o transporte é clássico e segue o modelo de Drude. Quanto a resistência Hall, em ambas as regiões \textbf{A} e \textbf{B} ela é proporcional a $B$ e vale~\eqref{eq:efeito-Hall}. Em \textbf{C} observamos as oscilações do efeito Shubnikov-de Haas, modeladas pela equação de Lifshitz-Kozevich. Essas oscilações podem ser observadas também em $R_H$, ainda que menos nitidamente~\cite{Pagnossin:2004,Roth:1966}. Finalmente, em \textbf{D} os platôs do IQHE estão bastante nítidos: neles a condução é não-dissipativa, razão pela qual $R = 0$; entre eles a condução ocorre por toda a amostra e $R$ é finito. Observe também que para $\nu \ge 8$ a influência do \foreign{spin} é desprezível, razão pela qual apenas platôs com $\nu$ par são visíveis. Note ainda que quando $\nu$ é ímpar o nível de Fermi está entre dois LLs com \foreign{spins} opostos, mas com mesmo $\ell$. \footnotesize[obs.: o gráfico acima \textbf{não} é uma medida legítma].}
+		\label{fig:regimes}
+	\end{figure}

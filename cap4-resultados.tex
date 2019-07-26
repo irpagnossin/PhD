@@ -1,0 +1,627 @@
+
+\section{Estados de borda contra-rotativos}\label{sec:CRES} %Counter-rotating edge-states
+
+	O primeiro resultado que apresentaremos é uma evidência da existência de estados de borda contra-rotativos (que definiremos em breve), conforme previsto em 1992 por Johnson~\etal~\cite{Johnson:1992-1,Johnson:1992-2}. O fenômeno manifesta-se diretamente no gráfico $R_H \times B$ assim: quando certos valores de tensão de \foreign{gate}\footnote{Diferença de potencial entre \foreign{gate} e \foreign{source}, cf.~sec.~\ref{sec:gate}.} são aplicados na superfície da região de interesse (fig.~\ref{fig:bH}), a rede de pontos-quânticos interfere na dinâmica do 2DES de tal maneira que $V_H$ passa a ser dada por uma outra regra de quantização, diferente de \eqref{eq:IQHE}. Veremos também que, conforme nossos resultados, é necessário, porém não suficiente, que haja dois canais de condução independentes (um sistema de bicamada, no nosso caso).
+
+
+	\subsection{Resultados}
+
+	\begin{figure}
+		\centering
+		\psfrag{B}{\Large $B$ (\tesla)}
+		\psfrag{Y}[][]{\Large $R$ e $R_H$ ($R_K$)}
+		\psfrag{D}[][]{\Large $\Delta(1/B)$}
+		\psfrag{2s}[][]{\Large Segunda sub-banda}
+		\psfrag{C}[l][l]{\Large $R_H/B$}
+		\psfrag{R0}[][]{\Large $R_0$}
+		\psfrag{Rxx}[][]{\Large $R$}
+		\psfrag{Rh}[][]{\Large $R_H$}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/SdHeHall2510.eps}}
+		\caption{\small medidas dos efeitos Hall e Shubnikov-de Haas da amostra $A$ para $V_{GS} = 0$. O coeficiente angular de $R_H \times B$ para $B \lesssim \unit{0,3}{\tesla}$ é \unit{4064}{\ohm\per\tesla}, de modo que a concentração total de portadores é $n = \unit{1,5\times\power{10}{15}} {\rpsquare \metre}$, cf. \eqref{eq:efeito-Hall}. E como $R_0 = \unit{1902}{\ohm}$ (e, portanto, $\rho_0 = R_0/\formFactor = R_0/2,5 = \unit{761}{\ohm}$), a mobilidade de transporte é $\mu = \unit{5,3}{\squaren\metre\per\volt\second}$, ainda conforme a equação \ref{eq:efeito-Hall}. Por outro lado, o período das oscilações de magnetorresistividade, que podem ser observadas tanto em $R \times B$ como em $R_H \times B$, é $\Delta(1/B) \approx \unit{0,53}{\reciprocal\tesla}$. Nesta região não há resolução de \foreign{spin}, de modo que vale \eqref{eq:n:SdH}. Então, a concentração da sub-banda que dá origem às oscilações observadas é de $n_1 = \unit{0,9\times\power{10}{15}}{\rpsquare\metre}$. Na região entre $1,0$ e \unit{1,4} {\tesla} podemos observar a influência da segunda sub-banda em ambas as curvas. A concentração de elétrons nela é simplesmente $n - n_1 = \unit{0,6\times\power{10}{15}}{\rpsquare\metre}$.}
+		\label{fig:SdHeHall2510}
+	\end{figure}
+
+
+	A figura~\ref{fig:RvsB} apresenta as medidas do efeito Hall e da magnetorresistência para alguns valores diferentes de tensão de \foreign{gate} ($V_{GS}$). Quando $V_{GS} = 0$, a concentração de portadores é de \unit{0,6\times\power{10}{15}}{\rpsquare\metre} num poço-quântico e de \unit{0,9\times\power{10}{15}}{\rpsquare\metre} no outro; a mobilidade média é de \unit{5,3}{\rpsquare\metre\per\volt\second}. Essas informações são obtidas da região $B \lesssim \unit{1}{\tesla}$ do gráfico $R$ e $R_H \times B$, conforme explicamos no capítulo~\ref{cap:metodos} (veja a figura \ref{fig:SdHeHall2510}).
+
+	\begin{figure}
+		\centering
+		\psfrag{Vg}[][]{\huge\colorbox{white}{$V_{GS} < 0$}}
+		\psfrag{Vg0}[][]{\LARGE$V_{GS} = 0$}
+		\psfrag{50mK}[][]{\LARGE\unit{50}{\milli\kelvin}}
+		\psfrag{Y}[][]{\rotatebox{90}{\LARGE$R$, $R_H$ ($R_K$)}}
+		\psfrag{L = 1}[][]{\LARGE$N = 1$}
+		\psfrag{.5}[r][r]{\LARGE$0,5$}
+		\psfrag{N1}{\LARGE $\nu = 1$}
+		\psfrag{N2}{\LARGE $\nu = 2$}
+		\psfrag{N3}{\LARGE $\nu = 3$}
+		\psfrag{N4}{\LARGE $\nu = 4$}
+		\psfrag{X}{\huge $B$ (\tesla)}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/RvsB.eps}}
+		\caption{\small efeito Hall e magnetorresistência da amostra $A$ para várias tensões de \foreign{gate} aplicadas. Quando $V_{GS} \ne \unit{0}{\volt}$ a resistência na região em que $N = 2$ torna-se quantizada, conforme~\eqref{eq:R}. Essas medidas foram feitas no \foreign{Laboratorie du Champs Magnetics Intenses} do \foreign{Centre National de la Recherche Scientifique} (CNRS) de Grenoble (França), num criostato de diluição (\foreign{dilution fridge}): $T = \unit{50}{\milli\kelvin}$.}
+		\label{fig:RvsB}
+	\end{figure}
+
+	Ainda para $V_{GS} = 0$ e $B$ intenso, os gráficos de $R$ e $R_H \times B$ comportam-se conforme o esperado: quando $\nu = N \in \mathbb{N}$, $R = 0$ e $R_H = R_K / N$, indicando que a condução de corrente ocorre através dos estados de borda; quando $\nu \notin \mathbb{N}$, $R_H$ transita entre os platôs e $R$ assume valores finitos, evidenciando a existência de correntes dissipativas no interior da amostra.
+
+	Mas quando $-0,5 \leq V_{GS} \leq \unit{-0,1}{\volt}$, o pico da magnetorresistência na região onde $1 < \nu < 2$ ($B \approx \unit{10}{\tesla}$) desloca-se para a esquerda, para a região onde $N = 2$, e alarga-se. Ali, $R$ deixa de ser nulo e assume o valor constante $R_K/2$, como $R_H$ e com igual acurácia.% Fenômeno análogo ocorre quando $V_{GS} > 0$, exceto que o pico alarga-se e desloca-se para a direita, assumindo o valor do platô $N = 1$~\cite{Gusev:1998}.
+
+	A figura~{\ref{fig:R-LB}a} resume o que esta acontecendo: quando $V_{GS} = 0$ a presença da rede de antipontos-quânticos passa desapercebida pelos elétrons do 2DES, levando-nos de volta à situação ilustrada pela figura~\ref{fig:IQHE-LB}. Por outro lado, ao aplicarmos $V_{GS} \ne 0$ os níveis de Landau são modulados conforme o potencial periódico da rede, exatamente como fazem as impurezas (seção~\ref{sec:QHE}), tornando possível a existência de ``estados de borda'' nas bordas \cite{Ishizaka:1993} da rede de antipontos. Assim, quando $\nu = 2$ um ($= M$) \emph{canal de condução} (um estado de borda) oriundo do contato $2$ é refletido pela rede e segue para o contato $6$ ao invés do $3$. Da mesma forma, um canal de condução oriundo do contato $5$ retorna para o $3$ ao invés de ir para o $6$. Esta situação pode ser descrita utilizando-se a equação de Landauer-Büttiker~\eqref{eq:LB}, de forma análoga àquela feita na seção~\ref{sec:IQHE-LB}, de onde concluímos que
+	\begin{equation}\label{eq:R}
+	\frac{R}{R_K} = \frac{M}{N(N-M)} \qquad\text{e}\qquad \frac{R_H}{R_K} = \frac{1}{N}.
+	\end{equation}
+
+	Assim, quando $N = 2$ e $M = 1$, temos $R = R_H = R_K/2$, conforme observamos. Além disso, $N - M = 1$, como observado em amostras com antipontos-quânticos mas apenas uma sub-banda~\cite{Gusev:1998}. Observe ainda que $R_H$ não sofre alteração de seu valor esperado (eq.~\ref{eq:IQHE}) e que quando $M = 0$ obtemos o resultado usual $R = 0$. Realmente, vimos que a ausência de resistência quando $\nu \in \mathbb{N}$ decorre da inexistência de espalhamentos entre os canais pretos e vermelhos (fig.~\ref{fig:IQHE-LB}). Mas na situação que encontramos, $M = 1$ canal preto oriundo do contato $2$ dirige-se para o $6$, e \emph{ali} mistura-se com os vermelhos. Agora o potencial do contato $6$ não é mais igual ao do $5$, posto que \emph{ali} misturam-se elétrons com energias $\mu_2$ e $\mu_5$. Trata-se de um espalhamento coerente.
+
+	Conforme modelamos na equação~\ref{eq:R}, a presença ou ausência do canal desgarrado só passa a ser percebida pelos outros canais no contato seguinte, onde ocorre a mistura de elétrons com energias diferentes.
+
+	\begin{figure}
+		\centering
+		\psfrag{1}[][]{\huge $1$}
+		\psfrag{2}[][]{\huge $2$}
+		\psfrag{3}[][]{\huge $3$}
+		\psfrag{4}[][]{\huge $4$}
+		\psfrag{5}[][]{\huge $5$}
+		\psfrag{6}[][]{\huge $6$}
+		\psfrag{N1}[][]{\huge $N$}
+		\psfrag{N2}[][]{\huge $M$}
+		\psfrag{N3}[][]{\huge $N$}
+		\psfrag{N4}[][]{\huge $N$}
+		\psfrag{N5}[][]{\huge $M$}
+		\psfrag{N6}[][]{\huge $N$}
+		\psfrag{N7}[][]{\huge $N-M$}
+		\psfrag{N8}[][]{\huge $N$}
+		\psfrag{N9}[][]{\huge $N-M$}
+		\psfrag{N10}[][]{\huge $N$}
+		\psfrag{X}[r][r]{\huge $N-M$}
+		\psfrag{I}[][]{\huge $I$}
+		\psfrag{H}[][]{\huge $\vetor B$}
+		\psfrag{A}[][]{\huge \textbf{(a)}}
+		\psfrag{B}[][]{\huge \textbf{(b)}}
+		\psfrag{VGS}[][]{\huge $V_{GS}$}
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/R-LB.eps}}
+		\caption{\small representação do fluxo de cargas através de estados de borda \textbf{(a)} em nossas amostras, com super-rede de antipontos-quânticos, e \textbf{(b)} numa amostra com \foreign{split-gate}. Devido à presença da super-rede em (a) e ao \foreign{split-gate} em (b), $M$ níveis de Landau são desviados, misturando estados que antes permaneciam disjuntos. Como resultado, em ambas as amostras a resistência é dada por~\eqref{eq:R} (quando $\nu \in \mathbb{N}$). A resistência Hall ainda obedece~\eqref{eq:IQHE}.}
+		\label{fig:R-LB}
+	\end{figure}
+
+	Outra forma de se obter o mesmo resultado é trocar a super-rede de antipontos por um \foreign{gate} que afunila a região de interesse, conforme ilustramos na figura~{\ref{fig:R-LB}b}: ao aplicarmos uma tensão negativa suficientemente intensa, o perfil de potencial das bandas de condução e de valência são modificados, tornando a região abaixo do \foreign{gate} inacessível aos elétrons (o \foreign{gate} construído com este fim chama-se \foreign{split-gate}). Isto equivale a controlarmos a espessura da região de interesse no ponto de estrangulamento. Ali, pode ocorrer, como ilustramos, a reflexão do nível de Landau mais interno, exatamente da mesma maneira que ocorreu com a nossa rede de antipontos. Por conseguinte, vale~\eqref{eq:R}~\cite{Datta:1995}.
+
+	Mas voltemos à figura~\ref{fig:RvsB}: abaixo de \unit{6}{\tesla} podemos identificar em $R_H \times B$ o platô $\nu = 3$ e, com alguma dificuldade, o $4$. No que concerne o terceiro platô, observe que para $V_{GS} = 0$ a magnetorresistência apresenta um pico de altura aproximadamente igual a $0,11\, R_K$, que confere aproximadamente com a previsão de \eqref{eq:R} para $(N,M) = (3,1)$: $R = 0,17\, R_K$. Por outro lado, no intervalo $-0,5 \le V_{GS} < \unit{0}{\volt}$ a magnetorresistência é aproximadamente igual a $0,03\, R_K$, que independe de $V_{GS}$ e que não pode ser descrita pela equação~\ref{eq:R}. Mas observe a figura~{\ref{fig:R-LB}}: na dedução de \eqref{eq:R} a suposição de que $M$ é um número natural implica que \emph{todos} os elétrons de um nível de Landau são desviados pela rede de antipontos, o que não é necessariamente verdade. De fato, podemos dizer que apenas uma fração $r$ de $M$ é desviada conforme a figura~{\ref{fig:R-LB}a} substituindo $M$ por $rM$ na equação~\ref{eq:R}:
+	\begin{equation}\label{eq:R(r)}
+	\frac{R}{R_K} = \frac{rM}{N(N - rM)}.
+	\end{equation}
+
+	Assim, quando $r = 1$ vale~\eqref{eq:R} e quando $r = 0$, a equação~\ref{eq:IQHE}. Então, quando $\nu = 3$ e $V_{GS} = 0$, aproximadamente $75\%$ dos elétrons no nível de Landau mais interno são desviados através da rede, enquanto os outros $25\%$ permanecem nas bordas da amostra ($r \approx 0,75$), de modo que $R = 0,11\, R_K$. Analogamente, para $\nu = 4$ apenas $25\%$ são desviados ($r = 0,25$), resultando em $R = 0,03 R_K$.
+
+
+
+	Duas observações importantes: primeira, note que fazermos $r \in [0,1]$ não implica em condução dissipativa, haja vista que mantivemos a suposição (na equação de Landauer-Büttiker) de que o equilíbrio de canais com energias diferentes só ocorre nos contatos. Observe também que a resistência Hall permanece inalterada, num platô, o que corrobora nossa suposição; segunda, a equação~\ref{eq:R(r)} nos permite explicar qualquer valor de $R$ com uma escolha apropriada (e arbitrária) de $r$\rlap{,} \footnote{De fato, quaisquer que sejam $N, M \in \mathbb{N}$ e $R$ (em unidades de $R_K$), $r = N^2R/[M(1 + NR)]$ ($\in [0,1]$) resolve o problema.} de modo que por si só ela não representa conhecimento algum; ela só tem mérito se considerada conjuntamente com~\eqref{eq:R} e por conta do que observamos quando $\nu = 2$.
+
+	Para $\nu > 4$ ($B \lesssim \unit{3}{\tesla}$ na figura~\ref{fig:RvsB}), os platôs são suprimidos devido à mudança de regime do transporte de cargas.
+
+	\begin{SCfigure}[][tb]
+		\centering
+		\psfrag{1}[][]{\huge $1$}
+		\psfrag{2}[][]{\huge $2$}
+		\psfrag{3}[][]{\huge $3$}
+		\psfrag{4}[][]{\huge $4$}
+		\psfrag{5}[][]{\huge $5$}
+		\psfrag{6}[][]{\huge $6$}
+		\psfrag{N1}[][]{\huge $N$}
+		\psfrag{N2}[][]{\huge \textcolor{red}{$N$}}
+		\psfrag{H}[][]{\huge $B$}
+		\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/antidots-capacitor.eps}}
+		\caption{\small Quando $r = 1$, nenhum elétron atravessa a rede, tornando desconexos os dois lados dela.}
+		\label{fig:antidots-capacitor}
+	\end{SCfigure}
+
+	Na região em que $\nu = 1$, $R$ se comporta de forma curiosa: quando $V_{GS} = \unit{-0,5}{\volt}$ a magnetorresistência cresce para além de $R_K$, e este comportamento coexiste com o platô $\nu = 1$ de $R_H \times B$. Este crescimento possivelmente está associado à uma transição condutor-isolante do 2DES sob inflência da rede de antipontos-quânticos quando $\nu$ aproxima-se da unidade. Segundo~\eqref{eq:R}, fazendo $M \to N = 1$, $R \to \infty$ (e $R_H = R_K$). Nesta situação, ilustrada pela figura \ref{fig:antidots-capacitor}, não há elétrons atravessando a super-rede, embora haja uma corrente de deslocamento. Ou seja, o potencial eletroquímico oscilante à direita da rede de antipontos, definido pelo \foreign{lock-in}, induz oscilações no outro lado. A super-rede se comporta como um capacitor, cuja resistência é idealmente infinita.
+
+	Por outro lado, a situação ilustrada pela figura \ref{fig:antidots-capacitor} só é possível, segundo a equação de Landauer-Büttiker, se $I = 0$. Decorre daí que todos os seis contatos têm o mesmo potencial, de modo que \eqref{eq:R} perde sentido. Isto ocorre porque como não há transferência de elétrons de um lado ao outro da amostra, é como se tivéssemos duas amostras independentes, conectadas a eletrodos independentes (e disto decorre que $\mu_1 = \mu_2 = \mu_6$ e $\mu_3 = \mu_4 = \mu_5$). E a condição adicional de que haja uma corrente $I$ comum a ambas as amostras só pode ser satisfeita se $I = 0$, fazendo $\mu_i$ ser o mesmo, indenpendentemente do terminal.
+
+	\begin{figure}
+		\centering
+		\psfrag{X}[][]{\huge $B (\tesla)$}
+		\psfrag{Vg}[][]{\huge\colorbox{white}{$V_{GS} < 0$}}
+		\psfrag{Vg0}[][]{\LARGE$V_{GS} = 0$}
+		\psfrag{50mK}[][]{\LARGE\unit{50}{\milli\kelvin}}
+		\psfrag{Y}[][]{\rotatebox{90}{\LARGE$R$, $R_H$ ($R_K$)}}
+		\psfrag{L = 1}[][]{\LARGE$N = 1$}
+		\psfrag{.5}[r][r]{\LARGE$0,5$}
+		\psfrag{N2}[][]{\LARGE $\nu = 2$ ou $(N,M) = (2,0)$}
+		\psfrag{Y}[][]{\huge $R_H$ ($R_K$)}
+		\psfrag{VG1}[r][r]{\LARGE $V_{GS} = \unit{-0,6}{\volt}$}
+		\psfrag{VG2}[][]{\LARGE\unit{-0,7}{\volt}}
+		\psfrag{VG3}[][]{\LARGE\unit{-0,8}{\volt}}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/RHvsB-CRES.eps}}
+		\caption{\small efeito Hall e magnetorresistência da amostra $A$ para $V_{GS} < \unit{-0,5}{\volt}$. $T = \unit{50}{\milli\kelvin}$.}
+		\label{fig:RHvsB-CRES}
+	\end{figure}
+
+	Porém, esta dificuldade pode ser sobrepujada se aceitarmos que sempre existe uma \emph{``corrente de fuga'' não-dissipativa} através da super-rede de antipontos-quânticos, permitindo que $r \to 1$, embora sempre diferente de um. A característica não-dissipativa desta corrente é assegurada pela presença do platô em $R_H \times B$ ($\nu = 1$). Alternativamente, pode haver uma corrente de indução através da rede, posto que a corrente aplicada na amostra é alternada. Esta possibilidade pode ser verificada estudando a amostra em função da freqüência do sinal de entrada, mas isto não foi feito aqui.
+
+	Observe ainda que o comportamento de $R \times B$ para $-0,5 < V_{GS} < \unit{0}{\volt}$ é similar ao que discutimos acima e reproduz a mesma seqüência do início do platô $\nu = 2$, \ie, $V_{GS}$ torna-se mais negativo da direita para a esquerda. Embora os dados sejam escassos neste caso e não possamos assegurar que este crescimento em $R$ de fato ocorre simultaneamente com o platô $\nu = 1$, podemos observar que, no começo do platô, $R = 0$ para todos os $V_{GS} \ne \unit{-0,5}{\volt}$. Ou seja, $r = 0$ e a condução é aquela do IQHE; pelas bordas. Mas conforme o campo magnético torna-se mais intenso, $R$ torna-se diferente de zero a partir de $B$ distintos para valores diferentes de $V_{GS}$. Isto ocorre mesmo para $V_{GS} = \unit{-0,5}{\volt}$, exceto que $R$ não chega a ser zero, mas passa por um valor mínimo em \unit{11,5}{\tesla}.
+
+	A seqüência é natural: quanto menos negativo é a tensão de \foreign{gate}, mais próximo da ``condução-padrão'' do efeito Hall quântico inteiro está o 2DES. Inversamente, conforme a super-rede de antipontos-quânticos torna-se mais negativa, mais influencia o 2DES, levando $r$ de zero ($V_{GS} = \unit{0}{\volt}$) até quase $1$ ($V_{GS} = \unit{-0,5}{\volt}$).
+
+	É importante perceber que a presença do platô em $R_H$ é crucial para a nossa análise. Caso contrário, tratar-se-ia de uma condução dissipativa entre platôs, atualmente explicada por meio de transições entre estados localizados e estendidos induzidas pelas impurezas da amostra \cite{Huckestein:1995}. Nada teríamos a acrescentar neste caso.
+
+	Finalmente, observe que nenhuma variação em $R_H$ é prevista ou observada. Contudo, quando o potencial no contato de controle é ainda mais negativo, menor que \unit{-0,5}{\volt}, a quantização em $R$ é destruída e os platôs do efeito Hall quântico inteiro são modificados, conforme apresentamos na figura~\ref{fig:RHvsB-CRES} para a amostra $A$. De fato, a sequencia usual de $R_H$ (eq. \ref{eq:IQHE}, em unidades de $R_K$) $1/2$, $1/3$ e $1/4$ é substituída por $1/5$, $1/5$ e $1/6$, respectivamente.
+
+	\begin{SCfigure}[][tb]
+		\centering
+		\psfrag{SP}[][]{\shortstack{Ponto-de-cela\\(\foreign{saddle-point})}}
+		\psfrag{QD}[][]{Ponto-quântico}
+		\psfrag{AQD}[l][l]{Antiponto-quântico}
+		\psfrag{X}[][]{$x$}
+		\psfrag{Y}[][]{$y$}
+		\psfrag{Z}[l][l]{$\varepsilon(x,y)$}
+		\includegraphics[width=0.5\textwidth]{figuras/saddle_point.eps}
+		\caption{\small um ponto-de-cela do potencial hexagonal da rede de antipontos-quânticos, por onde os elétrons migram de um ponto-quântico para o outro ou não, dependendo da diferença de energias do elétron e do ponto de cela.}
+		\label{fig:saddle-point}
+	\end{SCfigure}
+
+	Este fenômeno é mais visível para $\nu = 2$, e especial atenção deve ser dada para o fato de que $R$ volta a ser zero para $\nu$ inteiro (não mostrado) e de que $R_H$ ainda é quantizada. Isto indica que o nível de Fermi está num \foreign{gap} dos níveis de Landau (princípio adiabático) e que o transporte é não-dissipativo, \ie, o transporte continua a ocorrer através de estados de borda.
+
+	Em seus dois artigos de 1992, Johnson~\etal\ resolveram a equação de Schrödinger com \eqref{eq:H}, sendo $V(\vetor{\hat r})$ o potencial de uma rede bidimensional semi-infinita de pontos-quânticos, e mostraram que para certos valores de $\Phi/\Phi_0$ ($\Phi$ é o fluxo magnético numa célula da rede de pontos-quânticos e $\Phi_0$ é o \foreign{quantum} de fluxo magnético), existem estados de bordas que percorrem a rede no sentido contrário ao usual, alcunhados de \textbf{estados de borda contra-rotativos}: figura~\ref{fig:CRES}.
+
+	Quando a tensão no contato de controle negativa é suficientemente intensa, forma-se um potencial de confinamento nos interstícios dos antipontos-quânticos. Assim, a rede hexagonal de antipontos-quânticos coexiste com uma rede também hexagonal de pontos-quânticos triangulares, induzidos por $V_{GS}$ (por isso utilizamos indistintamente os termos rede de pontos-quânticos e de antipontos-quânticos).
+
+	Entre os pontos-quânticos existem os pontos-de-cela (\foreign{saddle points}) do potencial de confinamento (veja as figuras \ref{fig:antidots}, \ref{fig:saddle-point} e \ref{fig:CRES}). É através destes pontos da rede que os elétrons podem migrar, por tunelamento ou difusão, de um ponto-quântico para o outro, ou ainda interagir com elétrons no ponto-quântico vizinho. Por exemplo, se a probabilidade de transmissão do elétron através do ponto-de-cela for igual a um, ele poderá percorrer livremente a rede de pontos-quânticos no sentido anti-horário (considerando o campo magnético apontando para o leitor). Este elétron está num estado de borda dito contra-rotativo. Por outro lado, quando a probabilidade de transmissão é próxima de zero, o elétron fica confinado no ponto-quântico, percorrendo-o no sentido horário: ele está num estado de borda dito normal. Ainda nesta situação, os elétrons em estados estendidos, oriundos dos contatos, não terão acesso ao interior da rede. Em situações intermediárias podemos ter tanto estados normais como contra-rotativos. É o que acontece em nossas amostras.
+
+	\begin{figure}[tb]
+		\begin{minipage}[b]{0.46\textwidth}
+			\centering
+			\psfrag{A}[][]{\Large Antiponto-quântico}
+			\psfrag{B}[][]{\Large\shortstack{Estado\\normal}}
+			\psfrag{C}[][]{\Large\shortstack{Estado\\contra-rotativo}}
+			\psfrag{H}[][]{\Large$B$}
+			\psfrag{QDs}[][]{\Large QDs}
+			\psfrag{CU}[][]{\Large Célula}
+			\psfrag{SP}[][]{\Large\foreign{Saddle-point}}
+			\resizebox{\textwidth}{!}{\includegraphics{figuras/CRES.eps}}
+			\caption{\small representação dos estados de borda normais e contra-rotativos na super-rede de antipontos-quânticos, segundo Johnson \etal~\cite{Johnson:1992-1,Johnson:1992-2}.}
+			\label{fig:CRES}
+		\end{minipage}\hfill
+		\begin{minipage}[b]{0.46\textwidth}
+			\centering
+			\psfrag{1}[][]{\LARGE$1$}
+			\psfrag{2}[][]{\LARGE$2$}
+			\psfrag{3}[][]{\LARGE$3$}
+			\psfrag{4}[][]{\LARGE$4$}
+			\psfrag{N}[][]{\LARGE$N$}
+			\psfrag{M}[][]{\LARGE\textcolor{red}{$M$}}
+			\resizebox{\textwidth}{!}{\includegraphics{figuras/4-probe.eps}}
+			\caption{\small representação do fluxo de cargas através dos estados de borda normais e contra-rotativos numa amostra de quatro contatos.}
+			\label{fig:4-probe}
+		\end{minipage}
+	\end{figure}
+
+	Johnson \etal\ descreveram o transporte balístico numa rede quadrada de pontos-quânticos aplicando a equação de Landauer-Büttiker numa amostra com quatro contatos, conforme ilustrado pela figura \ref{fig:4-probe}: com o campo magnético apontando para o leitor, as setas pretas indicam o sentido de rotação dos elétrons em estados de borda normais, enquanto as vermelhas indicam os estados contra-rotativos.
+
+	Então, qualquer que seja o contato, $N$ estados normais saem dele e atingem o contato seguinte (no sentido horário). Adicionalmente, este contato insere $M$ estados contra-rotativos na amostra, que atingem o contato anterior. Assim, a matriz de transmissão é
+	$$	
+	T = 
+	\left(\begin{matrix}
+		\zero & M     & \zero & N     \\
+		N     & \zero & M     & \zero \\
+		\zero & N     & \zero & M     \\
+		M     & \zero & N     & \zero
+  \end{matrix}\right)
+	$$
+e, fazendo $V_1 = 0$ para simplificar, a equação de Landauer-Büttiker nos permite concluir que
+	$$
+	\frac{R_H}{R_K} = \frac{N - M}{N^2 + M^2}.
+	$$
+
+	No caso do platô anômalo associado a $\nu = 2$ ($R_H \approx 1/5$), e equação acima nos permite descrevê-lo através do par $(N,M) = (2,1)$, que dá $R_H = 1/5$. Ou seja, dois estados normais coexistem com um contra-rotativo. Analogamente, o platô associado $\nu = 3$ ($R_H \approx 1/5$) pode ser substituído por $(3,1)$, dando $R_H = 1/5$. E finalmente, para o platô $\nu = 4$ ($R_H \approx 1/6$) fazemos $(4,1)$: $R_H = 3/17 \approx 1/6$. Assim, a introdução de um estado contra-rotativo em todos os casos parece explicar o comportamento anômalo dos platôs do efeito Hall quântico.
+
+	\begin{figure}[tb]
+		\centering	
+		\psfrag{X}[][]{$x$}
+		\psfrag{Y}[][]{$y$}
+		\psfrag{Z}[][]{$z$}
+		\psfrag{S}[][]{Substrato}
+		\psfrag{F}[][]{Superfície}
+		\psfrag{D}[l][l]{\colorbox{white}{$\sim\unit{5}{\nano\metre}$}}
+		\psfrag{3}[l][l]{Contato 3}
+		\psfrag{QD1}[][]{$\text{QW}_1$ cf. fig. \ref{fig:gate-working}}
+		\psfrag{QD2}[][]{$\text{QW}_2$}
+		\includegraphics[width=0.6\textwidth]{figuras/CRES-3D}
+		\caption{\small os estados normais e contra-rotativos localizam-se cada qual num poço-quântico. É a separação espacial das funções de onda dos estados simétrico e antisimétrico, na direção do crescimento, que reduz a interação entre eles, permitindo que haja estados contra-rotativos.}
+		\label{fig:CRES-3D}
+	\end{figure}
+
+	Ainda segundo os dois trabalhos de Johnson \etal~\cite{Johnson:1992-1,Johnson:1992-2}, supõe-se que os estados normais e contra-rotativos percorram a amostra independentemente, só interagindo entre si nos contatos. Acreditamos que este requisito tenha sido satisfeito quando utilizamos uma heteroestrutura de poços-quânticos duplos: o distanciamento, na direção do crescimento, das funções de onda dos estados simétrico e antisimétrico do DQW reduz a sobreposição entre elas e, com isso, as interações interbanda. Além disso, como a presença do contato de controle na superfície da amostra (\foreign{front-gate}) não é percebido pela sub-banda mais profunda \cite{Muraki:2000,Fletcher:2005}, assim também o é a rede de pontos/antipontos-quânticos. Logo, se há estados contra-rotativos eles devem estar no poço-quântico mais próximo da superfície: fig. \ref{fig:CRES-3D}.
+
+	Observe que a configuração utilizada por Johnson \etal\ não prevê o valor da resistência $R$, que em nossas amostras permaneceu como esperado: $R = 0$ para $\nu$ inteiro. Visando contornar isto, procuramos definir um modelo teórico que determinasse tanto $R_H$ como $R$, mas nenhuma das possibilidades experimentadas funcionou tão bem quanto aquela proposta por Johnson \etal.
+
+	Resumindo, os dados e argumentações apresentadas até aqui constituem uma evidência da existência de estados de borda contra-rotativos, previstos teoricamente por Johnson \etal~\cite{Johnson:1992-1,Johnson:1992-2} em 1992, mas até então não observados. Outros experimentos comprobatórios precisam ser feitos e a reprodutibilidade precisa ser melhorada, mas o simples comportamento anômalo do efeito Hall quântico inteiro é, por si só, surpreendente. Até onde sabemos, há apenas mais um relato de comportamento anômalo do efeito Hall quântico em matrizes de pontos-quânticos, mas envolvendo o efeito Hall quântico \emph{fracionário} ($\nu < 1$) \cite{Takehana:2006}, cuja origem é distinta da do IQHE.
+
+	\subsection{QDIPs?}
+
+	Vamos agora apresentar uma experiência teórica (\foreign{gedanken experiment}) na qual pretendemos mostrar que é possível utilizar a rede hexagonal de antipontos-quânticos na fabricação de QDIPs transversais, com algumas vantagens sobre a estrutura tradicional, apresentada na seção \ref{sec:intro:QDIP}.
+
+	A heteroestrutura em questão consiste num poço-quântico simples, com uma rede de antipontos-quânticos na superfície e uma dopagem planar remota: fig. \ref{fig:myQDIP}. O poço-quântico faz o papel de canal de condução dos elétrons e os pontos-quânticos são induzidos \emph{dentro} do poço-quântico pelo contato de controle: conforme vimos, para $V_{GS}$ negativa e suficientemente intensa, a rede de antipontos-quânticos hexagonal induz, em seus interstícios, uma rede também hexagonal de pontos-quânticos.
+
+	Os parâmetros da heteroestrutura, em especial as dimensões do poço-quântico e dos antipontos-quânticos, devem ser dimensionados de modo que haja duas sub-bandas no poço-quântico, sendo o estado fundamental localizado, nos pontos-quânticos (com energia $\varepsilon_0$ inferior ao ponto-de-cela), e o excitado, estendido ($\varepsilon_1$, acima do ponto-de-cela).
+
+	A dopagem deve ser planar e remota para permitir alta mobilidade no canal (curto tempo de resposta) e para que a influência do contato de controle seja mais efetiva\rlap{.}\footnote{Se a dopagem se estendesse por toda a heteroestrutura, a influência do \foreign{gate} limitar-se-ia às proximidades da superfície.} Além disso, a concentração de dopantes deve ser baixa (não-degenerada), para que a região não se torne um canal secundário, e definida de modo a manter desocupado o estado excitado, para manter nula a corrente de escuro. É possível também utilizar um \foreign{back-gate} tradicional para controlar essa transferência \cite{Muraki:2000,Fletcher:2005,Lien:1994}.
+
+	Na situação ideal, quando $V_{GS} < 0$ teremos elétrons aprisionados nos pontos-quânticos (estado fundamental) e nenhum no estado excitado (acompanhe pela figura \ref{fig:myQDIP}). Quando um fóton de energia $\varepsilon_1 - \varepsilon_0$ incide sobre a amostra, ele provoca a transição de um elétron no estado fundamental para o excitado. Como este estado é estendido, a diferença de potencial $V_{DS}$ (no plano perpendicular ao do crescimento; veja a figura da página \pageref{fig:bH-3D}) arrasta-o para os contatos nas bordas da amostra, sendo então detectado pelos circuitos externos.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{A}[][]{(a)}
+		\psfrag{B}[][]{(b)}
+		\psfrag{X}[][]{$x$}
+		\psfrag{Y}[][]{$y$}
+		\psfrag{Z}[][]{$\varepsilon$}
+		\psfrag{E0}[][]{$\varepsilon_0$}
+		\psfrag{E1}[][]{$\varepsilon_1$}
+		\psfrag{S}[l][l]{Substrato}
+		\psfrag{F}[][]{Superfície}
+		\psfrag{E}[l][l]{Estado localizado}
+		\psfrag{V1}[l][l]{$V_{GS} = 0$}
+		\psfrag{V2}[l][l]{$V_{GS} < 0$}
+		\psfrag{1}[][]{\colorbox{white}{\unit{1}{\micro\metre}}}
+		\psfrag{D}[][]{$\delta$-Si}
+		\includegraphics[width=\textwidth]{figuras/MyQDIP.eps}
+		\caption{\small \textbf{(a)} fotodetector baseado em pontos-quânticos induzidos pela rede de antipontos-quânticos. Quando $V_{GS} < 0$ o potencial da banda de condução nas regiões do poço-quântico sob os antipontos-quânticos é maior que o dos interstícios (pontos-quânticos). Adicionalmente, o estado fundamental tem energia inferior ao ponto-de-cela e, portanto, é localizado; já o estado excitado tem energia superior e, logo, é estendido. Idealmente apenas o estado fundamental está inicialmente ocupado, e uma transição para o estado excitado é intermediada por um fóton de energia apropriada. No estado excitado, o elétron é arrastado para fora da amostra pela tensão $V_{DS}$ e delata a incidência do fóton. \textbf{(b)} Rede quadrada de antipontos-quânticos sobre GaAs feita pelo FIB do Centro de Componentes Semicondutores (CCS) da Universidade de Campinas (UNICAMP).}
+		\label{fig:myQDIP}
+	\end{figure}
+
+	Em suma, o funcionamento é idêntico ao dos QDIPs transversais tradicionais, exceto que os pontos-quânticos não são auto-organizados \cite{Pagnossin:2004}, mas induzidos eletricamente. A vantagem é que temos total controle das dimensões e da distribuição deles no plano perpendicular ao do crescimento (já que não estamos sujeitos às flutuações inerentes à ao precesso de auto-formação dos pontos-quânticos crescidos por MBE), o que implica numa raia de detecção mais estreita, \ie, maior acurácia na detecção do fóton. Outra vantagem é que a regularidade da rede de pontos-quânticos contribui para melhorar a mobilidade do 2DES. Além disso, pequenas variações em $V_{GS}$ nos permite controlar $\varepsilon_1 - \varepsilon_0$, ou seja, a faixa de detecção.
+
+	Mas há uma desvantagem: a estrutura que propomos aqui não permite o empilhamento de regiões-ativas. Isto significa que a corrente fotoexcitada deve ser muito baixa, o que não é bom. Por outro lado, isto também implica numa corrente de escuro baixa, o que é bom.
+
+	As primeiras tentativas de se fabricar pontos-quânticos utilizavam fotolitografia e eletrolitografia, como nos antipontos-quânticos que utilizamos. Na época essas técnicas mostraram-se incapazes de produzir pontos-quânticos com dimensões controladas ou pequenos o suficiente para garantir os efeitos de confinamento. Além disso, as estruturas produzidas por essas técnicas apresentavam má qualidade cristalina, com altas densidades de impurezas e defeitos estruturais proveninentes dos tratamentos químicos. Contudo, hoje temos à nossa disposição equipamentos mais modernos, como o FIB (\foreign{focused ion beam}), que nos permite construir \textbf{antipontos}-quânticos de algumas dezenas de nanometros (fig. \ref{fig:myQDIP}) sem a necessidade de tratamento químico posterior. Além disso, como os pontos são induzidos eletricamente nos interstícios, é possível controlar suas dimensões através de $V_{GS}$.
+
+%----------------------------------------------------------------------------------------------------------------
+\section{Localização fraca e interações elétron-elétron em 2DES com pontos-quânticos}\label{sec:WL-QDs}
+
+	%Abstract
+	%Nesta parte do trabalho nós apresentamos um estudo de localização-fraca (WL) e efeitos de interação elétron-elétron (EEI) em heteroestruturas de GaAs/InGaAs contendo pontos-quânticos (QDs) de InAs próximos ao 2DES no canal (fig.~\ref{fig:sample-structure}). Observamos ambos os efeitos no gráfico $\sigma\times T$, mas somente a WL no $\sigma \times B$ [$\sigma$ é a condutividade, $T$ é a temperatura e $B$, o campo magnético aplicado (perpendicularmente ao plano dos elétrons)]. A partir da magnetorresistência, determinamos os tempos de coerência ($\tau_\varphi$) e de espalhamento \foreign{spin}-órbita ($\tau_\text{\textsc{so}}$). Este último independe da temperatura e tem valor maior que $\tau_\varphi$, donde se conclui que a interação \foreign{spin}-órbita é fraca (como se espera para GaAs) quando comparada com os processos que causam a decoerência de fase dos elétrons. Observamos que a taxa de decoerência é linear com a temperatura e aumenta quando ocorre a formação dos pontos-quânticos, reflexo do mecanismo de espalhamento adicional que representam.
+
+	No trabalho~\cite{Pagnossin:2004} apresentamos um estudo das concentrações dos elétrons e suas mobilidades (quântica e de transporte) num 2DES próximo de uma camada tensionada de arseneto de índio, de espessura $\dInAs$. À medida que esta espessura crescia, a tensão acumulada durante o crescimento prejudicava as mobilidades do 2DES. Quando $\dInAs \approx \unit{1,5}{\monolayer}$, a tensão é liberada através da formação de pontos-quânticos. E neste momento, as mobilidades cresciam, chegando a igualarem-se àquelas observadas quando nenhuma camada de InAs era crescida.
+
+	Os métodos de extração das concentrações de elétrons e suas mobilidades (cap.~\ref{cap:metodos}) baseiam-se na suposição de que os campos magnéticos aplicados não alteram apreciavelmente as propriedades do 2DES, de sorte que essas propriedades (obtidas quando $B \ne 0$) são aquelas para $B = 0$ (isto nem sempre é verdadeiro, cf. \citealt{Sergio:2003}). Por outro lado, os efeitos de localização-fraca e interações entre elétrons constituem métodos alternativos no limite $B \to 0$ que podem corroborar ou não os resultados obtidos dos efeitos Hall e Shubnikov-de Haas. Ademais, eles são sensíveis ao tempo de relaxação de fase dos (\foreign{quasi}-) elétrons, característica geralmente ignorada no transporte de cargas.
+
+	Assim, a idéia aqui é verificar se a formação dos pontos-quânticos também influi no tempo de relaxação de fase ($\tauphi$), e veremos que isto de fato ocorre.
+
+
+	% ----------
+	% RESULTADOS
+	% ----------
+	\subsection{Resultados}
+
+	A figura~\ref{fig:sigmaxT} apresenta o gráfico da condutividade em campo nulo da amostra \unit{1,75}{\monolayer} em função da temperatura (as outras amostras apresentam resultados similares). Ele mostra um comportamento ``anômalo'' de $\sigma(T)$, já que conforme a lei de Wiedemann-Franz a condutividade de um \emph{gás} bidimensional de elétrons deve ser proporcional a $T^{-1}$ \cite[p.~253]{Buttiker:1986}. Isto ocorre porque, devido à baixa temperatura e mobilidade das amostras, o transporte de cargas ocorre no regime de difusão quântico (sec.~\ref{sec:WL}) e, neste caso,
+	\begin{equation}\label{eq:sigmaxT}
+	\sigma(T) = \sigma(0) + \delta\sigma_\text{\tiny WL}(T) + \delta\sigma_\text{\tiny{EEI}}(T).
+	\end{equation}
+
+	Aqui, $\delta\sigma_\text{\tiny WL}$ e $\delta\sigma_\text{\tiny{EEI}}$ são as correções da condutividade clássica [$\sigma(0)$] devido à localização-fraca e às interações elétron-elétron~\cite{Abrahams:1979, Altshuler:1980, Altshuler:1981, Altshuler:1985}, respectivamente:
+	$$
+	\left\{\begin{matrix}
+		\delta\sigma_\text{\tiny WL} \\
+		\delta\sigma_\text{\tiny{EEI}}
+	\end{matrix}\right\}
+	= \frac{e^2}{\pi h}
+	\left\{\begin{matrix}
+		\alpha p \\
+		\lambda
+	\end{matrix}\right\}
+	\ln\left( \frac{k_B T \tau}{\hbar} \right), 
+	$$
+onde $\alpha$ é igual a $1$ para interação \foreign{spin}-órbita fraca ou $1/2$ para forte. $p$ é o expoente da dependência com a temperatura do tempo de espalhamento inelástico ($\tau_\varphi \propto T^{-p}$) e $\lambda$ é a constante de interação~\cite{Zala:2001}.
+
+	\begin{figure}[tb]
+		\centering
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/sigmaxT.eps}}
+		\caption{\small condutividade em campo nulo da amostra \unit{1,75}{\monolayer}: tanto a localização fraca como as interações entre elétrons estão presentes ($\alpha, p = 1$ e $\lambda = -0,185$ na eq.~\ref{eq:sigmaxT}). A incerteza nos pontos experimentais é da ordem do tamanho dos símbolos.}
+		\label{fig:sigmaxT}
+	\end{figure}
+
+	Fazendo $\alpha = 1$ (interação \foreign{spin}-órbita fraca característica do GaAs) e $p = 1$ (mais a frente) na equação~\ref{eq:sigmaxT}, e ajustando-a aos dados experimentais da figura~\ref{fig:sigmaxT}, encontramos $\lambda = -0,185$ e $\sigma(0) = \unit{1,16\times\power{10}{-3}}{\reciprocal\ohm}$. Este resultado está representado na figura pela reta contínua e significa que tanto a localização-fraca como as interações elétron-elétron estão presentes no 2DES e são apreciáveis. De fato, se fizéssemos $\lambda = 0$, indicando que não há interação entre os elétrons, obteríamos o comportamento representado pela reta pontilhada.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{Y}[][]{\Large $\Delta\sigma$ ($\unit{\power{10}{-5}}{\reciprocal\ohm}$)}
+		\psfrag{A2369}[][]{\Large \shortstack{Amostra-referência\\($\dInAs = 0$)}}
+		\psfrag{A2365}[][]{\Large Amostra \unit{1,75}{\monocamadas}}
+		\psfrag{B}[][]{\Large$B$ (\milli\tesla)}
+		\psfrag{T1}[l][l]{\unit{1,3}{\kelvin}}
+		\psfrag{T2}[l][l]{\unit{2,1}{\kelvin}}
+		\psfrag{T3}[l][l]{\unit{2,8}{\kelvin}}
+		\psfrag{T4}[l][l]{\unit{4,2}{\kelvin}}
+		\psfrag{T5}[l][l]{\unit{7,5}{\kelvin}}
+		\psfrag{T6}[l][l]{\unit{8,7}{\kelvin}}
+		\psfrag{T7}[l][l]{\unit{1,6}{\kelvin}}
+		\psfrag{T8}[l][l]{\unit{3,0}{\kelvin}}
+		\psfrag{T9}[l][l]{\unit{3,5}{\kelvin}}
+		\psfrag{T10}[l][l]{\unit{4,3}{\kelvin}}
+		\resizebox{0.95\textwidth}{!}{\includegraphics{figuras/sigmaxB2.eps}}
+		\caption{\small correção da magnetocondutividade experimental (pontos) e teórico das amostras referência (sem camada de InAs) e \unit{1,75}{\monolayer}, devido à localização-fraca, eq.~\ref{eq:sigmaxB}.}
+		\label{fig:sigmaxB}
+	\end{figure}
+
+	Agora vejamos o que acontece quando aplicamos o campo magnético $B$ perpendicularmente ao plano dos elétrons. A fig.~\ref{fig:sigmaxB} ilustra o gráfico da correção da magnetocondutividade clássica da amostra \unit{1,75}{\monolayer}, donde podemos fazer duas observações imediatamente: primeiro, $\Delta\sigma$ decresce com a temperatura. Isto acontece porque o tempo de espalhamento inelástico depende da temperatura ($\tauphi \propto T^{-p}$) \cite[p.~5]{Bergmann:1984}; segundo, não há pico de anti-localização, o que nos permite concluir que a interação \foreign{spin}-órbita é fraca (esta é uma característica do GaAs), o que justifica termos feito $\alpha = 1$ anteriormente.
+
+	A partir da fig.~\ref{fig:sigmaxB} calculamos a correção da magnetocondutividade experimental:\footnote{Alternativamente, podemos utilizar $\Delta\sigma \approx -\formFactor\Delta R/R_0$, já que $\rho = R/\formFactor$ (sec.~\ref{sec:HE}).}
+	$$
+	\Delta\sigma \doteq \frac{1}{\rho(B)} - \frac{1}{\rho_0} \approx -\frac{\Delta\rho}{\rho_0^2},
+	$$
+onde $\rho_0$ é a resistividade para $B = 0$ e fizemos a aproximação $\rho(B) \approx \rho_0$ na segunda passagem pois $\Delta\rho(B) \ll \rho_0$. O resultado está na figura~\ref{fig:sigmaxB} e, da mesma forma que a dependência com a temperatura, $\Delta\sigma$ tem duas fontes de correção: localização-fraca e interações elétron-elétron.
+
+	Conforme Minkov \etal~\cite{Minkov:2004}, a correção da magnetocondutividade clássica (de Drude; constante) de um 2DES confinado num poço-quântico de InGaAs devido à localização-fraca é dada por
+	\begin{equation}\label{eq:sigmaxB}
+	\delta\sigma(B) = \frac{1}{2\pi R_K}\,\left[ F_t(b_\varphi,b_\text{\tiny SO}) - F_s(b_\varphi) \right];	
+		\qquad b_{\varphi,\text{\tiny SO}} \doteq \frac{B_{\varphi,\text{\tiny SO}}}{B}.
+	\end{equation}
+
+	$B_\varphi$ ($B_\text{\tiny SO}$) é a intensidade do campo magnético no qual um elétron percorre, por difusão e durante o tempo $\tau_\varphi$ ($\tau_\text{\tiny SO}$), uma trajetória que encerra uma área tal que contenha exatamente um \foreign{quantum} de fluxo magnético. São parâmetros úteis que substituem $\tau_\varphi$ e $\tau_\text{\tiny SO}$, respectivamente.
+
+	$F_t$ e $F_s$ são as contribuições dos elétrons em estados triplete e singlete, respectivamente. Ambos os termos dependem de $\tau_\varphi$ (que está associado à parte espacial da função de onda do 2DES), mas o segundo não depende do tempo de relaxação de \foreign{spin}, já que num espalhamento entre estados singlete não há mudança de \foreign{spin}. O primeiro tem uma expressão complicada \cite[eq.~1]{Minkov:2004} e contribui negativamente para magnetocondutividade ($\Delta\sigma < 0$), enquanto $F_s(b_\varphi) = \psi\left(b_\varphi + 1/2\right) - \ln\left(b_\varphi\right)$ contribui positivamente ($\psi$ é a função Digama).
+
+	Quanto a correção devido às interações intereletrônicas, Zala \etal~\cite{Zala:2001} trataram o caso de potenciais de espalhamento de curto alcance, enquanto Gornyi \etal~\cite{Gornyi:2003} consideraram os potenciais do tipo coulombiano (longo alcance). Em ambos os casos, os termos de Hartree contribuem positivamente para a magnetocondutividade, ao passo que os termos de Fock (\foreign{exchange}) contribuem negativamente. Independentemente disto, para os valores de temperatura ($< \unit{5}{\kelvin}$) e de campo magnético ($< \unit{5}{\milli\tesla}$) aos quais nossas amostras estiveram expostas, a $\delta\sigma(B)$ calculada (teórica) é $\power{10}{4}$ vezes menor que a $\Delta\sigma$ observada. Logo, podemos dizer que a $\Delta\sigma$ observada é devida (quase) exclusivamente a localização-fraca. De fato, a figura~\ref{fig:sigmaxB} mostra como o comportamento previsto (eq.~\ref{eq:sigmaxB}), representado pelas linhas contínuas, reproduz muito bem os dados experimentais.
+as curvas contínuas ilustram o comportamento teórico \eqref{eq:sigmaxB} ajustado aos dados experimentais.
+
+	Os parâmetros de ajuste\footnote{Utilizamos o \foreign{software} MathCAD para fazer os ajustes de mínimos quadrados.} da equação~\ref{eq:sigmaxB} são $B_\varphi$ e $B_\text{\tiny{SO}}$, a partir dos quais obtemos diretamente $\tau_\varphi$ e $\tau_\text{\tiny{SO}}$ usando a relação já conhecida $\tau_{\varphi,\text{\tiny{SO}}} = \hbar/(4e D B_{\varphi,\text{\tiny{SO}}})$. Analisando a amostra \unit{1,75}{\monolayer} (representativa) desta forma para várias temperaturas construimos a figura~\ref{fig:taxas}. Nela, vemos que a taxa de decoerência aumenta \emph{linearmente} com a temperatura, uma evidência de que a quebra de fase ocorre através de espalhamentos elétron-elétron~\cite[p.~21]{Datta:1995} (adiante).
+
+	Por outro lado, $\tauSO > \tau_\varphi$, o que corrobora nossa observação anterior de que as interações \foreign{spin}-órbita são fracas. Em semicondutores da família III-V\footnote{Em verdade, as famílias III-V e II-VI são as mais conhecidas e estudadas sob este aspecto.} (GaAs, InAs, AlAs, \etc) a simetria de inversão da rede de Bravais (\foreign{bulk inversion asymmetry}) é destruída pela presença de dois átomos na base. Com isto, a interação \foreign{spin}-órbita passa a depender do vetor de onda $\vetor k$. Efeito semelhante ocorre devido a assimetria nas heterointerfaces, causada pelos potenciais de confinamento (\foreign{structure inversion asymmetry}). O primeiro ficou conhecido como o termo de Dresselhauss~\cite{Dresselhaus:1992} da interação \foreign{spin}-órbita e o segundo, de Rashba~\cite{Rashba:1960}. O \foreign{gap} de \foreign{spin} devido ao termo de Rashba é de $2\hbar\alpha_0 E k_F = \unit{2.2}{\nano\electronvolt}$\rlap{,}\footnote{Aqui $\alpha_0 = \unit{5.5}{\electronvolt \squaren\angstrom}$ para o GaAs \cite{Lommer:1988}, $E \sim \unit{\power{10}{3}}{\volt\per\metre}$ é o campo elétrico médio no poço-quântico e $k_F = \sqrt{2\pi n_s}$ é o vetor de onda de Fermi. $n_s$ é a concentração total de portadores, obtida das medidas do efeito Hall clássico.} que não pode explicar o \foreign{gap} observado $\hbar\sqrt{2/(\tauSO\,\tau)} = 0,06 \text{ -- } \unit{0,228} {\milli\electronvolt}$ \cite{Desrat:2006}. Logo, podemos concluir que as interações \foreign{spin}-órbita ocorrem majoritariamente devido ao mecanismo de Dresselhauss. Isto está de acordo, por exemplo, com os cálculos auto-consistentes de Minkov \etal~\cite{Minkov:2004} e com os resultados experimentais de Desrat \etal~\cite{Desrat:2006}.
+
+	É interessante observar também que $\tauSO$ não depende da temperatura (na fig.~\ref{fig:taxas}). Isto também está de acordo com resultados anteriores \cite[p.~366]{Zutic:2004}.
+
+	\begin{figure}[tb]
+       \centering
+		\psfrag{Eq. 3 e 4}[][]{\Large eqs. \ref{eq:tauEE} e~\ref{eq:tauQD}}
+		\psfrag{T1}[][]{\Large $\tauphi^{-1}$}
+		\psfrag{T2}[][]{\Large $\tauSO^{-1}$}
+		\psfrag{Y}[][]{\Large $\tauphi^{-1}$ e $\tauSO^{-1}$ ($\unit{\power{10}{10}}{\reciprocal\second}$)}
+		\psfrag{A2369}[l][l]{\Large Amostra-referência ($\dInAs = 0$)}
+		\psfrag{A2365}[l][l]{\Large Amostra \unit{1,75}{\monocamadas}}
+		\psfrag{T (K)}[][]{\Large $T$ (\kelvin)}
+       \resizebox{0.95\textwidth}{!}{\includegraphics{figuras/taxas2.eps}}
+       \caption{\footnotesize dependência com a temperatura das taxas de decoerência e espalhamento \foreign{spin}-órbita. As retas representam o resultado teórico, equações~\ref{eq:tauEE} e~\ref{eq:tauQD}.}
+		\label{fig:taxas}
+	\end{figure}
+
+	Então, $\tau_\varphi$ é o principal parâmetro da localização-fraca; que define sua magnitude e dependência com a temperatura. E na ausência de impurezas magnéticas, como é o caso, a relaxação da fase dos elétrons no sistema bidimensional ocorre através de espalhamentos elétron-fônon e elétron-elétron (apenas mecanismos de espalhamento que modifiquem a fase aleatoriamente tanto no tempo quanto no espaço contribuem para $\tau_\varphi$). O primeiro implica em $\tau_\varphi^{-1} \propto T^2$ e o segundo, em $\propto T$ \cite[p.~21]{Datta:1995}. Isto posto, vemos pela figura~\ref{fig:taxas} que não há influência de fônons. De fato, conforme \cite{Rammer:1986, Iordanski:1996}, a taxa de espalhamento por interações elétron-fônon para o GaAs na maior temperatura utilizada em nossas medidas é $\sim\!\unit{3\times\power{10}{8}}{\reciprocal \second}$; duas ordens de grandeza menor que $\tau_\varphi^{-1}$ obtido dos dados experimentais.
+
+	Já a taxa de espalhamento elétron-elétron é dada por~\cite{Narozhny:2002}
+	\begin{equation}\label{eq:tauEE}
+        \frac{1}{\tauEE(T)} = \left[ 1 + \frac{3(\FLiquid)^2}{(1 + \FLiquid)\,(2 + \FLiquid )}  \right]\,\frac{k_B T}{g \hbar} \, \ln \left[ g (1+\FLiquid) \right] + \frac{\pi}{4}\,\left[ 1 + \frac{3(\FLiquid)^2}{( 1 + \FLiquid )^2} \right]\,\frac{(k_B T)^2}{\hbar E_F}\,\ln\left( \frac{E_F\tau} {\hbar} \right),
+    \end{equation}
+resultado que leva em consideração ambos os estados de triplete e singlete dos elétrons no sistema bidimensional\rlap{.}\footnote{Até então considerava-se apenas o estado singlete, de onde obtinha-se $\tauEE^{-1} \propto T^2$ para altas temperaturas e $\propto T$ para baixas \cite{Altshuler:1982, Eiler:1984}.} $g = R_K/R$ é a condutância adimensional, $R$ é a resistência, $E_F$ é a energia de Fermi e $\FLiquid$ é a constante do líquido de Fermi associada ao estado triplete, que reflete a intensidade da interação de troca de \foreign{spin} (\foreign{spin-exchange}): para $\FLiquid < 0$ a interação tende a alinhar os \foreign{spins}, atingindo uma instabilidade de Stoner  quando $\FLiquid = -1$.
+
+	\begin{figure}
+		\centering
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/Aee.eps}}
+		\caption{\footnotesize o coeficiente $A_{ee}$ e a mobilidade de transporte $\mu$ apresentam o mesmo comportamento em função de $d_\text{InAs}$. Isto ocorre por quê ambos dependem de $\tau$, o tempo de espalhamento elástico, que varia conforme tensão mecânica é acumulada durante o crescimento epitaxial, conforme explica a referência~\citealp{Pagnossin:2005}.}
+		\label{fig:Aee}	
+	\end{figure}
+
+	Outro tipo de espalhamento inelástico que pode ocorrer no caso das amostras com pontos-quânticos ($d_\text{InAs} \ge \unit{1,5}{\monolayer}$) é aquele entre os elétrons do sistema bidimensional e aqueles capturados pelos QDs. Conforme~\cite{Imry:1990,Kawazu:2005}, a taxa de espalhamento devido a este processo é dada por
+	\begin{equation}\label{eq:tauQD}
+		\frac{1}{\tau_\text{\textsc{qd}}(T)} = \frac{(k_BT)^2}{\hbar E_\text{el}}\, \frac{N_{0D}}{N_{2D}} \, \left|\ln\left( \frac{k_BT}{\Delta} \right) \right|^3,
+	\end{equation}
+onde $E_\text{el}$ é uma energia eletrônica da ordem de alguns décimos de elétron-volts, $\Delta$ é um valor característico da energia de tunelamento entre os elétrons do sistema bidimensional e aqueles localizados nos QDs (da ordem de uma fração de elétron-volt), $N_{0D}$ e $N_{2D}$ são as densidades de estados localizados e 2D, respectivamente.
+
+	A figura~\ref{fig:taxas} mostra $\tauphi^{-1}(T)$ para a amostra \unit{1,75}{\monolayer}. A curva representa o resultado teórico $\tauEE^{-1} + \tau_1^{-1}$, calculado através das equações~\ref{eq:tauEE} e \ref{eq:tauQD} com os parâmetros de ajuste $\FLiquid = -0,24$, $E_\text{el} = \unit{0,1}{\electronvolt}$ e $\Delta = \unit{30}{\milli\electronvolt}$, e tomando $N_{0D} = \unit{1,0\times\power{10}{15}}{\rpsquare\metre}$ \cite{Duarte:2002} e $N_{2D} = \unit{1,97\times\power{10}{16}}{\rpsquare\metre}$ (obtido das medidas de transporte).
+
+	O valor de $\FLiquid$ depende do parâmetro $r_s$ através da relação
+	$$
+	\FLiquid = -\frac{1}{2\pi}\,\frac{r_s}{\sqrt{2 - r_s^2}}\,\ln\left[\frac{\sqrt{2} + \sqrt{2-r_s^2}}{ \sqrt{2} - \sqrt{2-r_s^2}}\right] \quad\text{ para }
+r_s^2 < 2,
+	$$
+sendo $r_s$ a razão das energia de interação coulombiana e cinética, dado por $\sqrt{2}e^2/(\varepsilon_s \hbar v_F)$. $\varepsilon_s$ é a constante dielétrica e $v_F$ é a velocidade de Fermi. O valor teórico de $\FLiquid$ ($= -0,24$) foi calculado usando $\varepsilon_s = 12,9$ (GaAs). Experimentalmente obtivemos $\FLiquid = -0,20$ para a amostra \unit{1,75}{\monolayer}.
+
+	Assim, podemos concluir que a decorerência ocorre através de interações elétron-elétron e elétron-(elétron localizado) nas amostras com pontos-quânticos (apenas o primeiro está presente nas amostras sem pontos-quânticos). A figura~\ref{fig:taxas} mostra a dependência linear de $1/\tauphi$ com a temperatura, uma evidência de que o segundo termo em \eqref{eq:tauEE} é muito menor que o primeiro. Além disso, como o comportamento de $\ln(k_BT/\Delta)$ não é muito diferente do de $\Delta/k_BT$, a equação~\ref{eq:tauQD} se torna linear com $T$, de modo que podemos escrever $1/\tauphi = A_\text{ee} T$.
+
+	A figura~\ref{fig:Aee} mostra o coeficiente angular $A_\text{ee}$ e a mobilidade de transporte $\mu$ para todas as amostras, \ie, em função da espessura nominal da camada de InAs ($d_\text{InAs}$). O comportamento similar é uma conseqüência da dependência em $\tau$, que por sua vez sofre alterações com a evolução dos pontos-quânticos, conforme explicado por Pagnossin \etal~\cite{Pagnossin:2005}: antes da formação dos pontos-quânticos ($d_\text{InAs} \le \unit{1,5}{\monolayer}$), a tensão mecânica acumulada durante o crescimento epitaxial aumenta a taxa de relaxação do momento, ou seja, reduz tanto $\tau$ quanto as mobilidades quântica e de transporte. Com a formação dos pontos-quânticos ($d_\text{InAs} \approx \unit{1,6}{\monolayer} $), a tensão é liberada e tanto $\tau$ como as mobilidades voltam a crescer. Prosseguindo o crescimento, a tensão volta a acumular e, como anteriormente, as mobilidades são reduzidas.
+
+	Observe que $A_\text{ee} \propto \tauphi^{-1}$, o que significa que, embora a taxa de espalhamento aumente com o incremento da tensão mecânica, a de decoerência diminui. Isto pode parecer contraditório, mas segundo S. Datta, a quebra de fase da função de onda do 2DES é tão frequente quanto mais aleatório --- no tempo --- for a configuração dos agentes espalhadores (veja a discussão na p.~17 da ref. \citealt{Datta:1995}). Isto nos leva à interessante conclusão de que a tensão mecânica ``congela'' esses agentes espalhadores. As principais fontes de decoerência são, como vimos, as interações intereletrônicas e elétron-fônon. Como excluímos esta última há pouco, podemos concluir que a tensão mecânica ``congela'' os próprios elétrons do 2DES. Dito de forma mais técnica: o espaço de fase dos elétrons do 2DES é reduzido pela tensão mecânica.
+
+	Para finalizar, no detalhe da figura \ref{fig:Aee} vemos $A_\text{ee} \times \tau$ para as amostras com e sem pontos-quânticos. Embora os valores de $A_\text{ee}$ cresçam com $\tau$ em ambos os casos, a inclinação dessa variação é diferente. Nas amostras com pontos-quânticos, há o espalhamento adicional entre os elétrons no sistema bidimensional e aqueles capturados, que incrementa $A_\text{ee}$ conforme a densidade de elétrons localizados (de pontos-quânticos) aumenta, resultando na redução da inclinação.
+
+	Resumindo esta seção, concluímos que e fenômeno da localização fraca em nossas amostras é dimensionado principalmente pelo tempo de coerência da função de onda dos elétrons do 2DES, que por sua vez é dado pelas interações intereletrônicas e, nas amostras que têm pontos-quânticos, também pelas interações do 2DES com os elétrons aprisionados neles. A tensão mecânica do crescimento epitaxial prejudica as mobilidades do 2DES mas, por outro lado, aumenta o tempo de quebra de fase dos elétrons. Essa influência é distinta para as amostras com e sem pontos-quânticos.
+
+%----------------------------------------------------------------------------------------------------------------
+\section{Fotodetectores de infravermelho}\label{sec:QDIPs}
+
+	A partir de agora, deixamos para trás a física básica em direção à aplicada: os fotodetectores de infravermelho baseados em pontos-quânticos, ou QDIPs (\foreign{quantum-dots infrared photodetectors}), especificamente. A construção de um fotodetector completo não é o nosso objetivo atual, haja vista que isto requer infra-estrutura da qual não dispomos. Alternativamente, objetivamos identificar configurações de heteroestruturas que maximizam os requisitos de um QDIP (capítulo~\ref{cap:introducao}).
+
+	Conforme vimos na introdução deste trabalho, um QDIP deve ser projetado de modo a apresentar tempo de resposta mínimo e corrente fotogerada máxima, dentre outras características (veja a introdução). A primeira garante não só que a radiação incidente seja detectada, mas que o seja rapidamente (tempo de resposta mínimo significa que o tempo entre a excitação dos elétrons aprisionados nos pontos-quânticos e a detecção deles pelos circuitos externos ao detector seja mínima). A segunda característica provê maior sensibilidade ao dispositivo, permitindo-nos identificar (em meio aos ruídos) a corrente fotogerada para radiações menos intensas.
+
+
+	\subsection{Resultados do 1º conjunto}
+
+	Nas medidas de transporte as amostras foram imersas em $^4\text{He}$ líquido a \unit{1,4}{\kelvin} em uma região de campo magnético uniforme e perpendicular ao plano de crescimento. Então, fazemos percorrer-lhes uma corrente \foreign{ac} de aproximadamente \unit{1}{\micro\ampere} e, {\bfseries (I) no escuro}, medimos as diferenças de potencial paralela $V$ (efeito Shubnikov-de Haas) e perpendicular $V_H$ (efeito Hall) a essa corrente (veja a figura~\ref{fig:bH}) à medida que variamos o campo magnético de zero até dez tesla. Em seguida, {\bfseries (II)} iluminamos a amostra através de um \textsc{led} de $\sim\!\unit{2}{\electronvolt}$ por alguns segundos, desligamo-lo e retornamos ao passo {\bfseries (I)}. Executamos alternadamente os passos {\bfseries (I)} e {\bfseries (II)} várias vezes até a \novotermo{saturação},\index{saturação} situação na qual duas medidas consecutivas não apresentam diferenças apreciáveis. 
+
+	Levando em conta este procedimento, daqui para frente os termos \textsl{escuro}, \enfase{antes da iluminação} e seus sinônimos referir-se-ão à situação inicial das medidas de transporte, na qual o passo {\bfseries (II)} não fora executado nenhuma vez, \ie, na qual a amostra ainda não fora exposta ao \textsc{led}. Similarmente, com \textsl{claro}, \enfase{após a iluminação} e seus sinônimos referir-nos-emos à situação de saturação. Contudo, note que o uso da palavra \textit{claro} não significa que a amostra fora exposta à luz \textit{enquanto} mediamos, mas apenas que fora exposta. Os gráficos de $V$ e $V_H$ em função do campo magnético aplicado ($B$) são chamados de \novotermo{traços} SdH e Hall, respectivamente.
+
+	Apenas para simplificar a apresentação dos resultados e das análises a seguir, vamos dividí-la em duas partes: na primeira discutiremos os efeitos da iluminação sobre as amostras e, na segunda, a influência do empilhamento de planos de pontos-quânticos.
+
+	\subsection*{Os efeitos da iluminação}
+
+	\begin{figure}[tb]
+		\centering
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/tracos-SdH.eps}}
+		\caption{\small curvas (ou traços) SdH no (a) \textsl{escuro} e no (b) \textsl{claro} das cinco amostras do primeiro conjunto.}
+		\label{fig:tracos-SdH}
+	\end{figure}
+
+	A figura~\ref{fig:tracos-SdH} apresenta os traços SdH, gráficos de $V \times B$, no \textsl{escuro} e no \textsl{claro}, obtidos diretamente das medidas do efeito Shubnikov-de Haas e sem tratamento algum. Mesmo a partir deles é possível extraír algumas informações qualitativas.
+
+	Observamos em primeiro lugar que o valor médio da resistividade decresce ao iluminarmos as amostras: no \textsl{escuro} é de \unit{5,7}{\kilo\ohm\per\Box} e no \textsl{claro}, de \unit{4,2}{\kilo\ohm\per\Box}\rlap{.}\footnote{A notação $\kilo\ohm\per\Box$ é uma forma alternativa de escrevermos a resistividade (ou condutividade). Nela o $\Box$ representa o fator de forma ($\formFactor$), alertando para o fato de que para se obter a resistividade verdadeira é preciso dividir por $\formFactor$.} Mas como a condutividade é proporcional ao produto $n \mu$, podemos concluir que um dos dois (ou ambos) aumentou. Veremos este ponto com maiores detalhes quando analisarmos os resultados das medidas do efeito Hall.
+
+	Note agora os três seguintes fatos acerca das oscilações de magnetorresistividade: \textbf{(i)} no \textsl{escuro} o início delas é nítido somente a partir de quatro tesla, mas no \textsl{claro} já as podemos ver em \unit{1}{\tesla}; \textbf{(ii)} as amplitudes são maiores após a iluminação e, finalmente, \textbf{(iii)} as freqüências das oscilações são maiores no \textsl{claro}.
+
+	As duas primeiras observações acima decorrem da redução dos espalhamentos sofridos pelos elétrons: uma das condições necessárias para que observemos as oscilações de magnetorresistividade é que o tempo quântico ($\tau_q \propto \mu_q$), \ie, o tempo de vida do \foreign{quasi}-elétron no nível de Landau, seja maior que o período ciclotrônico ($2\pi/\omega_c$) ou, equivalentemente, que $\mu_q\,B \gg 1$. Em palavras, quanto maior for $\tau_q$, menor será a intensidade do campo magnético necessário para que as oscilações \emph{ocorram}. Mas esta condição não é suficiente, pois conforme \eqref{eq:SdH-LK} a amplitude das oscilações é dada pela exponencial $\exp\left[ -\pi/(\mu_q B) \right]$, o que significa que as oscilações podem não ser visíveis --- experimentalmente --- para $\mu_q$ suficientemente pequena, mesmo que a condição acima valha, ou seja, mesmo que de fato haja oscilação em $\rho$. De qualquer modo, podemos concluir seguramente que as mobilidades quânticas das sub-bandas presentes no \textsl{claro} são maiores que as daquelas presentes no \textsl{escuro}.
+
+	A observação (iii) permite-nos concluir que a concentração de portadores da sub-banda que dá origem às oscilações observadas aumenta conforme iluminamos a amostra: veja a equação \ref{eq:n:SdH} (p. \pageref{eq:n:SdH}).
+
+	Resumindo, com base em (i)--(iii), podemos dizer que a iluminação incrementa as concentrações de portadores e aumenta as mobilidades quânticas desses portadores (eventualmente, a iluminação popula sub-bandas antes depopuladas, cf. ref. \citealt{Pagnossin:2004}, por exemplo).
+
+	\begin{figure}[tb]
+		\centering
+		\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/espectros-SdH.eps}}
+		\caption{\small espectros de concentrações no (a) \textsl{escuro} e no (b) \textsl{claro} das oscilações de magnetorresistividade (traços SdH apresentados na figura anterior). Para facilitar a visualização, estes espectros foram normalizados, de modo que suas amplitudes não podem ser comparadas.}
+		\label{fig:espectros-SdH}
+	\end{figure}
+
+	O passo seguinte da análise consiste em efetuarmos as transformadas discretas de Fourier dos gráficos de $\rho''\times\tfrac{1}{B}$, sendo $\rho''$ a derivada segunda da magnetorresistividade com relação ao recíproco do campo magnético ($B$) \cite{Pagnossin:2004}. Fizemos isto através do algorítmo FFT (\foreign{fast Fourier transform}) disponibilizado pelo \foreign{software} de análise de dados \textsl{Microcal Origin}$^\text\textregistered$ e obtivemos os espectros de freqüências apresentados na figura~\ref{fig:espectros-SdH}, também nas situações \textsl{escuro} e \textsl{claro}.
+
+	Estes espectros são aqueles obtidos com a maior largura da janela Hanning, $\Delta = t_N - t_1$, onde  $t_1 = 1/(\unit{10}{\tesla})$ e $t_N$ são os limites inferior e superior da janela, respectivamente. O limite superior da janela Hanning foi fixado em \unit{1}{\reciprocal\tesla} no \textsl{escuro} e em \unit{0,5}{\reciprocal\tesla} no \textsl{claro} porque é só a partir destes valores de campo que as oscilações são observáveis (fig.~\ref{fig:tracos-SdH}). O número de pontos utilizados na transformação ($N$) foi feito igual a $2^{12} = 4096$ interpolando linearmente os pontos medidos entre $t_1$ e $t_N$\rlap{.}\footnote{É uma exigência do algorítmo da FFT que $N$ seja uma potência de $2$ \cite{Press:1992,Smith:1999}.} 
+
+	Observando a figura~\ref{fig:espectros-SdH} notamos que há ao menos duas sub-bandas presentes tanto no \textsl{escuro} quanto no \textsl{claro}: $n_1$ e $n_2$. Os índices de cada sub-banda são atribuídos da direita para a esquerda no gráfico, \ie, índices menores referem-se a picos com abscissas maiores. Isto porque sub-bandas com índices menores possuem energia de fundo de banda menores e, portanto, são mais populosas (assumindo, como é o caso, que as massas efetivas são parecidas).
+
+	No \textsl{escuro} há muita dúvida na identificação desses picos pois há apenas dois, mas no \textsl{claro} a presença de harmônicos (identificados nos espectros por $2n_2$, $3n_2$, \etc) dificulta a atribuição. Além de serem previstos na dedução de equação de Lifshitz-Kosevich (eq. \ref{eq:SdH-LK}) \cite{Ridley:1993}, os harmônicos podem também derivar do caráter discreto das transformadas de Fourier com fenômenos espúrios tais como ruídos, flutuações de temperatura, \etc~\cite{Smith:1999}. Eles são freqüentemente encontrados e já foram relatados em vários trabalhos \cite{Cavalheiro:2001,Shaw:1970}, mas vamos ignorá-los daqui para frente porque não trazem nenhuma informação adicional.
+
+	Podemos também ver pela figura~\ref{fig:espectros-SdH} que a concentração de portadores de ambas as sub-bandas aumenta ao levarmos as amostras do \textsl{escuro} para o \textsl{claro}. De fato, a concentração média da primeira sub-banda varia de $8,9$ (\textsl{escuro}) até \unit{9,3\times\power{10}{15}}{\rpsquare\metre} (\textsl{claro}), enquanto a segunda, de $1,0$ a \unit{2,5\times\power{10}{15}}{\rpsquare\metre}.
+
+	Ao iluminarmos as amostras, os elétrons armadilhados em níveis aceitadores (impurezas residuais de carbono), centros profundos (defeitos estruturais), estados de superfície (ligações químicas insaturadas) e pontos-quânticos (para as amostras que os possuem) absorvem fótons e são transferidos para a banda de condução e, dali, para o 2DES devido à termalização e à presença do campo elétrico gerado pelo desbalanceamento de cargas (\foreign{band-bending}). A contribuição de cada um desses estados depende das estruturas envolvidas, mas Cavalheiro \cite{Cavalheiro:2002} mostrou que são os centros profundos e os estados de superfície que mais fornecem elétrons para a região-ativa. De fato, ele utilizou cálculos autoconsistentes para mostrar que as impurezas aceitadoras contribuem com não mais do que $\sim\unit{5\times\power{10}{14}}{\rpsquare\metre}$.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{X}[][]{Amostra}
+		\psfrag{Y}[][]{Concentração (\unit{\power{10}{16}}{\rpsquare\metre})}
+		\psfrag{N1}[][]{$n_1$}
+		\psfrag{N2}[][]{$n_2$}
+		\includegraphics[width=0.7\textwidth]{figuras/n1e2_SdH.eps}
+		\caption{\small concentração de elétrons na primeira ($n_1$) e na segunda ($n_2$) sub-banda do poço-quântico. Os símbolos escuros referem-se ao \textsl{escuro}; os claros, ao \textsl{claro}. O erro na concentração, obtida do efeito Shubnikov-de Haas, é da ordem de \unit{\power{10}{10}}{\centi\rpsquare\metre}.}
+		\label{fig:ns}
+	\end{figure}
+
+	A figura \ref{fig:ns} ilustra a concentração das duas sub-bandas observadas nos espectros, tanto no \textsl{escuro} (símbolos escuros) como no \textsl{claro} (símbolos claros), em função da quantidade de camadas de pontos-quânticos empilhadas, isto é, em função das amostras. O comportamento médio de ambas as sub-bandas é aumentar a concentração com a iluminação, exceto pela amostra \#1, que não sofreu alteração. Realmente, podemos constatar isso nas figuras \ref{fig:tracos-SdH} e \ref{fig:espectros-SdH}.
+
+	No caso da segunda sub-banda esta observação confere com observações anteriores \cite{Pagnossin:2004}, mas não para $n_1$, que também deveria aumentar. Acreditamos que isto se deva ao \foreign{buffer} de \unit{170}{\nano\metre}: por estarem distantes da superfície, os elétrons na camada de pontos-quânticos inibem a ação da iluminação (\foreign{screening}), protegendo o 2DES dela. Naquele trabalho, a camada de pontos-quânticos estava próxima da superfície e, por isso, também era afetada pela iluminação: tornava-se nula. Como conseqüência, a concentração de portadores no 2DES aumentava. Este fenômeno é igual àquele discutido na seção \ref{sec:gate}, onde o \foreign{front-gate} só tem influência sobre o poço-quântico mais próximo dele.
+
+	Ainda observando os espectros de freqüências, a constatação mais interessante é que a altura do pico referente à segunda sub-banda cresceu muito mais que a daquele referente à primeira. De fato, note que se no \textsl{escuro} o pico $n_1$ é mais alto o $n_2$, no \textsl{claro} a situação é oposta. Isto significa que, na figura \ref{fig:tracos-SdH}, as oscilações observadas no \textsl{escuro} devem-se majoritariamente à primeira sub-banda, enquanto que no \textsl{claro} elas têm origem na segunda sub-banda.
+
+	Para determinarmos a mobilidade quântica dessas sub-bandas, precisamos rastrear a dependência da altura dos picos nos espectros com o limite inferior da janela Hanning utilizada na transformada de Fourier \cite[p. 45]{Pagnossin:2004}. Mas este método só é válido quando os picos não se sobrepõem, e isto não é verdade no \textsl{claro}. Alternativamente, podemos comparar as amplitudes dos espectros. Obtemos com isso a figura \ref{fig:mus}.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{X}[][]{Amostra}
+		\psfrag{Y}[][]{Amplitude FFT (u. a.)}
+		\psfrag{M1}[][]{$\mu_{q_1}$}
+		\psfrag{M2}[][]{$\mu_{q_2}$}
+		\includegraphics[width=0.95\textwidth]{figuras/mu1e2_SdH.eps}
+		\caption{\small mobilidade quântica dos elétrons na primeira ($\mu_{q_1}$) e da segunda ($\mu_{q_2}$) sub-bandas do poço-quântico. Os símbolos escuros referem-se à situação \textsl{escuro}; os claros, à \textsl{claro}. Não há picos nos espectros da amostra \#3 no \textsl{escuro}; os pontos indicados por ``?'' representam os valores experimentais mais próximos, após \unit{0,76}{\second} de iluminação. (obs.: \textsl{u.a.} $=$ unidades arbitrárias).}
+		\label{fig:mus}
+	\end{figure}
+
+	O leitor pode eventualmente questionar a validade de estudar a mobilidade quântica, que reflete o tempo de vida do \foreign{quasi}-elétron nos níveis de Landau, não num estado excitado do poço-quântico. Mas ocorre que tanto a mobilidade quântica quanto a de transporte são medidas dos mecanismos de espalhamento existentes \cite{Hai:1996}, o que torna legítimo analisar $\mu_q$ para tirar conclusões que visam aplicações eletrônicas.
+
+	Agora, observando a figura~\ref{fig:mus} notamos imediatamente que o comportamento é similar ao da figura anterior: todas as mobilidades crescem, exceto (novamente) para a amostra \#1. O acréscimo na mobilidade ocorre por duas razões: primeiramente, porque há um aumento correspondente de elétrons na região da dopagem (veremos isso ao analisarmos dos dados do efeito Hall clássico), que melhora a blindagem dos íons de silício (\foreign{screening}); segundo, porque como o aumento na concentração de elétrons no 2DES tende a reduzir a extensão da função de onda na direção do crescimento \cite{Hoppel:2004}, a sobreposição dela com os agentes espalhadores (íons de silício, interface do QW, pontos-quânticos, \etc) reduz. O comportamento da amostra \#1 agora condiz com o que já apresentamos.
+
+	Observe ainda que de fato, no \textsl{escuro}, os elétrons da primeira sub-banda têm maior mobilidade que os da segunda, enquanto que no \textsl{claro} é o oposto.
+
+	\subsection*{Os efeitos do empilhamento de QDs}
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{SP}[][]{\unit{300}{\angstrom}}
+		\psfrag{DL}[][]{$\delta$-Si}
+		\psfrag{Z}[][]{$z$ (\angstrom)}
+		\psfrag{PD}[][]{$\psi_\delta$}
+		\psfrag{P1}[][]{$\psi_1$}
+		\psfrag{P2}[][]{$\psi_2$}
+		\psfrag{QW}[][]{QW}
+		\psfrag{QD}[][]{QD}
+		\psfrag{A}[][]{\textbf{(a)}}
+		\psfrag{BC}[][]{BC}
+		\psfrag{BV}[][]{BV}
+		\psfrag{B}[][]{\textbf{(b)}}
+		\includegraphics[width=0.8\textwidth]{figuras/ademir.eps}
+		\caption{\small A partir de um \textbf{(a)} cálculo auto-consistente de uma heteroestrutura contendo uma dopagem do tipo delta e um poço-quântico próximo \cite{Cavalheiro:2001} podemos deduzir qualitativamente o \textbf{(b)} perfil das bandas das nossas amostras.}
+		\label{fig:ademir}
+	\end{figure}
+
+	A figura \hbox{\ref{fig:ademir}a} mostra um cálculo autoconsistente do trabalho \cite{Cavalheiro:2001} do qual podemos deduzir qualitativamente a distribuição de cargas para as nossas amostras. Nela o poço-quântico está acoplado com o potencial dos íons da dopagem delta e o sistema possui três sub-bandas: a primeira localiza-se sobre o plano da dopagem e tem mobilidade muito baixa devido aos íons de silício; a segunda fica dentro do poço-quântico e a terceira espalha-se por todo o sistema. À medida que afastamos a dopagem do poço-quântico, eles se desacoplam progressivamente, de sorte que a \unit{30}{\nano\metre} ele estão totalmente desacoplados. Como resultado (fig. \hbox{\ref{fig:ademir}b}), a segunda (terceira) sub-banda ``torna-se'' a primeira (segunda) do poço-quântico.
+
+	A primeira sub-banda permanece na dopagem como um canal de condução paralelo de baixa mobilidade que não se manifesta nas oscilações de resistividade, mas que contribui para a condução [dopagem degenerada, onde a distância entre dois átomos de silício ($\sim\unit{5}{\nano \metre})$ é menor que o raio de Bohr no GaAs ($\sim \unit{10}{\nano\metre}$)].
+
+	A presença dos pontos-quânticos introduz estados localizados nos planos que os contém, conforme fizemos em \cite{Pagnossin:2004}, e podemos representá-los por poços-quânticos, com a ressalva de que não conduzem corrente nas temperaturas utilizadas (\unit{1,4}{\kelvin}).
+
+	A figura \hbox{\ref{fig:nDeltaHall-e-muDeltaHall}a} e {b} apresenta a concentração efetiva ($n$) e a mobilidade de transporte ($\mu$), obtidas das medidas do efeito Hall. Com essas medidas mais as do efeito Shubnikov de Haas podemos estimar o \textit{comportamento} da concentração ($n_\delta$) e da mobilidade de transporte ($\mu_\delta$) dos elétrons na dopagem. Basta resolvermos \eqref{eq:nH2sb} para $n_\delta$ e $\mu_\delta$:
+	\begin{equation}\label{eq:nmu-delta}
+	n_\delta = \frac{\left(n\mu - n_1\mu_1 - n_2\mu_2\right)^2}{n\mu^2 - n_1\mu_1^2 - n_2\mu_2^2} \qquad\text{e}\qquad
+	\mu_\delta = \frac{n\mu^2 - n_1\mu_1^2 - n_2\mu_2^2}{n\mu - n_1\mu_1 - n_2\mu_2},
+	\end{equation}
+onde $\mu_s$ é a mobilidade \textit{de transporte} da sub-banda $s$. Nós não temos $\mu_s$, mas sabemos que ela relaciona-se com $\mu_{q_s}$ (a mobilidade quântica, obtida do efeito Shubnikov-de Haas) por um fator que depende da distância do 2DES à dopagem \cite{Sarma:1985}. Como as duas sub-bandas localizam-se no poço-quântico, a razão deve ser a mesma e podemos utilizar qualquer valor que resulte em valores não negativos de $n_\delta$ e $\mu_\delta$. Obviamente os valores absolutos obtidos deste processo não representam a realidade, mas a relação entre eles sim.
+
+	Utilizamos $\mu_s/\mu_{q,s} = 0,06$ e, como resultado, obtemos as figuras \hbox{\ref{fig:nDeltaHall-e-muDeltaHall}c} e {d}. O comportamento de $n_\delta$ é similar ao de $n$, enquanto $\mu_\delta$ é similar a $\mu$.
+
+	Então vejamos as concentrações (fig. \ref{fig:ns}): no \textbf{escuro} tanto $n_1$ como $n_2$ variam muito pouco à medida que adicionamos mais e mais pontos-quânticos à estrutura. Pouco podemos concluir dessa situação. Mas no \textsl{claro} vemos uma consistente redução entre a \#0 e \#1 e um subseqüente aumento em $n_s$. Por outro lado, $n_\delta$ aumenta. Acontece que a introdução da camada tensionada de InAs (a presença ou não de pontos-quânticos é irrelevante) eleva o potencial das bandas de condução e de valência, favorecendo a \textit{transferência} de cargas do 2DES (do poço-quântico) para a dopagem e para a superfície \cite{Pagnossin:2004}.
+
+	É importante compreender que o verbo ``transferir'' acima tem significado didático apenas, já que não existe uma \textsl{evolução} desde a amostra \#0 até a \#7: elas são amostras diferentes e cada qual tem uma distribuição de cargas características que equilibra as cargas na dopagem, no poço-quântico, nos pontos-quânticos e na superfície, dentre outros.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{Y1}[][]{$n$ (\unit{\power{10}{16}}{\rpsquare\metre})}
+		\psfrag{Y2}[][]{$n_\delta$ (u.a.)}
+		\psfrag{Y3}[][]{$\mu$ (\squaren\metre\per\volt\usk\second)}
+		\psfrag{Y4}[][]{$\mu_\delta$ (u.a)}
+		\psfrag{X}[][]{Amostra}
+		\psfrag{A}[][]{\textbf{(a)}}
+		\psfrag{B}[][]{\textbf{(b)}}
+		\psfrag{C}[][]{\textbf{(c)}}
+		\psfrag{D}[][]{\textbf{(d)}}
+		\includegraphics[width=0.95\textwidth]{figuras/nDeltaHall_e_muDeltaHall.eps}
+		\caption{\small em \textbf{(a)} e \textbf{(b)}, concentração e mobilidade efetivas no \textsl{escuro} (símbolos escuros) e no \textsl{claro} (símbolos claros) em função da quantidade de camadas de pontos-quânticos empilhadas, obtidas das medidas do efeito Hall, cf. sec. \ref{sec:HE}. Em \textbf{(c)} e \textbf{(d)}, o comportamento da concentração e da mobilidade de transporte dos elétrons sobre a dopagem nas mesmas condições, calculados através da equação \ref{eq:nmu-delta}.}
+		\label{fig:nDeltaHall-e-muDeltaHall}
+	\end{figure}
+
+	De qualquer forma, a amostra sem pontos-quânticos tem mais elétrons no poço-quântico do que qualquer outra. Contudo, entre \#1 e \#7 essa diferença aumenta à medida que a oferta de elétrons capturados pelos pontos-quânticos aumenta. Na verdade, é preciso analisar a situação através da iluminação, amostra por amostra. Tomemos a \#7, por exemplo. Ela tem 7 camadas de pontos-quânticos que, no \textsl{escuro}, estão ocupados por elétrons. Conforme a amostra é iluminada, pares elétron-buraco fotogerados separam-se espacialmente ao longo do eixo de crescimento devido ao campo elétrico estabelecido na heteroestrutura (\foreign{band-bending}). Uma situação possível é a seguinte, ilustrada na figura \ref{fig:iluminando}: inicialmente os pontos-quânticos mais próximos da superfície transferem elétrons (aqui a transferência é verdadeira) para lá, tornando-se eletricamente neutros (não é necessário chegar a este ponto). Com isso o perfil da banda muda e favorece a depopulação da próxima camada. Mas desta vez é energeticamente mais vantajoso para o elétron migrar para o 2DES e, com isso, $n_s$ aumenta.
+
+	E como $n_1$ (e $n$) permanece constante entre \#1 e \#7, somos levados a concluir que o 2DES protege a dopagem desse processo, exatamente da mesma maneira que discutímos anteriormente no caso da amostra \#1. Aliás, com relação a esta amostra, observe que quanto mais longe da superfície estão os pontos-quânticos, menor é a influência da iluminação. É provável que os pares fotogerados próximos à superfície não sobrevivam até chegarem nos pontos-quânticos ou no 2DES.
+
+	Finalmente, o comportamento da mobilidade em função da amostra reflete o da concentração. No entanto, este é o resultado mais importante pois, ao contrário do que se poderia pensar, à medida que empilhamos mais e mais pontos-quânticos a mobilidade não é prejudicada. Embora a formação dos pontos-quânticos libere a tensão mecânica acumulada, isto não ocorre integralmente e o crescimento prossegue sob tensão. O resultado observado sugere que o empilhamento de pontos-quânticos pode tanto aumentar (de \#0 para \#1) como reduzir a tensão (de \#1 para \#7), e podemos inclusive conjecturar se a mobilidade apresentaria um comportamento oscilatório, refletindo essas duas tendências.
+
+	Independentemente disso, é fato que podemos escolher a quantidade de camadas de pontos-quânticos visando maximizar a mobilidade e a corrente fotogerada. Nas nossas amostras, por exemplo, utilizar sete repetições seria a melhor opção. De fato, se ignorarmos toda a análise feita aqui e compararmos apenas os espectros das amostras \#0 e \#7, veremos que são muito parecidos. Eles sugerem que de alguma forma o empilhamento de pontos-quânticos permite à heteroestrutura retomar sua mobilidade inicial (amostra-referência).
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{QD}[][]{QD}
+		\psfrag{QW}[][]{QW}
+		\psfrag{DL}[][]{$\delta$-Si}
+		\psfrag{S}[][]{Superfície}
+		\psfrag{P}[][]{Par fotogerado}
+		\psfrag{T0}[][]{$t_0 > 0$}
+		\psfrag{T1}[][]{$t_1 > t_0$}
+		\includegraphics[width=0.95\textwidth]{figuras/iluminando.eps}
+		\caption{\small a iluminação promove a transferência de cargas ao longo do eixo do crescimento. À esquerda, após um tempo $t_0$ de iluminação, forma-se um par fotogerado. O elétron segue para a superfície e o buraco, para os pontos-quânticos, onde é capturado. Ali ele se recombina com o elétron ali previamente capturado (é como se o ponto-quântico tivesse transferido carga para a superfície). Como resultado, a camada de pontos-quânticos torna-se nula e o perfil das bandas muda. Então, num tempo $t_1 > t_0$ (à direita) um novo par é fotogerado. Agora o elétron desloca-se em direção ao 2DES, onde acrescerá a concentração de portadores (se não for capturado pelo ponto-quântico). O buraco, por outro lado, dirige-se para a superfície e lá recombina-se (é como se a superfície transferisse um elétron para o 2DES).}
+		\label{fig:iluminando}
+	\end{figure}
+
+	\subsection{Resultados do 2º conjunto}
+
+	Num fotodetector ideal, o poço-quântico permanece vazio (ou quase) até que se lhe incida uma radiação de comprimento de onda apropriado, levando os elétrons armadilhados nos pontos-quânticos para o poço-quântico e permitindo-nos detectá-los através da aplicação de um campo elétrico perpendicular à direção do crescimento. O tempo de vida $\tau$ dos elétrons nesse estado excitado (no poço) está diretamente relacionado com a mobilidade ($\mu = e\tau/m^*$). Além disso, a mobilidade é uma medida do quão rapidamente um elétron responderá ao campo elétrico aplicado, que também é importante.
+
+	Como de costume, fizemos tanto medidas do efeito Shubnikov-de Haas como do Hall, mas devido às baixíssimas mobilidades, não pudemos enxergar nenhuma oscilação em $R_{xx}$. Portanto, contentamo-nos com os resultados do efeito Hall.
+
+		\begin{figure}[tb]
+			\centering
+			\psfrag{1p}[][]{1 período}
+			\psfrag{10p}[][]{10 períodos}
+			\psfrag{X}[][]{$V_{GS}$}
+			\psfrag{Y}[][]{Mobilidade de transporte (\unit{\power{10}{3}}{\centi\squaren\metre\per\volt\usk\second})}
+			\includegraphics[width=0.6\textwidth]{figuras/muXgate.eps}
+			\caption{\small mobilidade de transporte em função do \foreign{gate}. As curvas terminam onde ocorre a saturação. Por exemplo, para a curva verde, $V_{GS}$ pouco maior que \unit{0,5}{\volt} não acarreta alterações na mobilidade. Os desenhos ao lado de cada gráfico são representações do perfil de potencial do QW, que distingue as amostras. Compare-os com a figura~\ref{fig:QDIP-set2}.}
+			\label{fig:muXgate}
+		\end{figure}
+
+		A figura~\ref{fig:muXgate} apresenta a mobilidade Hall em função do \foreign{gate} aplicado para as amostras com 1 e 10 períodos. Analisemos primeiro aquelas com 1 periodo: notamos imediatamente que tensões negativas deslocam a função de onda para cima dos QDs, reduzindo a mobilidade; o contrário para $V_{GS} > 0$. Este é um resultado esperado. A primeira novidade, entretanto, é que posicionar os pontos-quânticos no centro do QW é a pior escolha, qualquer que seja $V_g$. Pior até que utilizar um poço-quântico triangular, inerentemente rugoso. É mais uma evidência de que a capacidade de espalhamento dos QDs é muito superior que a das imperfeições na interface do QW.
+
+		Quando $V_{GS} < 0$ o comportamento de qualquer uma das configurações é o mesmo, mas para $V_{GS} > 0$ vemos que (i) a mobilidade no QW triangular cresce mais rapidamente, embora sature rapidamente em \unit{0,3}{\squaren \metre\per \volt\second} para $V_{GS} = \unit{0,5}{\volt}$. (ii) Já o poço-quadrado com os QDs na interface oposta a da dopagem apresenta a melhor mobilidade a partir de \unit{0,75}{\volt}, chegando mesmo a triplicar seu valor em $V_{GS} = \unit{0}{\volt}$.
+
+		Note que para uma heteroestrutura contendo pontos-quânticos auto-formados, mobilidades de alguns \squaren \metre\per\volt\second\ é razoável~\cite{Ribeiro:1998}, embora ainda aquém do que se pode obter.
+
+		Quando empilhamos dez períodos, a mobilidade aumenta para todos os valores de $V_{GS}$, mas parece saturar próximo do valor obtido anteriormente para a amostra com pontos-quânticos, \unit{0,6}{\squaren\metre \per\volt\second}. Mais que isso, o resultado sugere que o empilhamento torna a heteroestrutura menos suscetível à aplicação do \foreign{gate}, ao menos no caso da amostra com pontos-quânticos no centro do poço-quântico. Por outro lado, a mobilidade dos elétrons no poço-quântico triangular, embora mantenha a amplitude da variação em função do \foreign{gate}, torna-se nitidamente menos favorável que a primeira para $V_{GS} < 0$. A situação se inverte para $V_{GS} > 0$. Isto significa que nesta heteroestrutura o deslocamento da função de onda dos elétrons é muito mais suscetível ao \foreign{gate}.
+
+		Quanto a amostra de dez períodos com QDs na interface do poço-quântico, não pudemos medí-la porque ela foi destruída pela difusão do ouro do \foreign{gate}, sec.~\ref{sec:gate}. 
+
+		Finalmente, concluimos que a melhor opção de região-ativa para QDIPs são poços-quânticos quadrados com pontos-quânticos na interface oposta à da dopagem. Este resultado é verdadeiro desde que não empilhemos as regiões-ativas. Isto porquê se construirmos um QDIP como o da figura \ref{fig:QDIP}, os íons da camada de dopagem modificariam a banda de condução (conforme ilustrado), favorecendo aos elétrons no poço-quântico aproximarem-se dos pontos-quânticos. Uma opção para contornar isso é alternar dopagens com altas e baixas concentrações, mantendo os pontos-quânticos nas interfaces mais próximas das baixas concentrações.
+

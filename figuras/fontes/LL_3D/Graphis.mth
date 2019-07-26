@@ -1,0 +1,17 @@
+'Defined by I. R. Pagnossin (6.7.2007)
+Function Lorentz( x, y, x0, y0, A, W, z0 )
+Lorentz = 2 * A * W / (3.1415 * (4*(x-x0)^2 + 4*(y-y0)^2 + W^2)) + z0
+End Function
+
+'Defined by I. R. Pagnossin (6.7.2007)
+Function Heaviside( x )
+If( x > 0 ) Then
+  Heaviside = 1
+Else
+  If( x < 0 ) Then
+    Heaviside = 0
+  Else
+    Heaviside = 0.5
+  End If
+End If
+End Function

@@ -1,0 +1,605 @@
+	Neste capítulo apresentaremos os processos e equipamentos utilizados neste trabalho, desde o crescimento das amostras até a sua caracterização.
+
+	\section{Amostras}
+
+	As heteroestruturas utilizadas neste trabalho foram fabricadas no Laboratório de Novos Materiais Semicondutores (LNMS) do Instituto de Física da Universidade de São Paulo (IFUSP) através de epitaxia por feixe molecular (MBE, \foreign{molecular beam epitaxy}) \cite{Silva:1999,Sperandio:1998}. 
+
+	A epitaxia por feixe molecular é apenas uma das chamadas técnicas de crescimento epitaxial\footnote{Técnicas correlatas são a MOCVD (\foreign{metalorganic chemical vapour deposition}) e a CBE (\foreign{chemical beam epitaxy}).} e caracteriza-se principalmente pela capacidade de produzir filmes monocristalinos ultrafinos com precisão atômica. A palavra ``epitaxia'' é um hibridismo do prefixo grego ``epi'' (acima) com o radical latino ``axis'' (eixo) e procura representar a idéia de que a camada cristalina em crescimento (epicamada) tende a seguir a orientação cristalográfica da camada imediatamente abaixo (substrato); já o termo ``feixe molecular'' refere-se ao regime molecular dos elementos químicos que incidem na superfície do substrato. Assim, a técnica MBE consiste em incidir um feixe \emph{molecular} de átomos ou moléculas sobre um substrato cristalino (previamente produzido por alguma outra técnica) e, com isso, produzir mais uma camada atômica estruturalmente idêntica à anterior, e assim sucessivamente para as camadas seguintes (veja a figura~\ref{fig:crescimento}).
+
+	% ---- Importada da tese de mestrado. ----
+	\begin{SCfigure}
+		\centering
+		\psfrag{a}[r][r]{\colorbox{white}{\LARGE\shortstack{\hfill Feixe\\molecular}}}
+		\psfrag{b}[l][l]{\colorbox{white}{\LARGE\shortstack{Sítio\hfill\\da rede}}}
+		\psfrag{c}[r][r]{\rotatebox{90}{\LARGE epicamada}}
+		\psfrag{d}[l][l]{\rotatebox{90}{\LARGE substrato}}
+		\psfrag{e}[][]{\LARGE\colorbox{white}{Defeito}}
+		\resizebox{0.4\textwidth}{!}{\includegraphics{figuras/rede.eps}}
+		\caption{\small ao incidir sobre o substrato, os átomos ou moléculas do feixe molecular tendem a se posicionar nos sítios da rede. Deste modo, o crescimento segue a estrutura cristalina do substrato, pois é assim que a energia total é minimizada. Os átomos da epicamada podem ou não ser diferentes daqueles do substrato, dependendo do que se quer obter.}
+		\label{fig:crescimento}
+	\end{SCfigure}
+
+		A figura~\ref{fig:MBE-1} é uma representação das partes principais de um equipamento de MBE genérico e a figura~\ref{fig:MBE-2} é uma fotografia do equipamento utilizado para crescer as amostras deste trabalho.\footnote{No Laboratório de Novos Materiais Semicondutores (LNMS) do Departamento de Física dos Materiais e Mecânica (DFMT) do Instituto de Física (IF) da Universidade de São Paulo (USP).} O equipamento é constituído de duas câmaras de vácuo independentes (sistemas de vácuo independentes) e conectadas por uma válvula gaveta, específica para ambientes de ultra-alto-vácuo. A primeira delas (\termo{câmara de entrada}) não está representada na figura~\ref{fig:MBE-1} por que tem pouco interesse para a compreensão do método propriamente dito: Ela é utilizada para manusear as amostras e, por isso, freqüentemente exposta à atmosfera-ambiente (daí a necessidade de essas duas câmaras possuirem sistemas de vácuo independentes). É na segunda \novotermo{câmara} (\novotermo{de crescimento}), acima da válvula gaveta (fig.~\ref{fig:MBE-1}), que o crescimento ocorre: O substrato é fixado no centro (porta-amostras) e para ele estão apontadas as \novotermo{células de Knudsen}, cada qual contendo um bloco de elemento químico sólido puro, e somente ele. No nosso caso, as células contém As (arsênio), Al (alumínio), In (índio), Ga (gálio) e Si (silício, usado nas dopagens). O feixe molecular é obtido pela sublimação desses elementos e seu fluxo é controlado pela temperatura de cada célula. Entre o substrato e cada célula existe um obturador pneumático que interrompe ou não a incidência desse fluxo sobre o substrato, conforme o interesse. Então, \eg, se quisermos jogar apenas alumínio no substrato, abrimos o obturador da célula de Al e fechamos os das outras. A quantidade de átomos que incide sobre o substrato é diretamente proporcional ao tempo de abertura do obturador. Deste modo, manipulando as temperaturas das células de Knudsen e os tempos de exposição (do substrato às células) podemos atingir taxas de crescimento tão baixas quanto \unit{1}{\micro\metre\per\hour} (ou alguns angströns por segundo).
+		
+	\begin{figure}[tb]
+		\centering
+		\subfigure{
+			\psfrag{a}[][]{\Large\shortstack{Células de\\Knudsen}}
+			\psfrag{b}[][]{\Large\shortstack{Canhão de\\elétrons\\(RHEED)}}
+			\psfrag{c}[][]{\Large\shortstack{Janela de\\observação}}
+			\psfrag{d}[][]{\Large\shortstack{Válvula\\gaveta}}
+			\psfrag{e}[][]{\Large\shortstack{Braço\\mecânico}}
+			\psfrag{f}[][]{\Large\shortstack{Feixe de\\elétrons}}
+			\psfrag{g}[][]{\Large\shortstack{Anteparos\\frios}}
+			\psfrag{h}[][]{\Large\shortstack{Tela\\fosforescente}}
+			\psfrag{i}[][]{\Large Obturador}
+			\psfrag{j}[][]{\Large Porta-amostras}
+			\resizebox{0.4\textwidth}{!}{\includegraphics{figuras/MBE-1.eps}}	
+			\label{fig:MBE-1}}\hfill
+		\subfigure{
+			\psfrag{a}[][]{\Large\colorbox{white}{\shortstack{Células de\\Knudsen}}}
+			\psfrag{b}[][]{\Large\colorbox{white}{\shortstack{Câmara de\\crescimento}}}
+			\psfrag{c}[][]{\Large\colorbox{white}{\shortstack{Válvula\\Gaveta}}}
+			\psfrag{d}[][]{\Large\colorbox{white}{\shortstack{Janela de\\observação}}}
+			\psfrag{e}[][]{\Large\colorbox{white}{Câmera}}
+			\psfrag{f}[][]{\Large\colorbox{white}{\shortstack{Tela\\fosforescente}}}
+			\resizebox{0.45\textwidth}{!}{\includegraphics{figuras/MBE-2.eps}}					
+			\label{fig:MBE-2}}\hfill
+		\caption{\footnotesize (a) Esquema genérico de um sistema MBE (visto de cima). (b) Fotografia do equipamento MBE do laboratório LNMS no Instituto de Física da Universidade de São Paulo (\foreign{campus} SP). A câmera (na parte inferior) capta os padrões de difração que aparecem na tela fosforescente e envia-os para um monitor. O leitor pode ter uma noção do tamanho do equipamento observando o filtro-de-linha na parte inferior direita da figura.}		
+	\end{figure}		
+	
+		\index{Reflection high-energy electron diffraction}
+		\index{RHEED|see{Reflection high-energy electron diffraction}}
+		\index{Monocamada}
+		\index{MC|see{Monocamada}}
+		O canhão de elétrons e a tela fluorescente na figura~\ref{fig:MBE-1} são necessários para monitorar o crescimento através de uma técnica chamada \novotermo{RHEED} (\foreign{reflection high-energy electron diffraction}): Basicamente, o canhão de elétrons incide sobre a superfície da amostra em crescimento um feixe rasante ($\sim \unit{1}{\degree}$ com a superfície) de elétrons altamente energéticos (\unit{8}{\kilo\electronvolt} no nosso caso), projetando na tela fluorescente o padrão de difração produzido pelo feixe na superfície da amostra. Então suponha que temos uma superfície perfeitamente lisa. Como a incidência é rasante, o feixe é totalmente refletido e difratado pelas camadas mais superficiais (1 a \unit{5}{\novotermo\monocamadas}).\footnote{Chamamos de monocamada (MC) a distância entre dois planos sucessivos de átomos da mesma espécie numa estrutua cristalina. Especificamente no nosso caso, onde a estrutura é do tipo \foreign{zinc-blend}~\cite{Ashcroft:1976} e a orientação cristalográfica é $(001)$, $\unit{1}{\monocamadas}=a/2$, onde $a$ é o parâmetro de rede.} Assim, o padrão de difração observado é um conjunto de listras, característico de uma estrutura bidimensional (a área de incidência). Inversamente, suponha agora que temos uma superfície rugosa. Neste caso o feixe será fortemente bloqueado pela rugosidade. Agora, o feixe de elétrons tem de atravessar as rugosidades e quando isto acontece as condições de difração são associadas a um arranjo tridimensional de átomos. Isto implica que o padrão de difração, nesta situação, é um conjunto de pontos, característico de uma estrutura tridimensional (rugosidade da superfície). A figura~\ref{fig:rheed} ilustra essas duas situações.
+		
+		Embora o crescimento por MBE seja praticamente isento de defeitos, ele não ocorre camada por camada atômica exatamente. A figura~\ref{fig:crescimento} ilustra isso: Cada linha horizontal de átomos (círculos) é uma monocamada. A primeira monocamada acima do substrato (círculos amarelos) ainda não está completa, embora a segunda (imediatamente acima) já tenha começado a se formar. Essa figura mostra uma situação em que a rugosidade é alta, mas dentro em breve a primeira camada acima do substrato estará completa e a segunda (acima) ainda estará em formação. Quando isto ocorrer a rugosidade terá reduzido. O crescimento ocorre desta maneira: A rugosidade da superfície oscila, e é isso que a técnica RHEED mede. Quando uma monocamada está completa, a rugosidade é mínima e a difração do feixe eletrônico é característico de uma estrutura bidimensional (conjunto de listras). Mas quando só metade de uma monocamada está completa, a rugosidade é máxima e o padrão de difração é o de uma estrutura tridimensional (conjunto de pontos). A figura~\ref{fig:rheed} mostra uma foto dessas duas situações e as referências \cite{Silva:1999} e \cite{Sperandio:1998} explicam pormenorizadamente a técnica.
+		
+		\begin{figure}[tb]
+			\centering
+			\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/rheed}}
+			\caption{\footnotesize\label{fig:rheed} À esquerda vemos o padrão de difração característico de uma estrutura bidimensional (veja o texto); À direita, o padrão é devido à rugosidade da superfície (aglomerados tridimensionais de átomos), indicando que a monocamada mais superficial ainda não está completa. O ponto intenso no centro é a parte do feixe que não sofreu difração.}
+		\end{figure}		
+		
+		A técnica RHEED também é utilizada para verificar a formação dos pontos-quânticos: Conforme veremos na próxima seção, os QDs são pequenos aglomerados tridimensionais de átomos e, por isso, produzem um padrão de difração característico de uma estrutura tridimensional.
+
+		O feixe molecular obtido da sublimação dos elementos químicos nas células de Knudsen incide sobre o substrato a uma taxa que varia de \power{10}{18} até \power{10}{20} átomos por metro quadrado e por segundo. Ao atingir a superfície, esses átomos sofrem uma enorme variedade de trocas energéticas antes de entrarem em equilíbrio termodinâmico com o substrato e, só então, serem efetivamente incorporados na amostra\footnote{Para uma taxa de crescimento típica, de \unit{1}{\monocamadas\per\second}, um átomo de gálio sobre um substrato de GaAs a \unit{600}{\degreecelsius} pode realizar aproximadamente \power{10}{6} interações antes de ser efetivamente incorporado pelo cristal~\cite{Sperandio:1998}.} (isto ocorre por que as temperaturas do substrato e a das células de Knudsen não são a mesma). Essas trocas energéticas ocorrem através de cinco maneiras, ou fenômenos, distintos (basicamente): \novotermo{Adsorção}, \novotermo{difusão} e \novotermo{incorporação}; \novotermo{desadsorção} e \novotermo{dissociação}. Um átomo ou molécula \enfase{adsorvido} está simplesmente em contato com a superfície do substrato, mantido ali por intermédio de interações de Van der Waals (sem troca de elétrons). Esse é, geralmente, o primeiro estado pelo qual os átomos ou moléculas do feixe incidente passam. A partir daí, eles podem ``passear'' (\enfase{difundir}) pela supefície trocando energia até se ligarem quimicamente (com troca de elétrons) a algum átomo da superfície, o que corresponde à \enfase{incorporação} no cristal propriamente dita. A desadsorção e a dissociação são os antônimos da adsorção e da incorporação, respectivamente.
+		
+		\index{Dangling bonds}
+		A incorporação de um átomo ou molécula no cristal é o estado final desejado e geralmente ocorre \enfase{junto} de defeitos, impurezas ou ligações químicas incompletas (ou insaturadas: \novotermo{\foreign{dangling bonds}}) na superfície pois eles propiciam uma menor variação da energia livre do substrato~\cite{Sperandio:1998}. Mas isto não significa que a incorporação \enfase{gere} os defeitos, contrariando o que dissemos no início deste capítulo: Observe, por exemplo, a figura~\ref{fig:crescimento}. Numa situação como esta, a incorporação ocorrerá mais provavelmente no degrau (que é um defeito) formado pelo substrato e pela epicamada, mas ainda assim seguindo a orientação cristalográfica da região.
+		
+		\index{Adsorcao@Adsorção}
+		\index{Difusao@Difusão}
+		\index{Incorporacao@Incorporação}
+		\index{Desadsorcao@Desadsorção}
+		\index{Dissociacao@Dissociação}
+		\index{Processos de superficie@Processos de superfície}
+		\index{Forca@Força ou interação!de Van der Waals}
+		\index{Substrato!Rugosidade do}
+		Para que a incorporação ocorra eficientemente (o que dá origem a amostras de melhor qualidade), os átomos ou moléculas adsorvidos precisam ter liberdade para difundirem-se pela superfície do substrato até encontrarem o sítio da rede mais apropriado para a incorporação. Se a superfície do substrato for muito rugosa (de má qualidade), os átomos ou moléculas adsorvidos não terão energia para transpor os aglomerados tridimensionais de átomos (já incorporados à superfície) e trocarão energia nas imediações da região onde incidiram. Assim, eles não poderão se difundir e acabarão sendo incorporados ali mesmo, prejudicando a qualidade da amostra. Por outro lado, se a superfície da amostra for lisa, haverá poucos obstáculos e os átomos ou moléculas poderão se difundir apreciavelmente, melhorando a qualidade da amostra. Portanto, a rugosidade inicial do substrato é um parâmetro que influencia fortemente a qualidade da amostra crescida; A temperatura é outro: Em baixas temperaturas, a adsorção é promovida (em detrimento da desadsorção) mas a difusão não; Em altas, a difusão melhora mas a adsorção não (a desadsorção melhora). Com efeito, os processos pelos quais os átomos ou moléculas do feixe incidente e os do substrato interagem são, por si só, extremamente complexos e um sem número de trabalhos procura abordá-los.
+		
+		A condição de vácuo ultra-alto tem importância fundamental pois não só garante o regime molecular do feixe de átomos oriundos das células de Knudsen como também minimiza a contaminação da amostra em crescimento: Para se ter uma idéia, a câmara de crescimento é mantida em \unit{\power{10}{-10}}{torr} (ultra-alto-vácuo) e, nesta pressão, o tempo necessário para que uma monocamada de impureza se forme numa superfície qualquer é da ordem de 28 horas; Em $10^{-6}$ torricelli (alto-vácuo), no entanto, esse tempo cai para cinco minutos! Com efeito, o crescimento epitaxial por feixe molecular não seria possível sem a atual tecnologia de vácuo.
+		
+		\section{A formação dos pontos-quânticos}\label{sec:QD}
+		
+		\index{Pontos-quanticos@Pontos-quânticos} 
+		\index{Crescimento!coerente}
+		\index{Crescimento!Frank-van der Merwe}
+		Quando o filme epitaxial (epicamada) e o substrato sobre o qual ele é crescido possuem a mesma estrutura cristalina e um parâmetro de rede muito parecido (o caso do AlGaAs sobre GaAs) ou idêntico (GaAs sobre GaAs), o crescimento é coerente, \ie, o material depositado adota \enfase{naturalmente} o mesmo parâmetro de rede que o do substrato e o filme cresce camada por camada (fig.~\ref{fig:crescimento}). Este regime de crescimento é conhecido como Frank-van der Merwe (FM)~\cite{Silva:1999} e é o principal modo de crescimento em sistemas isentos de tensões (a seguir). No entanto, quando o material sublimado (na célula de Knudsen) tem um parâmetro de rede consideravelmente diferente daquele do substrato (InAs sobre GaAs, como no nosso caso, por exemplo), a camada em crescimento (epicamada) é \enfase{forçada} a assumir o parâmetro de rede do substrato. Isto significa que a energia potencial contida nas ligações químicas da epicamada não é mínima por que o parâmetro de rede do filme não é o seu natural. Neste caso, surge uma tensão mecânica que aumenta conforme aumentamos a quantidade (ou camadas) de material depositado. Mesmo assim o crescimento ainda é coerente e a epicamada é cristalograficamente perfeita; idêntica ao substrato. Mas esta situação não prossegue indefinidamente: Existe uma espessura crítica a partir da qual a tensão não pode mais ser contida pelas camadas epitaxiais. Quando isso acontece, os átomos das camadas recém-depositadas se deslocam e se aglutinam para formarem pequenas ilhas tridimensionais \enfase{tensionadas} (ditas \enfase{coerentes}). Essas ilhas são chamadas de \novotermo{pontos-quânticos} e são literalmente pequenos ``montes'' (aglomerados) de átomos arranjados numa estrutura cristalina cujo parâmetro de rede ainda é o do substrato (por isso dita coerente), mas com um leve relaxamento em suas bordas (ou seja, à medida que nos afastamos do centro de um QD e nos aproximamos de sua superfície, o parâmetro de rede tende ao seu valor natural). Veja a figura~\ref{fig:crescimento-QD}.
+		
+		\begin{figure}[tb]
+			\centering
+			\psfrag{a}[][]{\LARGE (a)}
+			\psfrag{b}[][]{\LARGE (b)}
+			\psfrag{c}[][]{\LARGE (c)}
+			\psfrag{d}[][]{\LARGE (d)}
+			\psfrag{e}[l][l]{\LARGE Pontos-quânticos}
+			\psfrag{f}[][]{\rotatebox{90}{\LARGE\foreign{wetting-layer}}}
+			\psfrag{g}[][]{\colorbox{white}{\huge Substrato}}
+			\psfrag{h}[][]{\LARGE Cobertura}
+			\psfrag{i}[r][r]{\rotatebox{90}{\Large\shortstack{Epicamada \\ tensionada}}}
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/crescimento-QD}}
+			\caption{\footnotesize\label{fig:crescimento-QD} Em (a) apresentamos separadamente uma representação das ligas do substrato (círculos pretos) e do filme epitaxial (círculos amarelos) que queremos crescer sobre ele, ilustrando a diferença entre seus respectivos parâmetros de rede (distâncias entre círculos vizinhos). (b) Ao crescermos um filme epitaxial cujo parâmetro de rede difere daquele do substrato, o filme fica mecanicamente tensionado. Mesmo assim, a estrutura cristalina do filme ainda é igual à do substrato. Este é o regime de crescimento Frank-van der Merwe (FM). (c) Quando o filme atinge uma espessura crítica, a tensão se torna tão grande que não pode mais ser contida por ele. Quando isto acontece, os átomos da epicamada tensionada se rearranjam e formam pequenas ilhas tensionadas (ou seja, com o parâmetro de rede do \enfase{substrato}). Essas ilhas são chamadas de pontos-quânticos e o regime de crescimento é agora conhecido como Stranski-Krastanov (SK). Abaixo dos QDs é comum restar um filme ultra-fino (de \unit{1}{\monocamadas} aproximadamente) conhecido por \foreign{wetting-layer}. (d) Depois de formados os QDs, é comum retomarmos o crescimento da liga do substrato, \enfase{cobrindo} os pontos-quânticos, daí o nome ``cobertura.$\!$''}
+		\end{figure}		
+		
+		\index{Wetting-layer}
+		O restante das camadas epitaxiais recém-depositadas que não é utilizado para formar os pontos-quânticos fica sob a forma de um filme ultra-fino de aproximadamente \unit{1}{\monocamadas} de espessura chamado \novotermo{\foreign{wetting-layer}} (camada molhada) logo abaixo dos QDs.
+				
+		\index{Crescimento!Stranski-Krastanov}
+		\index{SK|see{Crescimento!Stranski-Krastanov}}
+		À medida que o crescimento prossegue, novos pontos-quânticos são formados e os já existentes crescem~\cite{Duarte:2002}, elevando drasticamente a rugosidade da superfície. Por isso, o crescimento deixa de ser bidimensional (camada por camada) e passa a ocorrer tridimensionalmente: É o chamado regime \novotermo{Stranski-Krastanov} (SK)~\cite{Silva:1999}. 
+		
+		\index{Transicao@Transição!FMSK@FM$\to$SK ou 2D$\to$3D}
+		\index{Pontos-quanticos@Pontos-quânticos!Familias de@Famílias de}
+		O gráfico da figura~\ref{fig:ramachandran} ilustra a concentração de QDs de arseneto de índio (nosso caso) em função da quantidade nominal (em monocamadas) de InAs depositada, obtida por Ramachandran \etal\ em 1997~\cite{Ramachandran:1997}. Como podemos ver, a densidade de pontos-quânticos cresce abruptamente logo após a espessura crítica (transição FM$\to$SK ou 2D$\to$3D), mas tem um valor máximo próximo de \unit{\power{10}{11}}{\centi\rpsquare\metre}. Além disso, o crescimento não é homogêneo e na superfície da amostra coexistem QDs com dimensões distintas. Em verdade, geralmente os pontos-quânticos se agrupam em \novotermo{famílias}, cada qual com uma distribuição gaussiana de tamanhos (altura, raio ou volume) em torno de um valor médio (figura~\ref{fig:QD-familias}) que caracteriza essa família.
+		
+		\index{Q3D|see{Quasi three-dimensional}}
+		\index{Quasi three-dimensional}		
+		A despeito de a concentração de pontos-quânticos crescer abruptamente após a espessura crítica (aproximadamente \unit{1,6}{\monocamadas}), o processo de remanejamento dos átomos da epicamada tensionada parece iniciar-se um pouco antes e um pouco menos drasticamente com a formação de imensos platôs com dimensões de $\sim\unit{400}{\angstrom}$ paralelamente ao plano do crescimento e de \unit{2-3}{\monocamadas} ($\sim\unit{7}{\angstrom}$) perpendicularmente. Aparentemente este é o primeiro passo na formação dos pontos-quânticos e o fato de esses platôs ainda não serem ilhas tridimensionais renderam-lhes o nome de Q3Ds (\foreign{quasi-three dimensional}). Ainda existe muita controvérsia a respeito desse fenômeno, especialmente por que --- até onde sabemos --- somente dois trabalhos no mundo conseguiram observá-los experimentalmente:~\cite{Duarte:2002} e~\cite{Reitz:1997}, o primeiro deles realizado neste laboratório.
+		
+		\begin{figure}[tb]
+			\centering
+			\subfigure[\label{fig:ramachandran} A concentração de SQDs cresce drasticamente a partir de aproximadamente \unit{1,6}{\monocamadas} de InAs depositadas, ilustrando a transição 2D$\to$3D (ou FM$\to$SK, Frank-van der Merwe para Stranski-Krastanov): É neste momento que a tensão acumulada na epicamada não pode mais ser contida e formam-se os QDs, a forma encontrada pela estrutura para reduzir esta tensão.]%
+				{%
+				\psfrag{x}[][]{$d_\text{InAs}$ ($\monocamadas$)}
+				\psfrag{y}[][]{\rule[-15pt]{0pt}{15pt}Concentração de QDs (\unit{\power{10}{8}}{\centi\rpsquare\metre})}
+				\resizebox{0.47\textwidth}{!}{\includegraphics{figuras/ramachandran}}
+				}%
+			\hfill
+			\subfigure[\label{fig:QD-familias} A evolução dos SQDs ocorre através de ``famílias'' de pontos-quânticos, caracterizadas pelas suas dimensões. Aqui podemos ver claramente a existência de duas dessas famílias, uma com altura média de \unit{45}{\angstrom}, e outra com  \unit{75}{\angstrom}. A figura inserida no gráfico é uma imagem obtida através de Microscopia de Força Atômica, e é a partir desta figura que contamos os QDs e medimos suas dimensões.]%
+				{%
+				\centering
+				\psfrag{a}[][]{\colorbox{white}{\unit{1}{\micro\metre}}}
+				\psfrag{b}[r][r]{\shortstack{$0$\\$\nano\metre$}}
+				\psfrag{c}[r][r]{$15$}
+				\psfrag{d}[r][r]{$30$}
+				\psfrag{e}[][]{2\textordfeminine\ família}
+				\psfrag{f}[][]{1\textordfeminine\ família}
+				\psfrag{x}[][]{Altura ($\angstrom$)}
+				\psfrag{y}[][]{\rule{0pt}{15pt}Concentração de QDs (\rule{0pt}{15pt}$\micro\rpsquare\metre$)}
+				\resizebox{0.47\textwidth}{!}{\includegraphics{figuras/QD-Familias}}
+				}%
+			\label{fig:QD-conc+familias}
+			\caption{\footnotesize Em (a) apresentamos a concentração de pontos-quânticos auto-organizados em função da espessura nominal de InAs depositado. Este resultado foi obtido por Ramachandran \etal\ em 1997~\cite{Ramachandran:1997}. Já em (b), ilustramos a existência de ``famílias'' de SQDs, caracterizadas pelas suas dimensões. Este resultado foi obtido por Duarte \etal\ em 2002~\cite{Duarte:2002}.}
+		\end{figure}
+		
+		Embora a formação dos pontos-quânticos represente uma redução na tensão mecânica acumulada durante o crescimento, ainda assim esta configuração não está completamente relaxada, haja vista que as ilhas tridimensionais possuem o parâmetro de rede do substrato, e não o seu natural. Destarte, à medida que o crescimento prossegue e os QDs crescem em quantidade e tamanho, a tensão também aumenta. Novamente, existe um tamanho máximo dos pontos-quânticos acima do qual a tensão não pode mais ser contida por eles. Neste momento as ilhas tensionadas relaxam, assumindo seu parâmetro de rede natural, e o crescimento deixa o modo SK, dando origem a inúmeros defeitos estruturais indesejáveis. De fato, qualquer aplicação atual de pontos-quânticos utilizando esta técnica de crescimento sempre permanece no regime SK, até por que as dimensões e a concentração dos QDs neste regime são controláveis através da quantidade de material depositado (dentre outros parâmetros), embora este controle não seja tão preciso quanto se gostaria. 
+
+		\index{Quantum-!dot!Self-organized}
+		\index{SQD|see{Quantum-!dot!Self-organized}}
+		Resumindo, o fenômeno de auto-formação e organização dos pontos-quânticos consiste na reoganização espontânea de parte da camada epitaxial tensionada durante o crescimento para diminuir sua energia total, e os QDs crescidos desta maneira são comumente conhecidos como \novotermo{pontos-quânticos auto-organizados} (SQDs, \foreign{self-organized quantum-dots}).
+
+		É interessante, importante e instrutivo observar que, grosso modo, não há diferenças morfológicas entre uma superfície repleta de pontos-quânticos e outra simplesmente rugosa: Ambas são formadas por ``ondulações.$\!$'' Dito de outra forma, tanto os QDs como as ondulações numa superfície rugosa são aglomerados de átomos. Em verdade, a diferença essencial reside no fato de que os pontos-quânticos são formados por uma liga diferente da do substrato, enquanto as ondulações numa superfície rugosa não. Isto significa que o \foreign{gap} de energia na região do ponto-quântico é diferente daquele no substrato. Então, \eg, no caso de QDs de arseneto de índio crescido sobre um substrato de GaAs, o \foreign{gap} do InAs é menor e a região do QD se torna um QW tridimensional. Todavia, o conceito de banda proibida (\foreign{gap}) tem origem na teoria de Bloch e não pode ser aplicado aqui indiscriminadamente pois a estrutura cristalina dos pontos-quânticos não é infinita, como requer esta teoria. De fato, uma das discussões a respeito dos QDs é justamente que tipo de centro espalhador ele é: atrativo~\cite{Sakaki:1995} ou repulsivo~\cite{Ribeiro:1998}.
+		
+		A técnica de crescimento MBE fornece pontos-quânticos praticamente isentos de defeitos, além de oferecer um confinamento muito mais efetivo do que aquele obtido por litografia, por exemplo. Contudo, devido à espontaneidade da formação dos QDs, o controle de suas características é limitado. Particularmente, a aleatoriedade de tamanho e da distribuição espacial dos pontos-quânticos sobre a superfície da amostra são desvantagens com relação a outras técnicas. Com efeito, atualmente a principal dificuldade em se aplicar os QDs em dispositivos eletrônicos e opto-eletrônicos reside aí.
+
+	%
+	% Amostra A: #2510
+	% Amostra B: #3154-2º
+	% Amostra C: #3146
+	%
+	\subsection{Descrição das amostras}
+
+	As quatro seções a seguir apresentam as heteroestruturas utilizadas neste trabalho. Na primeira, as amostras utilizadas no estudo de estados de borda contra-rotativos; na segunda, aquelas analisadas através do fenômeno da localização-fraca; finalmente, nas duas seguintes apresentamos as estruturas utilizadas para averiguar fenômenos de transporte que possam ser utilizados no melhor dimensionamento de fotodetectores de infravermelho baseados em pontos-quânticos auto-formados (QDIPs).
+
+	\subsubsection*{Amostras para o estudo dos estados de borda contra-rotativos}
+
+	Apesar de muitas outras amostras terem sido crescidas (com diferentes parâmetros), apenas nas amostras $A$ e $B$ (fig.~\ref{fig:profile:DQW}) observamos os estados de borda contra-rotativos. Concentraremo-nos nos resultados da amostra $A$, bem mais claros que os da $B$. A heteroestrutura delas é a seguinte, em ordem de crescimento:
+
+\begin{table}[tb]
+	\begin{minipage}[c]{\textwidth}
+		\centering
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+			Amostra	&	$d$ (\nano\metre) & $s_1$ (\nano\metre)	&	$s_2$ (\nano\metre) & $s_3$ (\nano\metre) &
+					$\delta_1$ (\unit{\power{10}{15}}{\rpsquare\metre}) &
+					$\delta_2$ (\unit{\power{10}{15}}{\rpsquare\metre})&
+					$\delta_3$ (\unit{\power{10}{15}}{\rpsquare\metre})\\
+			\hline
+			\rowcolor[gray]{.9}$A$		&	$5$	&	$20$	&	$90$	&	-		&	$10$	&	$3$	&	-		\\
+									 $B$		&	$1,4$	&	$50$	&	$130$	&	$30$	&	$4$	&	$4$	&	1		\\
+			%\rowcolor[gray]{.9}$C$		&	$5$	&	$40$	&	?		&	?		&	$4$	&	$4$	&	? 		\\
+			\hline
+		\end{tabular}
+	\end{minipage}\vspace{1cm}
+	\begin{minipage}[c]{\textwidth}
+		\centering
+		\psfrag{BC}[][]{\LARGE BC}
+		\psfrag{BV}[][]{\LARGE BV}
+		\psfrag{GaAs}[][]{\LARGE GaAs}
+		\psfrag{AlGaAs}[][]{\LARGE AlGaAs}
+		\psfrag{14}[][]{\LARGE \unit{14}{\nano\metre}}
+		\psfrag{d}[][]{\LARGE $d$}
+		\psfrag{S1}[][]{\LARGE \colorbox{white}{$s_1$}}
+		\psfrag{S2}[][]{\LARGE \colorbox{white}{$s_2$}}
+		\psfrag{S3}[][]{\LARGE \colorbox{white}{$s_3$}}
+		\psfrag{dSi1}[][]{\LARGE $\delta_1$}
+		\psfrag{dSi2}[][]{\LARGE $\delta_2$}
+		\psfrag{dSi3}[][]{\LARGE $\delta_3$}
+		\psfrag{Substrato}[][]{\LARGE Substrato}
+		\psfrag{Superfície}[][]{\LARGE Superfície}
+		\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/profileDQWs.eps}}
+		\captionof{figure}{\label{fig:profile:DQW}\small parâmetros e esquema da heteroestrutura e do perfil de potencial da região-ativa das amostras de poços-quânticos duplos. A amostra $A$ não possui a dopagem $\delta_3$ (por conseguinte, nem $s_3$). BC é a banda de condução e BV, a de valência.}
+	\end{minipage}
+\end{table}
+
+	\begin{compactitem}
+		\item \textbf{Substrato} comercial semi-isolante de \especie{GaAs} com orientação cristalográfica $(001)$. No caso da amostra $B$ a superfície do substrato possui inclinação de dois graus, numa tentativa de reduzir a incorporação de impurezas durante o crescimento e, por conseguinte, melhorar a mobilidade dos elétrons no 2DES;
+		\item camada de \textbf{preenchimento} (\foreign{buffer}) de \unit{200}{\nano\metre} de \especie{GaAs}, para reduzir a rugosidade do substrato, de algumas dezenas de nanometros para duas monocamadas de GaAs\rlap{,}\footnote{Monocamada é a distância entre dois planos sucessivos de átomos da mesma espécie numa rede cristalina. No nosso caso, onde a estrutura é do tipo \foreign{zinc-blend} e a orientação cristalográfica é $(001)$, ela corresponde a meio parâmetro de rede. Então, para o GaAs $\unit{1}{\monolayer} \approx \unit{2,8}{\angstrom}$ e para o InAs, $\approx \unit{3}{\angstrom}$.} aproximadamente;
+		\item \textbf{super-rede} composta por 20 períodos de \especie{AlAs/GaAs}, cada qual com 5 monocamadas de \especie{AlAs} e 10 de \especie{GaAs}, cuja finalidade é evitar a migração de contaminantes do substrato para a região-ativa (a seguir) da estrutura. Esta camada tem aproximadamente \unit{170}{\nano\metre} de espessura;
+		\item outro \foreign{buffer} de GaAs com \unit{500}{\nano\metre} de espessura;
+		\item a partir daqui o material hospedeiro passa a ser o AlGaAs, começando com um \foreign{buffer} de \unit{80}{\nano\metre};
+		\item	a \textbf{região-ativa} (fig.~\ref{fig:profile:DQW}) inicia-se com uma monocamada de \especie{AlGaAs} dopada com silício, com concentração nominal de átomos dopantes igual a $\delta_1$ (veja a figura). Sua função é prover elétrons para a formação do 2DES nos poços-quânticos;
+		\item	em seguida, a primeira \textbf{camada de espaçamento} (\foreign{spacer-layer}) de AlGaAs, com espessura $s_1$, encarrega-se de separar a região da dopagem dos QWs. Quanto mais espessa, maior a mobilidade e menor a concentração de elétrons no 2DES, de modo que $s_1$ é dimensionada de modo fornecer a maior mobilidade possível, com a restrição de garantir uma concentração mínima detectável pelos equipamentos utilizados;
+		\item	os dois \textbf{poços-quânticos} de GaAs, cada qual com espessura de \unit{14}{\nano\metre} e separados por uma \textbf{barreira} de espessura $d$ (AlGaAs), constituem a região na qual se forma o 2DES. Trata-se de uma bicamada (\foreign{bilayer}), ou seja, um sistema bidimensional de elétrons com duas sub-bandas separadas espacialmente e cuja origem é o tunelamento entre os dois QWs~\cite{Hoppel:2004}, ao invés do potencial de confinamento dos poços-quânticos. É o principal canal de condução da amostra;
+		\item	segunda camada de espaçamento de AlGaAs (espessura $s_1$), separando o segundo QW da dopagem $\delta_2$, a seguir;
+		\item a região-ativa propriamente dita acaba com a inserção de uma segunda camada de dopagem ($s_2$ na figura~\ref{fig:profile:DQW}), de igual ofício que a primeira e com concentração $\delta_2$. Na amostra $B$, $\delta_1 = \delta_2$ para tornar (quase) simétrica a distribuição de cargas nos poços-quânticos. Já na amostra $A$ fizemos $\delta_1 \ne \delta_2$ para induzir uma assimetria nessa distribuição de cargas;
+		\item daqui para frente as camadas têm por função isolar a região-ativa da superfície. E para evitar a depleção de portadores das dopagens para a superfície, acrescenta-se uma terceira camada de dopagem ($\delta_3$) que fornece os elétrons necessários para completar as ligações químicas insaturadas na superfície. Quando esta camada não está presente, como no caso da amostra $A$, este papel cabe à $\delta_2$ (por isso $\delta_2 > \delta_1$ nessa amostra).
+	\end{compactitem}
+
+	\subsubsection*{Amostras para o estudo de localização-fraca}
+
+	As várias amostras deste conjunto diferem entre si pelo estágio evolutivo em que os pontos-quânticos (QD, \foreign{quantum-dots}) se encontram e referir-nos-emos a esse estágio em termos da espessura nominal da camada de InAs ($d_\text{InAs}$, dada em monocamadas) depositada durante o crescimento das amostras (a seguir). Desta forma, pudemos abranger todos os estágios evolutivos dos QDs auto-organizados~\cite[cap.~2]{Pagnossin:2004}, desde as primeiras estruturas precursoras até a sua completa formação, quando já apresentam grande regularidade de tamanho e forma~\cite{Duarte:2002}. Utilizaremos seis amostras com espessuras nominais de $0$ (amostra-referência) a \unit{2,5}{\monocamadas}, todas com a seguinte estrutura básica:
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{BC}[][]{\LARGE BC}
+		\psfrag{BV}[][]{\LARGE BV}
+		\psfrag{GaAs}[][]{\LARGE GaAs}
+		\psfrag{InGaAs}[][]{\LARGE InGaAs}
+		\psfrag{InAs}[][]{\LARGE InAs}
+		\psfrag{7}[][]{\LARGE \colorbox{white}{\unit{7}{\nano\metre}}}
+		\psfrag{10}[][]{\LARGE \colorbox{white}{\unit{10}{\nano\metre}}}
+		\psfrag{8}[][]{\LARGE \colorbox{white}{\unit{8}{\nano\metre}}}
+		\psfrag{dSi1}[][]{\LARGE $\delta$-Si}
+		\psfrag{d}[l][l]{\LARGE $\dInAs$}
+		\psfrag{Substrato}[][]{\LARGE Substrato}
+		\psfrag{Superfície}[][]{\LARGE Superfície}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/profileQDs.eps}}
+		\caption{\label{fig:profile:QD}\small representação do perfil de potencial da heteroestrutura das amostras contendo pontos-quânticos. O parâmetro que distingue as amostras é a espessura da camada de InAs: $\dInAs = 0$ (amostra-referência), \unit{1}{\monolayer}, \unit{1,5}{\monolayer} (os QDs se formam a partir daqui), \unit{1,75}{\monolayer}, \unit{2}{\monolayer} e \unit{2,5}{\monolayer}.}
+	\end{figure}
+
+	\begin{compactitem}
+		\item Substrato comercial semi-isolante de \especie{GaAs} com orientação cristalográfica $(001)$;
+		\item \foreign{buffer} de \unit{50}{\nano\metre} de \especie{GaAs};
+		\item super-rede composta por 10 períodos de \especie{AlAs/GaAs}, cada qual com 5 monocamadas de \especie{AlAs} e 10 de \especie{GaAs}. Esta camada tem aproximadamente \unit{84}{\nano\metre} de espessura;
+		\item outro \foreign{buffer} com \unit{200}{\nano\metre} de \especie{GaAs} afasta a região-ativa (a seguir) do substrato;
+		\item	a região-ativa inicia-se com uma monocamada de \especie{GaAs} (camada $\delta$-Si) dopada com \unit{4\times\power{10}{16}}{\rpsquare\metre} ($\pm 10\%$) átomos de silício;
+		\item \foreign{spacer-layer} com \unit{7}{\nano\metre} de \especie{GaAs}, separando a camada $\delta$-Si do poço-quântico de InGaAs;
+		\item o poço-quântico de $\especie{In_xGa_{1-x}As}$ ($\text{x} = 16\%$, proporção atômica), com espessura de \unit{10}{\nano\metre}, constitui o principal canal de condução da heteroestrutura. O índice de proporção atômica ($\text{x}$) será omitido daqui para frente pois é constante em todas as amostras utilizadas. Assim, quando escrevermos InGaAs estaremos, na verdade, querendo dizer $\especie{In_xGa_{1-x}As}$;
+		\item	segunda camada de espaçamento, de \unit{8}{\nano\metre} de \especie{GaAs}, separando o QW dos pontos-quânticos;
+		\item	a camada de InAs tem espessura nominal $\dInAs$ própria para cada amostra (fig. \ref{fig:profile:QD}) e é nela que se formam os pontos-quânticos, quando $\dInAs \gtrsim \unit{1,5}{\monolayer}$. Antes disso é apenas um poço-quântico muito delgado;
+		\item outro \foreign{buffer} (\unit{50}{\nano\metre} de \especie{GaAs}) separa a camada de InAs da cobertura (a seguir) e da superfície da amostra;
+		\item	finalmente, a \textbf{cobertura} consiste numa camada de \unit{10}{\nano\metre} de GaAs uniformemente dopada com aproximadamente $10^{17}$ átomos de silício por \centi\cubic\metre. Sua função é a mesma da camada $\delta_3$ da seção anterior (e, portanto, uma forma alternativa de evitar a depleção de portadores).
+	\end{compactitem}
+
+	O perfil de potencial das bandas de condução e de valência (ponto $\Gamma$) da região-ativa está representada na figura~\ref{fig:profile:QD}.
+
+	Daqui para frente, referir-nos-emos a cada uma dessas amostras pela respectiva espessura nominal da camada de arseneto de índio. Então, \eg, por ``amostra \unit{1,5}{\monolayer}'' estaremos nos referindo à amostra deste conjunto cuja espessura nominal da camada de InAs é \unit{1,5}{\monolayer}. No caso da amostra $\dInAs = 0$, poderemos nos referir a ela alternativamente por ``amostra-referência\rlap{.}''
+
+
+	\begin{table}[t]
+		\centering
+		\setlength{\abovecaptionskip}{0.5cm}
+		\setlength{\belowcaptionskip}{0.5cm}
+		\caption{\small\label{tab:QDIP-set1} resumo das características da heteroestrutura estudada. As cinco amostras deste primeiro conjunto distinguem-se pelo número de períodos da heteroestrutura $\unit{2}{\monocamadas}_\text{InAs} + \unit{200} {\angstrom}_\text{GaAs}$ inserido no \foreign{buffer} de \unit{170}{\nano\metre} abaixo destacado: veja a figura~\ref{fig:QDIP-set1}.}		
+		\begin{tabular}{c|c|c}
+			Camadas	&	Espessuras (\nano\metre) & Observações \alturaLinha\\	\hline \hline
+			GaAs & \multicolumn{2}{c}{Substrato semi-isolante (001)} \alturaLinha\\ \hline
+			GaAs & 50 & \foreign{Buffer} \alturaLinha\\ \hline
+			$[(\text{AlAs})_5(\text{GaAs})_{10}]\times10$	&	84	&	Super-rede (SR)	\alturaLinha\\ \hline
+			GaAs & 20 & \foreign{Buffer} \alturaLinha\\ \hline
+			\color{blue} GaAs:Si & $\sim\unit{1}{\monocamadas}$ & 	
+				$n_\text{Si}=\unit{4}{\times\terad\centi\rpsquare\metre}$ \alturaLinha\\ \hline
+			\color{blue} GaAs & 30 & Barreira anterior \alturaLinha\\ \hline
+			$\color{blue}\mathrm{In_yGa_{1-y}As}$ & 10 & QW ($\mathrm{y}=16,534\%$) \alturaLinha\\ \hline
+			\color{blue} GaAs & 7 & Barreira posterior \alturaLinha\\ \hline
+			\rowcolor[gray]{0.9} \color{blue} GaAs & 170 & \foreign{Buffer} \alturaLinha\\ \hline
+			GaAs:Si & 10 & $\unit{3,0\times10^{17}}{\centi\rpcubic\metre}$ \alturaLinha\\ \hline 
+		\end{tabular}
+	\end{table}
+
+	\subsubsection*{Amostras para o estudo relacionado aos QDIPs (1º conjunto)}
+
+	A otimização da corrente fotogerada é feita empilhando-se unidades básicas (a seguir) da região-ativa, formando diversos canais de condução (poços-quânticos, principalmente) paralelos até os contatos ôhmicos, conforme ilustra a figura~\ref{fig:QDIP} (p.~\pageref{fig:QDIP}). Quanto mais unidades básicas tivermos, maior será a corrente fotogerada. Mas ocorre que a sobreposição de heteroestruturas tensionadas (os pontos-quânticos) pode prejudicar a mobilidade~\cite{Pagnossin:2005}, de modo que é preciso averiguar esta influência no 2DES. Este foi o objetivo do primeiro conjunto de amostras desta parte do trabalho.
+
+	\begin{figure}[tb]
+		\centering
+		\psfrag{b}[][]{\foreign{Buffer}}
+		\psfrag{1700}[][]{\colorbox{white}{\unit{170}{\nano\metre}}}
+		\psfrag{InGaAs}[][]{InGaAs}
+		\psfrag{Delta}[][]{$\delta$-Si}
+		\psfrag{1periodo}[][]{\shortstack{1 período:\\amostra 1}}
+		\psfrag{5periodos}[l][l]{\shortstack{5 períodos:\\amostra 5}}
+		\psfrag{Barreiras}[][]{Barreiras}
+		\psfrag{Cap-layer}[][]{\shortstack{\foreign{Cap-layer}\\ou cobertura}}
+		\psfrag{Superficie}[][]{Superfície}
+		\resizebox{0.6\textwidth}{!}{\includegraphics{figuras/QDIP-set1.eps}}
+		\caption{\small ilustração das heteroestruturas das amostras $1$ e $5$, desde o início da região-ativa até a superfície. O crescimento ocorre da esquerda para a direita e neste sentido todas as camadas estão em escala. No plano perpendicular, as diferentes camadas são apresentadas com diferentes dimensões apenas para facilitar a visualização. As camadas em vermelho são regiões de GaAs dopado com silício ($\delta$-Si e cobertura) e o poço- e os pontos-quânticos são apresentados em azul (regiões que contém In). Note que o \foreign{buffer} no qual são empilhados os pontos-quânticos possui sempre \unit{170}{\nano\metre}, independentemente da amostra, ou seja, da quantidade de planos com QDs empilhados. Isto é necessário para que as influências da superfície sobre o 2DES sejam não difiram de amostra para amostra.}
+		\label{fig:QDIP-set1}
+	\end{figure}
+
+	Nossa análise baseia-se em obter a mobilidade de transporte dos elétrons no canal das medidas de magnetorresistência e efeito Hall. Assim, para simplificar a análise dos dados, optamos por construir apenas um canal (um poço-quântico) e por colocar os pontos-quânticos fora dele. Fizemos isto por dois motivos: primeiro porque em medidas anteriores (não apresentadas aqui) em que os pontos-quânticos estavam dentro do poço-quântico, o 2DES tinha uma mobilidade tão baixa que não conseguimos definí-la. Segundo, porque a presença de vários 2DES parelelos poderiam levar a dificuldades que ocultariam a influência da tensão mecânica.
+
+	A figura \ref{fig:QDIP-set1} e a tabela \ref{tab:QDIP-set1} resumem a heterorestrutura das amostras deste conjunto. Todas elas possuem um plano de dopagem anteriormente ao poço-quântico de InGaAs e, em seguida, uma repetição de \emph{unidades básicas}, cada qual composta por \unit{2}{\monolayer} de InAs (pontos-quânticos) e \unit{20}{\nano\metre} de GaAs. A quantidade de unidades básicas define as cinco amostras deste conjunto: $0$ (amostra-referência), $1$, $3$, $5$ e $7$.  Assim, a amostra $1$ possui apenas um plano de pontos-quânticos (de \unit{2}{\monocamadas} de InAs), enquanto a amostra \amostra{5} possui $5$: veja a figura~\ref{fig:QDIP-set1}. A amostra-referência não tem nenhuma camada de InAs e o perfil de potencial da amostra $1$ é igual àquele apresentado na figura \ref{fig:profile:QD}.
+
+	É importante notar que, em todas as amostras, a distância entre a borda posterior do poço-quântico e a superfície é fixa, independentemente da quantidade de camadas de pontos-quânticos que empilhamos. Isto é necessário para que a influência da superfície~\cite{Cavalheiro:2001} seja a mesma em todas as amostras.
+
+	\subsubsection*{Amostras para o estudo relacionado aos QDIPs (2º conjunto)}
+
+	\begin{figure}[tb]
+		\centering
+		\resizebox{!}{0.5\textheight}{\includegraphics{figuras/QDIP-set2.eps}}
+		\caption{\small perfil de potencial das amostras para pesquisa aplicada (somente a banda de condução está representada). Cada uma das figuras (a), (b) e (c) acima representa duas amostras: a primeira é simplesmente o que está desenhado, mas para a segunda a região-ativa demarcada representa um período dos dez existentes, ou seja, temos dez repetições consecutivas da região-ativa. Os pontos-quânticos de InAs estão representados como um poço-quântico estreito.}
+		\label{fig:QDIP-set2}
+	\end{figure}
+
+	O segundo e último conjunto de amostras foi projetado para que averiguássemos a melhor posição dos pontos-quânticos dentro do poço-quântico, de modo que a mobilidade de transporte do 2DES seja máxima. Isto equivale a dizer que o tempo de relaxação, o tempo de resposta e o tempo de vida do elétron fotogerado no estado excitado (do poço-quântico) são máximos\rlap{.}\footnote{Na verdade, o tempo de vida é diferente do de relaxação \cite{Pagnossin:2004}, mas ambos decorrem da sobreposição da função de onda dos elétrons do 2DES com a dos centros espalhadores \cite{Hai:1996}, de sorte que podemos dizer que são proporcionais.}
+
+	A mobilidade é proporcional à sobreposição da função de onda dos elétrons no poço-quântico com a dos centros espalhadores \cite{Hai:1996}, como dopagens, pontos-quânticos, interfaces, \etc. Num poço-quântico quadrado os elétrons tendem a posicionarem-se junto da interface mais próxima da dopagem (veja os cálculos autoconsistentes de Cavalheiro \cite{Cavalheiro:2001}, por exemplo). Neste caso, se os pontos-quânticos estiverem na interface oposta, a sobreposição será minimizada e, por conseguinte, a mobilidade será maximizada. 
+
+	Já no caso de poços-quânticos parabólicos, os elétrons tendem a posicionarem-se no centro \cite{Sergio:2003}. Mas como não é possível construir um bom poço-quântico parabólico de \unit{20}{\nano\metre} (precisamos também minimizar o tamanho do dispositivo, o que não seria muito efetivo se utilizássemos poços-quânticos parabólicos de \unit{200}{\nano\metre}, por exemplo), optamos por uma aproximação grosseira: uma variação linear do perfil de potencial (poço-quântico triangular).
+
+	A figura \ref{fig:QDIP-set2} ilustra o perfil de potencial da região-ativa das três amostras deste conjunto.%, identificadas pelos símbolos $\QDcenterSQW$, $\QDcornerSQW$ e $\QDcenterTQW$. O pequeno círculo representa os pontos-quânticos e as linhas, o perfil de potencial do poço-quântico. Então, da esquerda para a direita (e de cima para baixo na figura \ref{fig:QDIP-set2}), na primeira amostra os pontos-quânticos foram crescidos no centro do poço-quântico; na segunda, na interface mais distante da dopagem delta; na terceira, os pontos-quânticos estão no centro de um poço-quântico triangular.
+
+
+	\section{Processos}
+
+	As medidas de transporte de cargas (capítulo~\ref{cap:metodos}) exigem alguma preparação prévia das amostras, a saber: (i) impressão da barra-Hall na amostra, (ii) corte, (iii) difusão dos contatos de índio (contato ôhmico), (iv) confecção da rede de antipontos-quânticos (opcional), (v) deposição do contato de controle ou \foreign{gate} (opcional) e (vi) a instalação dos terminais aos quais os equipamentos eletrônicos utilizados se conectam.	A figura~\ref{fig:bH-3D} ilustra uma amostra pronta para as medidas de transporte (consulte-a no decorrer das próximas seções).
+
+		\begin{figure}[tb]
+			\centering
+			\psfrag{1}[][]{\huge $1$ ou $S$}
+			\psfrag{2}[][]{\huge $2$}
+			\psfrag{3}[][]{\huge $3$}
+			\psfrag{4}[][]{\huge $4$ ou $D$}
+			\psfrag{5}[][]{\huge $5$}
+			\psfrag{6}[][]{\huge $6$}
+			\psfrag{7}[r][r]{\huge $G$ (\foreign{gate})}
+			\psfrag{I}[][]{\huge $I$}
+			\psfrag{B}[][]{\huge $B$}
+			\resizebox{0.7\textwidth}{!}{\includegraphics{figuras/bH-3D.eps}}
+			\caption{\small amostra pronta para as medidas de transporte. A corrente elétrica é aplicada entre os contatos $S$ (fonte ou \foreign{source}) e $D$ (dreno ou \foreign{drain}), enquanto o contato $G$ (de controle ou \foreign{gate}) permite-nos modificar a concentração e a mobilidade dos elétrons nos canais (nos QWs). As medidas de magnetorresistência são feitas entre os contatos $2$ e $3$ (ou $5$ e $6$) e as do efeito Hall, entre os contatos $2$ e $6$ (ou $3$ e $5$).}
+			\label{fig:bH-3D}
+		\end{figure}
+
+		\begin{SCfigure}
+			\centering
+			\psfrag{S}[][]{\LARGE $S = \text{source}$ (fonte)}
+			\psfrag{2}[][]{\huge $2$}
+			\psfrag{3}[][]{\huge $3$}
+			\psfrag{D}[][]{\LARGE $D = \text{drain}$ (dreno)}
+			\psfrag{5}[][]{\huge $5$}
+			\psfrag{6}[][]{\huge $6$}
+			\psfrag{1mm}[][]{\huge \unit{1}{\milli\metre}}
+			\psfrag{V1}[][]{\huge $V_H$}
+			\psfrag{V}[][]{\huge $V$}
+			\psfrag{I0}[][]{\huge $I = 0$}
+			\psfrag{I}[][]{\huge $I$}
+			\psfrag{RA}[][]{\huge\shortstack{Região de\\ interesse}}
+			\psfrag{200}[l][l]{\huge\unit{200}{\micro\metre}}
+			\psfrag{500}[l][l]{\huge\unit{500}{\micro\metre}}
+			\resizebox{.45\textwidth}{!}{\includegraphics{figuras/bH.eps}}
+			\caption{\small vista em planta da barra-Hall (compare com a figura anterior). A corrente elétrica é aplicada através dos contatos $1$ (fonte ou \foreign{source}) e $4$ (dreno ou \foreign{drain}) e mantém-se apenas na região central (em forma de ``I''). A região de interesse é acessada por contatos instalados nas periferias, através dos quais efetuamos as medidas de magnetorresistência e efeito Hall.}
+			\label{fig:bH}
+		\end{SCfigure}
+
+		% -----------
+		% BARRA-HALL.
+		% -----------
+		\subsection{A barra-Hall}
+
+		Neste tipo de experimento é crucial que conheçamos a geometria da amostra. No nosso caso, por exemplo, trabalhamos com uma pequena região onde possamos assumir que a densidade de corrente seja uniforme. Uma geometria já bastante difundida neste sentido é a barra-Hall, ilustrada nas figuras~\ref{fig:bH-3D} e~\ref{fig:bH}. Somente na região em forma de ``I'' é permitido o fluxo de corrente elétrica e, apesar disso, a \textbf{região de interesse} consiste apenas na pequena área central, medindo $\unit{200}{\micro\metre} \times \unit{500}{\micro\metre}$ (esta é a região ilustrada na figura~\ref{fig:efeito-Hall}). A corrente, fornecida por uma fonte de tensão\rlap{,}\footnote{A figura~\ref{fig:bH} ilustra uma fonte de corrente apenas para simplificar o desenho. Um esquema mais correto das conexões eletrônicas é apresentado na figura~\ref{fig:eletronica}, na página~\pageref{fig:eletronica}.} percorre a amostra no sentido $D \to S$ (dreno $\to$ fonte) e as medidas de tensões são feitas entre os contatos $2$ e $3$ (ou $5$ e $6$) para as medidas de magnetorresistência (efeitos Shubnikov-de Haas, localização-fraca e interações entre elétrons) e entre $2$ e $6$ (ou $3$ e $5$) para o efeito Hall (clássico e quântico). Uma geometria alternativa é a de Van-der Pauw \cite{Pauw:1958}, extensamente utilizada por nós em medidas de teste para avaliar rapidamente a concentração total de portadores e a mobilidade de transporte.
+
+	A implantação da barra-Hall nas amostras foi feita através de um processo litográfico no Laboratório de Microeletrônica (LME) da Escola Politécnica da Universidade de São Paulo: primeiramente devemos limpar a amostra com acetona e secá-la com nitrogênio gasoso; depois, fixamo-la (a vácuo) pela base (substrato) em uma aparelho chamado \foreign{spinner} (que pode ser grosseiramente comparado a uma centrifugadora), pingamos algumas gotas de revelador fotosensível (fotorresiste) e fazemo-la girar durante algum tempo. Este passo deve ser feito sob luz amarela para que o fotorresiste não seja sensibilizado incorretamente. Com isso o fotorresiste fica espalhado uniformemente pela superfície da amostra. Em seguida, colocamos a amostra em forno a \unit{80}{\degreecelsius} por vinte minutos; depois posicionamos a máscara da barra-Hall sobre a amostra e incidimo-lhe luz ultra-violeta por \unit{10}{\second}. Deste modo, a parte do fotorresiste que não estava protegida pela máscara é sensibilizada. Agora, mergulhamos a amostra no revelador por aproximadamente trinta segundos, imergimo-la em água e a secamos novamente com \hbox{N$_2$}. A revelação extrai o fotorresiste não-sensibilizado e, assim, o ataque químico a seguir não agride a região protegida pelo fotorresiste sensibilizado. O tempo do ataque químico depende da amostra e dos objetivos que queremos atingir. No caso de heteroestruturas como a nossa, entretanto, uma regra prática é usar um minuto de ataque para cada \unit{1000}{\angstrom}. Finalmente, retiramos o fotorresiste: a barra-Hall está instalada e a amostra está pronta para receber os contatos: fig.~\ref{fig:bH}.
+
+		%A implantação da barra-Hall nas amostras foi feita através de um processo litográfico no Laboratório de Microeletrônica (LME) da Escola Politécnica da Universidade de São Paulo (EPUSP). Basicamente, cobrimos com fotorresiste as regiões da superfície que queremos manter e, em seguida, fazemos um ataque químico (\foreign{wet-etching}) que corrói toda a heteroestrutura nas regiões desprotegidas. Tipicamente, a profundidade desse ataque é de $500$ a \unit{800}{\nano\metre} (o suficiente para percorrer toda a heteroestrutura) e ocorre à taxa aproximada de \unit{100}{\nano\metre\per\minute} para o composto químico que utilizamos ($H_2O:H_3PO_4:H_2O_2$ na proporção $50:3:1$). Como resultado, obtemos o desenho da barra-Hall (fig.~\ref{fig:bH}) em alto relevo na superfície da amostra: figura~\ref{fig:bH-3D}.
+
+		% ---------------
+		% CONTATO ÔHMICO.
+		% ---------------
+		\subsection{Contato ôhmico}
+		\label{sec:contatos}
+
+		Exceto pelo contato de controle (\foreign{gate} na fig.~\ref{fig:bH-3D}), todos os outros contatos são de índio, do tipo ôhmico. Um contato ôhmico é uma junção metal-semicondutor com comportamento ôhmico, isto é, no qual a relação entre a corrente elétrica e a tensão através da amostra é linear (neste tipo de junção, a função de trabalho do metal é menor que a do semicondutor, cf. ref. \citealt{Wood:1994}). Esses contatos são utilizados tanto para aplicar a corrente elétrica como para medir as diferenças de potencial oportunas.
+
+		Para confeccioná-los, utilizamos o método de difusão, que consiste simplesmente em repousar um pouco de índio nas bordas da barra-Hall (nas regiões numeradas da figura~\ref{fig:bH}) e, em seguida, aquecê-lo a \unit{300}{\degreecelsius} por alguns minutos (quatro, especificamente) numa atmosfera saturada de nitrogênio. Nessas circunstâncias o índio difunde verticalmente e forma um canal metálico ao longo de toda a heteroestrutura, que nos dá acesso à \textbf{região-ativa}, a porção da heteroestrutura que possui a estrutura de interesse (veja o capítulo~\ref{cap:resultados}). Por fim, é útil soldar terminais de ouro ou alumínio\footnote{Fios de cobre não são recomendados porque em baixas temperaturas eles se tornam rígidos, introduzindo tensões mecânicas que podem quebrar os contatos ou, mais sutilmente, torná-los não-ôhmicos. Alumínio, por outro lado, não tem boa aderência ao índio.} a esses contatos de modo a facilitar as conexões com os equipamentos eletrônicos.
+
+		Vimos no capítulo anterior que quando as medidas envolvem o transporte não dissipativo de cargas, como no caso do efeito Hall quântico, os estados estendidos localizam-se nas bordas da amostra. Por conta disso os contatos ôhmicos devem ser difundidos nas bordas da barra-Hall. Caso contrário um voltímetro ali conectado mediria a diferença de potencial entre estados localizados, que não conduzem a corrente elétrica. Exceto por este caso, não importa a posição dos contatos.
+
+		Outro detalhe experimental importante é que aos terminais de medida ($2$, $3$, $5$ e $6$ nas figuras~\ref{fig:bH-3D} e~\ref{fig:bH}) são conectados instrumentos de alta impedância, o que torna nula a corrente entre o ``I'' central da barra-Hall e esses contatos. Com isso, a diferença de potencial entre os pontos $2$ e $3$ da figura~\ref{fig:bH}, por exemplo, é precisamente a mesma entre as extremidades inferior e superior da região de interesse. Mais que isso, como a corrente é nula, a resistência dos contatos $2$ e $3$ (considerável quando há poucos modos de condução, como no caso do transporte não dissipativo associado ao efeito Hall quântico) não influencia a medida.
+
+		% --------------------
+		% CONTATO DE CONTROLE.
+		% --------------------
+		\subsection{Contato de controle (\foreign{gate} ou porta)}
+		\label{sec:gate}
+
+		O \foreign{gate} ou contato de controle, muito utilizado em transístores de efeito de campo (FET, \foreign{field effect transistor}), é um contato não-ôhmico cuja função é modificar a concentração de portadores e, com isso, controlar a corrente elétrica entre o dreno e a fonte (fig.~\ref{fig:bH}). Há três tipos: o primeiro é aquele utilizado nos JFETs (\foreign{junction} FET), constituído de uma junção pn polarizada reversamente (fig.~{\ref{fig:gates}a}); o segundo tipo utiliza uma junção metal-semicondutor do tipo Schottky (o outro tipo de junção metal-semicondutor é o ôhmico), utilizado nos MESFETs (\foreign{metal-semicondutor} FET, fig.~{\ref{fig:gates}b}); e no terceiro existe uma delgada camada isolante (geralmente dióxido de silício) entre o contato metálico e a superfície do dispositivo, como nos MOSFETs (\foreign{metal oxide semiconductor} FET, fig.~{\ref{fig:gates}c}).
+
+		Em qualquer um deles a concentração de portadores é controlada através da diferença de potencial entre o \foreign{gate} e a fonte ($V_{GS}$), que cria uma região de depleção nos arredores do \foreign{gate}. Trata-se basicamente de um capacitor, onde uma das placas é o contato metálico e a outra, o gás de elétrons (veja a ref.~\citealt{Sedra}, por exemplo). E diferentemente dos contatos ôhmicos, não há (idealmente) fluxo de cargas entre o \foreign{gate} e o 2DES, a chamada corrente de fuga (ou \foreign{leakage}).
+
+		Em todas as nossas amostras utilizamos os tipos dois e três acima, e ouro como contato metálico. Nas amostras com super-rede de antipontos-quânticos (p.~\pageref{sec:antidots}) o \foreign{gate} é basicamente do tipo MOS, exceto que o PMMA sobre o qual efetuamos a litografia dos antipontos exerce o papel de isolante (ao invés do óxido). Entretanto, nessas amostras pode ocorrer de na região dos furos não haver PMMA após a revelação. Neste caso, o \foreign{gate} é do tipo Schottky. Nas outras amostras o contato de controle é exclusivamente Schottky: um filme de ouro de \unit{500}{\nano\metre} ou, alternativamente, um de titânio (\unit{80}{\nano\metre}) seguido por outro de ouro (\unit{20}{\nano\metre}).
+
+		\begin{figure}[tb]
+			\centering
+			\psfrag{JFET}[][]{\Large \textbf{a)} JFET}
+			\psfrag{MESFET}[][]{\Large \textbf{b)} MESFET}
+			\psfrag{MOSFET}[][]{\Large \textbf{c)} MOSFET}
+			\psfrag{OHMICO}[][]{\Large \shortstack{Contato\\ ôhmico}}
+			\psfrag{CANAL}[][]{\Large Canal}
+			\psfrag{DEPLECAO}[][]{\Large Região de depleção}
+			\psfrag{ISOLANTE}[r][r]{\Large Isolante}
+			\psfrag{M}[][]{\Large \shortstack{Contato\\ metálico}}
+			\psfrag{S}[][]{\Large $S$}
+			\psfrag{D}[][]{\Large $D$}
+			\psfrag{G}[][]{\Large $G$}
+			\psfrag{B}[][]{\Large $B$}
+			\psfrag{S1}[][]{\Large $S = \text{\foreign{source}}$}
+			\psfrag{D1}[][]{\Large $D = \text{\foreign{drain}}$}
+			\psfrag{G1}[r][r]{\Large $G = \text{\foreign{gate}}$}
+			\psfrag{B1}[l][l]{\Large $B = \text{\foreign{body}}$}
+			\psfrag{N}[][]{\Large $n^+$}
+			\psfrag{P}[][]{\Large $p^+$}
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/gate-types.eps}}
+			\caption{\small os três tipos de \foreign{gate} utilizados em transístores de efeito de campo e seus os símbolos eletrônicos: \textbf{(a)} de junção, \textbf{(b)} Schottky e \textbf{(c)} MOS. Nas nossas amostras, utilizamos os dois últimos.}
+			\label{fig:gates}
+		\end{figure}
+
+		\subsubsection*{Confecção}
+
+		O procedimento de confecção dos contatos de controle consiste basicamente na evaporação e subsequente deposição do metal (ouro e/ou titânio) sobre a superfície da amostra.
+
+		Utilizando um pequeno pedaço de acetato (suficiente para cobrir por completo a amostra) com um furo central de aproximadamente \unit{1}{\milli\metre} de diâmetro, colocamo-lo sobre a amostra, tomando o cuidado de posicionar o furo sobre a região de interesse, conforme ilustra a figura~\ref{fig:gate-mask}. Feito isso, a amostra é colocada numa câmara de vácuo, dentro da qual encontra-se um cadinho metálico verticalmente alinhado com a amostra e que sustenta o metal a ser evaporado, conforme ilustra a figura~\ref{fig:gate-evaporation}.
+
+		O aquecimento do metal é feito através do efeito Joule, ao aplicarmos uma corrente elétrica constante através do cadinho, e o fluxo de evaporação é medido através da oscilação de um cristal próximo da amostra, cuja freqüência muda conforme os átomos do metal evaporado são depositados sobre ele. Inicialmente, a evaporação é inconstante e por isso o processo começa com o obturador ainda fechado (ou seja, sem expor a amostra), mas após alguns segundos abre-se o obturador e a amostra é exposta. Conhecendo a taxa de deposição do ouro/titânio no cristal (da ordem de $\angstrom\per\second$ e supostamente igual àquela sobre a amostra), podemos depositar o filme metálico com acurácia e precisão de um ou dois nanometros.
+
+		\begin{figure}[tb]
+			\begin{minipage}[c]{0.45\textwidth}
+				\centering
+				\psfrag{Exposta}[][]{\Huge \shortstack{Área\\ exposta}}
+				\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/gate-mask.eps}}
+				\caption{\small a região da amostra abaixo do furo no acetato (amarelo) fica exposta ao fluxo de ouro/titânio, que ali forma um filme delgado desse metal (\unit{20}{\nano\metre} no caso do ouro e \unit{80}{\nano\metre} no do titânio). A região protegida permanece inalterada.}
+				\label{fig:gate-mask}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[c]{0.45\textwidth}
+				\centering
+				\psfrag{Au}[][]{\Huge Au}
+				\psfrag{Cristal}[r][r]{\Huge Cristal}
+				\psfrag{Amostra}[][]{\Huge Amostra}
+				\psfrag{Acetato}[][]{\Huge Acetato}
+				\psfrag{Shutter}[][]{\Huge Obturador}
+				\psfrag{C}[l][l]{\huge Cadinho}
+				\resizebox{0.8\textwidth}{!}{\includegraphics{figuras/gate-evaporation.eps}}
+				\caption{\small câmara de evaporação do ouro e titânio, sob vácuo. O metal no cadinho é fundido através do efeito Joule e o fluxo de evaporação, medido através das oscilações do cristal. O obturador aberto expõe a amostra ao metal evaporado.}
+				\label{fig:gate-evaporation}
+			\end{minipage}			
+		\end{figure}
+
+		Os primeiros filmes metálicos com os quais trabalhamos (confeccionados no Instituto de Física da USP de São Carlos, IFSC) eram feitos de ouro apenas (\unit{500}{\nano\metre}), mas ocorre que o ouro difunde no GaAs mesmo a temperatura ambiente, de modo que após algum tempo ele conecta-se com o gás de elétrons, destruindo a amostra. Por conta disso, mais recentemente (no Instituto de Física da Universidade de Campinas, UNICAMP) passamos a depositar um filme de titânio de \unit{80}{\nano\metre}, que funciona como barreira de difusão, antes do ouro (\unit{20}{\nano\metre}).
+
+		É possível também utilizar um processo mais refinado, no qual o acetato é substituído por fotorresiste sensibilizado e o posicionamento, feito através de uma alinhadora, similarmente ao processo de litografia da barra-Hall. Mas isto torna o processo mais oneroso e contribui pouco para a melhoria da qualidade do \foreign{gate}, conforme pudemos verificar. Além disso, este método não poderia ser utilizado nas amostras com super-rede de antipontos pois o fotorresiste cobriria os furos do PMMA (a seguir), impedindo o ouro de ficar em contato direto com a superfície da amostra nessas regiões.
+
+		Finalmente, colamos com prata ou soldamos com índio um terminal de ouro no \foreign{gate}, através do qual conectamos a amostra aos instrumentos eletrônicos.
+
+		\subsubsection*{Funcionamento}
+
+		O efeito básico do contato de controle é fixar externamente o potencial da superfície, forçando a heteroestrutura a ajustar-se a ele através da redistribuição de cargas. A figura~\ref{fig:gate-working} ilustra essa transferência para uma amostra de poço-quântico duplo: fixamos a energia dos elétrons nos poços-quânticos em zero aterrando a amostra através do dreno. Simultaneamente, fixamos a energia potencial elétrica na superfície em $-eV_{GS}$ através de uma fonte de tensão. Quando $V_{GS} > 0$ as bandas de condução e de valência são dobradas para baixo, reduzindo a energia dos elétrons na superfície e, portanto, favorecendo a transferência de cargas do $\text{QW}_2$ para a dopagem $\delta_2$ e para a superfície (mas não para o \foreign{gate}: a corrente no ramo que o alimenta é idealmente nula). A concentração do $\text{QW}_1$ permanece aproximadamente constante~\cite{Muraki:2000,Fletcher:2005}. Por outro lado, $V_{GS} < 0$ repele os elétrons da superfície e da dopagem para o poço-quântico, aumentando a concentração de elétrons em $\text{QW}_2$. Representamos este fenômeno dobrando as bandas de condução e de valência para cima. Novamente, a concentração de portadores em $\text{QW}_1$ permanece inalterada.
+
+		A densidade de portadores em $\text{QW}_1$ pode ser alterada através de um \foreign{back-gate} (fig. \ref{fig:gate-working}), um contato de controle construído atrás da heteroestrutura; no substrato, por exemplo (como o contato \foreign{body} \cite{Sedra} do MOSFET na figura~\ref{fig:gates}). A fenomenologia é exatamente a mesma do então \foreign{front-gate}, acima explicado. Nós não utilizamos \foreign{back-gate}.
+
+		\begin{figure}[tb]
+			\centering
+			\psfrag{VBG}[][]{\Large $V_{bg}$}
+			\psfrag{VFG1}[][]{\Large $V_{GS} < 0$}
+			\psfrag{VFG2}[][]{\Large $V_{GS} = 0$}
+			\psfrag{VFG3}[][]{\Large $V_{GS} > 0$}
+			\psfrag{PSI1}[][]{\Large $\psi_1$}
+			\psfrag{PSI2}[][]{\Large $\psi_2$}
+			\psfrag{QW1}[][]{\Large $\text{QW}_1$}
+			\psfrag{QW2}[][]{\Large $\text{QW}_2$}
+			\psfrag{D1}[][]{\Large $\delta_1$}
+			\psfrag{D2}[][]{\Large $\delta_2$}
+			\psfrag{SF}[][]{\Large\rotatebox{90}{Superfície}}
+			\psfrag{S}[r][r]{\Large \foreign{Source}}
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/gate-working.eps}}
+			\caption{\small representação da influência do \foreign{front-gate} (tensão $V_{GS}$) no perfil de potencial da banda de condução (por clareza, omitimos a banda de valência) de uma heteroestrutura de poços-quânticos duplos aterrados. Quando $V_{GS} > 0$ os elétrons são atraídos para a superfície (seta verde), reduzindo a concentração deles no $\text{QW}_2$; quando $V_{GS} < 0$, eles são repelidos (seta vermelha) e a concentração aumenta. Este rearranjo de cargas também modifica a função de onda dos elétrons e, por conseguinte, a mobilidade deles. Os elétrons no poço-quântico $1$ não são afetados significativamente por $V_{GS}$, embora o sejam (similarmente) pelo \foreign{back-gate} ($V_{bg}$).}
+			\label{fig:gate-working}
+		\end{figure}
+
+		A aplicação da tensão de \foreign{gate} também tem influência na mobilidade dos elétrons, haja vista que a modificação nas funções de onda dos elétrons altera sua sobreposição (\foreign{overlap}) com os centros espalhadores~\cite{Hai:1996}. Por exemplo: ainda na situação descrita acima, quando a superfície repele os elétrons do 2DES ($V_{GS} < 0$), a despeito de qualquer variação na densidade de portadores em $\text{QW}_2$, a função de onda desses elétrons é deslocada para a esquerda; para longe da dopagem $\delta_2$. Logo, podemos esperar uma redução na taxa de espalhamento devido aos íons da dopagem ou, equivalentemente, um aumento na mobilidade desses elétrons. Mas diferentemente da concentração, a dependência da mobilidade com a tensão de \foreign{gate} está intimamente relacionada com a heteroestrutura.
+
+		% -------------------
+		% REDE DE ANTIPONTOS.
+		% -------------------
+		\subsection{A rede de antipontos-quânticos}
+		\label{sec:antidots}
+
+		A (super-) rede de antipontos-quânticos (ou \foreign{antidots}) é essencialmente um padrão bidimensional de buracos mecânicos aproximadamente cilíndricos num filme de PMMA (polimetilmetacrilato), um polímero da família do vinil, que recobre a superfície da amostra e preenchidos com um condutor: figura~\ref{fig:e-beam}. Este padrão ocupa toda a região de interesse e sua função em nosso trabalho é simular um padrão organizado (hexagonal, no caso) de centros espalhadores.
+
+		\subsubsection*{Confecção}
+
+		O primeiro passo do processo é depositar o filme de PMMA (\unit{200}{\nano\metre} de espessura) sobre a superfície da amostra, exatamente como depositamos o fotorresiste para a litografia da barra-Hall. A diferença reside apenas na receita.
+
+		Os buracos no filme de PMMA são feitos por eletrolitografia, ou seja, são literalmente desenhados com um feixe eletrônico (\foreign{e-beam}) de alta energia (algumas dezenas de \kilo\electronvolt). Em verdade qualquer desenho pode ser feito através de um \foreign{software} CAD (\foreign{computer aided desing}) e, dependendo do equipamento, até mesmo fotografias podem ser impressas na superfície da amostra. No nosso caso, utilizamos o microscópio eletrônico de varredura (SEM, \foreign{scanning electron microscope}) do Laboratório de Sistemas Integrados (LSI) da Escola Politécnica da USP (EPUSP), e nosso desenho consiste apenas numa matriz hexagonal de \emph{pontos} com \unit{0,4}{\micro\metre} de distância entre eles. O diâmetro desses furos ($\sim\unit{0,2}{\micro\metre}$) é controlado pelo tempo de exposição de cada ponto ao feixe de elétrons (alguns microsegundos).
+
+		Após posicionada na câmara de vácuo do SEM, precisamos posicionar o foco do feixe de elétrons no centro da região de interesse, a partir do qual a super-rede será desenhada. Como o microscópio gera imagens a partir da difração do feixe de elétrons, precisamos dele ligado para podermos observar e posicionar o \foreign{e-beam}. Por outro lado, não podemos ``iluminar'' a região de interesse com o feixe pois ele sensibilizaria o PMMA, inutilizando-o para a exposição posterior do padrão que nos interessa. Para resolver este problema, reduzimos o campo de visão, procuramos por referências nas periferias da barra-Hall e, com base no conhecimento prévio de suas dimensões, posicionamos manualmente o feixe \emph{desligado} no centro da região de interesse. Feito isso basta executar o \foreign{software} do SEM e deixá-lo desenhando a super-rede.
+
+		\begin{figure}[tb]
+			\centering
+			\psfrag{SAMPLE}[][]{\huge Superfície da amostra}
+			\psfrag{PMMA}[][]{\huge PMMA}
+			\psfrag{GOLD}[][]{\huge Ouro}
+			\psfrag{AQD}[][]{\huge \colorbox{white}{Antipontos}}
+			\psfrag{QD}[][]{\huge \colorbox{white}{QD}}
+			\psfrag{D}[][]{\LARGE \colorbox{white}{\unit{0,2}{\micro\metre}}}
+			\psfrag{L}[][]{\LARGE \colorbox{white}{\unit{0,4}{\micro\metre}}}
+			\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/e-beam.eps}}
+			\caption{\small à esquerda, representação da rede de antipontos-quânticos. Cada furo no PMMA é um antiponto-quântico e entre eles, os pontos-quânticos de forma triangular. À direita, imagem da rede obtida no próprio SEM, com ampliação de $35$ mil vezes. Há aproximadamente meio milhão de antipontos sobre toda a região de interesse.}
+			\label{fig:e-beam}
+		\end{figure}
+
+		Depois de exposto ao feixe de elétrons, efetuamos a revelação, processo químico no qual as regiões no PMMA sensibilizadas pelo feixe (os pontos) são removidas. A reação química ocorre à temperatura constante de \unit{25}{\degreecelsius}, onde as moléculas sensibilizadas de PMMA ligam-se com o revelador (ARP-600) e são removidas por agitação manual. Neste estágio o PMMA aparenta-se com uma peneira, cobrindo toda a superfície da amostra, exceto nas regiões dos furos: figura~\ref{fig:e-beam}.
+
+		Embora o procedimento descrito acima seja basicamente simples, existe um sem número de parâmetros que precisam ser otimizados para obtermos bons resultados. Exemplos são a intensidade do feixe e o tempo de exposição de cada \foreign{antidot}. Particularmente, um dos pontos de maior dificuldade foi a influência dos contatos de índio (necessariamente já presentes quando da exposição ao \foreign{e-beam})\footnote{Caso contrário o PMMA sublimaria durante a difusão dos contatos, a \unit{400} {\celsius}, conforme pudemos verificar.} na espessura do filme de PMMA, tornando-o não uniforme; outro foi nossa escolha de \foreign{antidots} distanciados de \unit{0,4}{\micro\metre}, bastante próximo da resolução do aparelho. De fato, consumimos quase seis meses para conseguir super-redes aceitáveis e ainda assim o sucesso do processo é estatístico: somente $20\%$ das amostras apresentam bons resultados.
+
+		Finalmente, recobrimos a superfície da amostra com ouro e instalamos um terminal de controle, conforme explicado na seção~\ref{sec:gate}. Esta parte do processo foi feita no Instituto de Física da USP de São Carlos e o resultado final pode ser visto na figura~\ref{fig:e-beam}.
+
+		\subsubsection*{Funcionamento}
+
+		\begin{SCfigure}
+			\centering
+			\psfrag{X}[][]{\huge $x$}
+			\psfrag{Y}[][]{\huge $y$}
+			\psfrag{Z}[][]{\huge $-eV(x,y)$}
+			\psfrag{Antidot}[l][l]{\huge \foreign{Antidot}}
+			\psfrag{QD}[l][l]{\huge Ponto-quântico}
+			\psfrag{D}[][]{\huge\colorbox{white}{\unit{0,4}{\micro\metre}}}
+			\psfrag{V}[l][l]{\huge $-eV_{GS}$}
+			\psfrag{SP}{\huge Ponto-de-cela}
+			\resizebox{0.5\textwidth}{!}{\includegraphics{figuras/antidots.eps}}
+			\caption{\small energia potencial da superfície em função da posição no plano $xy$. A presença da super-rede de antipontos-quânticos faz com que a tensão aplicada no terminal de controle não seja a mesma em todo ponto $(x,y)$ da superfície: nos furos, onde o ouro está em contato com a superfície, ela é igual a $-eV_{GS}$; nos interstícios, onde há PMMA isolante, é um pouco inferior (em módulo).}
+			\label{fig:antidots}
+		\end{SCfigure}
+
+		Podemos ver na figura~\ref{fig:e-beam} que, depois de finalizada, a super-rede de antipontos-quânticos é um contato de controle híbrido dos tipos Schottky (nos furos) e MOS (entre eles).
+
+		Ao fixarmos o potencial no terminal de controle em $V_{GS}$, o potencial na superfície da \emph{amostra} será fixado neste valor somente nas regiões dos furos, onde o ouro está em contato com a superfície (barreira Schottky); nos interstícios, onde há PMMA separando a superfície do ouro, o potencial da superfície será ligeiramente menor (em módulo), dando origem a um potencial eletrostático que reflete a geometria estabelecida pela litografia, conforme ilustra a figura~\ref{fig:antidots}. Em outras palavras, as bandas de condução e de valência são modificadas (cf. fig.~\ref{fig:gate-working}) mais nas regiões dos furos que dos interstícios.
+
+		Este padrão é difundido ao longo da heteroestrutura, da superfície até o poço-quântico mais próximo, onde o \foreign{front-gate} ainda tem influência~\cite{Muraki:2000,Fletcher:2005}. Por conseguinte, o 2DES fica submetido a um potencial de espalhamento periódico conhecido e, dependendo da razão entre a distância entre eles e o caminho livre médio, sua influência pode ser analisada clássica~\cite{Wagenhuber:1992,Choque:2002} ou quanticamente~\cite{Hofstadter:1976,Kirczenow:1992}. No nosso caso, o comprimento de onda dos elétrons no nível de Fermi está entre $50$ e \unit{80}{\nano\metre}, apenas algumas vezes menor que a distância entre os furos (\unit{0,4}{\micro\metre}), de modo que os fenômenos observados são manifestações do estado quântico.
+
+		A despeito de interpretarmos a super-rede de antipontos-quânticos como um potencial de espalhamento periódico, ela é essencialmente um \foreign{gate} e como tal altera a concentração e a mobilidade dos elétrons, conforme vimos anteriormente. Contudo, devido à presença do PMMA e à pequena área de contato do ouro com a superfície da amostra (aproximadamente $10\%$), a variação é pequena, conforme veremos no próximo capítulo.
+
+		Finalmente, observe que quando $V_{GS} < 0$ o potencial eletrostático de cada furo é repulsivo, em oposição àquele de um ponto-quântico; daí o nome ``antiponto-quântico'' (quando $V_{GS} > 0$ são os interstícios que assumem o papel de \foreign{antidots}). E particularmente no caso da rede hexagonal, o potencial da rede apresenta mínimos locais nos interstícios, tornando possível o confinamento de elétrons ali. Isto é, formam-se pontos-quânticos ali (fig.~\ref{fig:antidots}). Por esta razão, usamos os termos \textsl{super-rede de antipontos} e de \textsl{pontos-quânticos} como sinônimos.
+
+	% -------------
+	% EQUIPAMENTOS.
+	% -------------
+	\section{Equipamentos}
+
+		Todos os estudos apresentados aqui têm como base medidas de magnetorresistência e do efeito Hall em baixas temperaturas ($0,05$ a \unit{5}{\kelvin}). Elas foram realizadas em parte no próprio Laboratório de Novos Materiais Semicondutores (LNMS) do Instituto de Física da USP/SP e em parte no \foreign{Laboratorie du Champs Magnetiques Intenses} (LCMI) do \foreign{Centre National de la Recherche Scientifique} (CNRS), na França. As instalações nesses dois laboratórios são conceitualmente iguais, embora difiram por alguns equipamentos utilizados (especialmente no caso do sistema de vácuo, que não trataremos aqui).
+
+		\subsection{Criogenia e vácuo}
+
+			As baixas temperaturas utilizadas neste trabalho foram obtidas através de três criostatos de banho (\foreign{bath cryostat}): de hélio-4, de hélio-3 e de diluição. No primeiro a amostra fica imersa em $^4\text{He}$ e atinge temperaturas pouco superiores a \unit{1,4}{\kelvin} aproximadamente. Na segunda técnica de refrigeração a amostra fica imersa em $^3\text{He}$, entre $1,4$ e \unit{0,25}{\kelvin}. Finalmente, no criostato de diluição (\foreign{dilution fridge}) a amostra fica imersa numa mistura de hélio-3/hélio-4 que atinge temperaturas tão baixas quanto \unit{50}{\milli\kelvin} \cite{oxford:2000}.
+
+		\subsection{Eletrônica}
+
+			A figura~\ref{fig:eletronica} ilustra a instalação eletrônica utilizada no LCMI, que difere daquela no IF-USP/SP apenas pela inexistência do ramo associado ao segundo \foreign{lock-in}, o que nos impede de medir $V$ e $V_H$ simultaneamente. Remediamos isto alternando a entrada do amplificador entre os contatos $5$ (neste caso medimos $V$) e $2$ ($V_H$), mantendo o contato $6$ inalterado (comum a ambas as medidas).
+
+			A idéia básica da medida é fixar uma corrente elétrica que percorre a amostra com uma fonte de corrente e medir a diferença de potencial paralela ($V$) e perpendicularmente ($V_H$) ao fluxo de cargas com um multímetro. O que difere disto é para otimizar a medida. Então acompanhemos o esquema: primeiramente, visando reduzir o ruído eletrônico nas medidas, utilizamos um \foreign{lock-in} (EG\&G 5210) ao invés de um multímetro para medir $V$ e $V_H$. Este equipamento (basicamente, um multímetro melhorado) espera receber como entrada o sinal a ser medido modulado por um \emph{sinal de referência} ac conhecido. Este sinal pode ser fornecido externamente ou, como preferimos, pelo próprio \foreign{lock-in}, na forma de uma fonte de tensão de onda quadrada de \unit{1}{\volt}/\unit{11}{\hertz} (ajustáveis). Assim, utilizamos este sinal para alimentar a amostra (contatos \foreign{source} e \foreign{drain}) e como referência para ambos os \foreign{lock-ins}. A corrente é definida e estabilizada através da carga resistiva $R_L$, escolhida através da chave CH, em série com a amostra. Esta chave permite-nos ainda verificar o caráter ôhmico dos contatos: a corrente elétrica na amostra, dada por $\unit{1}{\volt}/R_L$, varia conforme escolhemos valores diferentes de $R_L$. Como resultado, a tensão $V$ sobre a amostra (lida no visor do \foreign{lock-in}) deve variar conforme a primeira lei de Ohm.
+
+			As diferenças de potencial $V$ e $V_H$ são então medidas pelos \foreign{lock-ins} [opcionalmente, elas podem ser pré-amplificadas analogicamente (EG\&G 5186)] e enviadas a um conversor analógico-digital (HP 34401A), que por seu turno envia o resultado da medida para um computador (via GPIB, \foreign{gerenal purpose interface bus}), registrando-os em arquivos de texto. O computador também controla o campo magnético, através de uma fonte OXFORD IPS 120A-10V.
+
+			Recusos adicionais são o terminal de controle e o LED vermelho. O primeiro é controlado por uma fonte de tensão e o segundo, por uma de corrente (KEITHLEY 224), ambos operados manualmente. A iluminação da amostra tem efeito similar a aplicar $V_{GS} > 0$, ou seja, é utilizado para aumentar a concentração de portadores, geralmente como ferramenta na determinação das propriedades do 2DES~\cite{Cavalheiro:2002}.
+
+		\begin{figure}[tb]
+			\centering
+			\psfrag{S}[][]{\large $S$}
+			\psfrag{D}[][]{\large $D$}
+			\psfrag{CRIO}[][]{\large Criostato}
+			\psfrag{VGS}[][]{\large \shortstack{$V_{GS}$\\\foreign{gate}}}
+			\psfrag{CH1}[r][r]{\large $\text{CH}$}
+			\psfrag{RL}[][]{\large $R_L$}
+			\psfrag{AMP}[][]{\large Amplificador}
+			\psfrag{X1}[][]{\large $\times 10$}
+			\psfrag{V}[][]{\large $V$}
+			\psfrag{1V}[l][l]{\large \unit{1}{\volt}/\unit{11}{\hertz}}
+			\psfrag{REF}[][]{\large Referência}
+			\psfrag{L1}[][]{\large \foreign{Lock-in} 1}
+			\psfrag{L2}[][]{\large \foreign{Lock-in} 2}
+			\psfrag{ADC}[l][l]{\large ADC}
+			\psfrag{GPIB}[][]{\large GPIB}
+			\psfrag{IPS}[][]{\large \shortstack{Fonte do\\ campo magnético}}
+			\psfrag{VXX}[r][r]{\large $V$}
+			\psfrag{VXY}[r][r]{\large $V_H$}
+			\psfrag{GERA}[l][l]{\large \shortstack{Gera o sinal\\ de referência}}
+			\psfrag{MEDE}[l][l]{\large \shortstack{Mede o sinal\\ recebido}}
+			\psfrag{2}[r][r]{\large $2$}
+			\psfrag{5}[r][r]{\large $5$}
+			\psfrag{6}[r][r]{\large $6$}
+			\resizebox{\textwidth}{!}{\includegraphics{figuras/eletronica.eps}}
+			\caption{\small esquema da instalação elétrica das medidas de transporte. O computador instrui a fonte IPS a variar o campo magnético e recebe dos \foreign{lock-ins} as tensões $V$ e $V_H$, registrando-as em arquivos de texto. A tensão de \foreign{gate} ($V_{GS}$) é controlada manualmente por uma fonte de tensão. Alternativamente, um LED vermelho pode ser utilizado para modificar a concentração de portadores na amostra, mas não utilizamos este recurso. A região em cinza representa o criostato (baixa temperatura).}
+			\label{fig:eletronica}
+		\end{figure}

@@ -1,0 +1,348 @@
+	\section*{Configuração 1 (padrão)}
+
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1 = 0$}}
+		\psfrag{2}[][]{\Large$V_2 = 0$}
+		\psfrag{3}[][]{\Large$V_3 = 0$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4 = -\frac{1}{N}\,I$}}
+		\psfrag{5}[][]{\Large$V_5 = -\frac{1}{N}\,I$}
+		\psfrag{6}[][]{\Large$V_6 = -\frac{1}{N}\,I$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg1.eps}}
+		\caption{\footnotesize Configuração-padrão: há somente estados normais. Estados emergentes: $N$ em todos os contatos; estados imergentes: idem.}
+	\end{figure}
+
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N \\
+					N & 0 & 0 & 0 & 0 & 0	\\
+					0	& N & 0 & 0 & 0 & 0 \\	
+					0	& 0 & N & 0 & 0 & 0 \\
+					0	& 0 & 0 & N & 0 & 0 \\
+					0	& 0 & 0 & 0 & N & 0
+			  \end{matrix}\right)
+	\end{equation*}
+
+	Neste caso o resultado é o usual:
+	$$
+	G_H \propto N \qquad\text{e}\qquad G_{xx} = 0.
+	$$
+	
+	%-----------------------------------------------------	
+	\clearpage\section*{Configuração 2}
+
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1 = 0$}}
+		\psfrag{2}[][]{\Large$V_2 = -\frac{N-n}{n\,N}I$}
+		\psfrag{3}[][]{\Large$V_3 = -\frac{N-n}{N^2}I$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4 = -\frac{2\,N-n}{N^2}I$}}
+		\psfrag{5}[][]{\Large$V_5 = -\frac{1}{n}I$}
+		\psfrag{6}[][]{\Large$V_6 = -\frac{1}{N}I$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg2.eps}}
+		\caption{\footnotesize Estados emergentes: $N$ em todos os contatos; estados imergentes: $N$ nos contatos 1 e 4, $2N-n$ nos 2 e 5 e $n$ nos contatos 3 e 6.}
+	\end{figure}
+	
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N \\
+					N & 0 & 0 & 0 & N-n & 0	\\
+					0	& n & 0 & 0 & 0 & 0 \\	
+					0	& 0 & N & 0 & 0 & 0 \\
+					0	& N-n & 0 & N & 0 & 0 \\
+					0	& 0 & 0 & 0 & n & 0
+			  \end{matrix}\right)
+	\end{equation*}	
+	
+	Para um valor arbitrário de $n \le N$, $V_{26} \ne V_{35}$ e $V_{32} \ne V_{56}$, o que não pode acontecer. Se impusermos as igualdades, restringiremos $n$ ao valor $N$, ou seja, retornaremos à configuração 1. Portanto, \textbf{esta configuração não é possível}.
+			
+	%-----------------------------------------------------
+	\clearpage\section*{Configuração 3}
+
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1=0$}}
+		\psfrag{2}[][]{\Large$V_2=0$}
+		\psfrag{3}[][]{\Large$V_3=-\frac{n}{N\,(N-n)}\,I$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4=-\frac{1}{N-n}\,I$}}
+		\psfrag{5}[][]{\Large$V_5=-\frac{1}{N-n}\,I$}
+		\psfrag{6}[][]{\Large$V_6=-\frac{1}{N}\,I$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg3.eps}}
+		\caption{\footnotesize Estados emergentes: $N$ em todos os contatos; estados imergentes: idem.}
+	\end{figure}
+
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N \\
+					N & 0 & 0 & 0 & 0 & 0	\\
+					0	& N-n & 0 & 0 & n & 0 \\	
+					0	& 0 & N & 0 & 0 & 0 \\
+					0	& 0 & 0 & N & 0 & 0 \\
+					0	& n & 0 & 0 & N-n & 0
+			  \end{matrix}\right)
+	\end{equation*}
+
+	Neste caso temos $V_{26} = V_{35}$ e $V_{32} = V_{56}$ para qualquer valor de $n \le N$. Obtemos
+	$$
+	G_H \propto N \qquad\text{e}\qquad G_{xx} \propto -\frac{N\,(N-n)}{n} \quad\text{[negativo!]}.
+	$$
+	
+	obs.1: suspeito que a regra de simetria que implique $V_{26} = V_{35}$ e $V_{32} = V_{56}$ seja $\text{estados emergentes} = \text{estados imergentes}$ em cada contato.
+	
+	obs.2: o valor negativo de $G_{xx}$ decorre de termos utilizado a substituição $\mu = +eV$ (ao invés de $-eV$) na equação de Landauer-Büttiker.
+
+	obs.3: quando $n=0$, $V_3=0$ e, portanto, $V_{32}=0 \Rightarrow G_{xx} = 0$ (não $\infty$). Ou seja, quando fazemos $n=0$ obtemos o resultado usual (configuração 1).
+
+	%-----------------------------------------------------
+	\clearpage\section*{Configuração 4}
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1=0$}}
+		\psfrag{2}[][]{\Large$V_2=-\frac{m}{(N-n)(N-m)}\,I$}
+		\psfrag{3}[][]{\Large$V_3=-\frac{n+m}{N\,(N-n)}\,I$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4=-\frac{N+m}{N\,(N-n)}\,I$}}
+		\psfrag{5}[][]{\Large$V_5=-\frac{N+m}{(N-n)(N-m)}\,I$}
+		\psfrag{6}[][]{\Large$V_6=-\frac{1}{N}\,I$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg4.eps}}
+		\caption{\footnotesize Estados emergentes: $N$ em todos os contatos; estados imergentes: $N$ nos contatos 1 e 4, $N+m$ nos 2 e 5 e $N-m$ nos contatos 3 e 6.}
+	\end{figure}
+
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N \\
+					N & 0 & 0 & 0 & m & 0	\\
+					0	& N-(n+m) & 0 & 0 & n & 0 \\	
+					0	& 0 & N & 0 & 0 & 0 \\
+					0	& m & 0 & N & 0 & 0 \\
+					0	& n & 0 & 0 & N-(n+m) & 0
+			  \end{matrix}\right)
+	\end{equation*}
+	
+	Neste caso temos $V_{26} \ne V_{35}$ e $V_{32} \ne V_{56}$ para valores arbitrários de $n+m \le N$. Impondo as igualdades concluimos que $m=0$ sempre, ou seja, recuperamos a configuração 3. Portanto, \textbf{esta configuração não é possível}.
+
+	%-----------------------------------------------------
+	\clearpage\section*{Configuração 5}
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1=0$}}
+		\psfrag{2}[][]{\Large$V_2=?$}
+		\psfrag{3}[][]{\Large$V_3=?$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4=?$}}
+		\psfrag{5}[][]{\Large$V_5=?$}
+		\psfrag{6}[][]{\Large$V_6=?$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg5.eps}}
+		\caption{\footnotesize Estados emergentes: $N$ em todos os contatos; estados imergentes: $N$ nos 1, 2, 4 e 5; $N-m$ nos contatos 3 e 6. Esperamos, portanto, obter desigualdades entre as diferenças de potencial.}
+	\end{figure}
+
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N \\
+					N & 0 & 0 & 0 & 0 & 0	\\
+					0	& N-(n+m) & 0 & 0 & n & 0 \\	
+					0	& 0 & N & 0 & 0 & 0 \\
+					0	& 0 & 0 & N & 0 & 0 \\
+					0	& n & 0 & 0 & N-(n+m) & 0
+			  \end{matrix}\right)
+	\end{equation*}
+	
+	Não há necessidade de resolver a equação de Landauer para a matriz de transmissão acima: conforme a seção ``\textsl{Conclusões sobre as configurações 1 a 6}'' o resultado físico possível ocorre somente quando $m=0$, o que nos leva de volta à configuração 3.
+	
+	%-----------------------------------------------------
+	\clearpage\section*{Configuração 6}
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1=0$}}
+		\psfrag{2}[][]{\Large$V_2=0$}
+		\psfrag{3}[][]{\Large$V_3=-\frac{n}{N\left[N-(n+m)\right]}\,I$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4=-\frac{N-m}{N\left[N-(n+m)\right]}\,I$}}
+		\psfrag{5}[][]{\Large$V_5=-\frac{1}{N-(n+m)}\,I$}
+		\psfrag{6}[][]{\Large$V_6=-\frac{1}{N}\,I$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg6.eps}}
+		\caption{\footnotesize Estados emergentes: $N$ em todos os contatos; estados imergentes: $N$ nos contatos 1 e 4, $N+m$ nos 2 e 5 e $N-m$ nos contatos 3 e 6. Esperamos, portanto, obter desigualdades entre as diferenças de potencial.}
+	\end{figure}
+
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N \\
+					N & m & 0 & 0 & 0 & 0	\\
+					0	& N-(n+m) & 0 & 0 & n & 0 \\	
+					0	& 0 & N & 0 & 0 & 0 \\
+					0	& 0 & 0 & N & m & 0 \\
+					0	& n & 0 & 0 & N-(n+m) & 0
+			  \end{matrix}\right)
+	\end{equation*}
+
+	Neste caso temos $V_{26} \ne V_{35}$ e $V_{32} \ne V_{56}$ para valores arbitrários de $n+m \le N$. Impondo as igualdades concluimos que $m=0$ sempre, ou seja, recuperamos a configuração 3. Portanto, \textbf{esta configuração não é possível}.
+	
+	obs.: a equação apresentada por~\cite{Buttiker:1986} é $I_j = (1-R_{jj})\mu_j - \sum_{i \ne j} T_{ji}\mu_i$, um pouco diferente daquela apresentada por~\cite{Johnson:1992-1}. Isto por que ele supôs que os contatos eram emissores e receptores ideais. Note que a somatória é feita para $i\ne j$, de modo que posso fazer $T_{ii}=0$ nela para simplificar. Por outro lado, $(1-R_{jj}) = T_{jj}$. Foi o que fiz ao colocar $m$ na diagonal principal, colunas (contatos) 2 e 5.
+
+	%-----------------------------------------------------	
+	\clearpage\section*{Conclusões sobre as configurações 1 a 6}
+	
+	Como pudemos observar por tentativa e erro, somente as configurações que satisfaziam
+	\begin{equation}\label{cond}
+	\text{estados emergentes} = \text{estados imergentes}
+	\end{equation}
+	resultavam em $V_{32}=V_{56}$ e $V_{26}=V_{35}$ naturalmente (configurações~1 e 3). Isto ocorre por que nesses casos \textbf{não} há acúmulo de cargas nos contatos.
+	
+	Por outro lado, nas outras configurações a condição~\eqref{cond} não era satisfeita e obtínhamos $V_{32}\ne V_{56}$ e $V_{26}\ne V_{35}$ (havia acúmulo de cargas). Assim, quando impunhamos $V_{32}=V_{56}$ e $V_{26}=V_{35}$ nós estávamos, em verdade, impondo~\eqref{cond}. De fato, a solução das equações impostas é a mesma de~\eqref{cond}. Vejamos caso a caso [lembre-se de que em todas as configurações anteriores a quantidade de estados emergentes em qualquer um dos contatos é sempre $N$ (isso nós fixamos ao definir a configuração)]:
+	\begin{compactitem}
+		\item[\textbf{configuração 2:}] a condição~\eqref{cond} é satisfeita para os contatos 1 e 4; para os contatos 2 e 5 temos de satisfazer $N = 2N-n$ e nos 3 e 6, $N=n$. De fato, $n=N$ é a solução procurada, como obtivemos impondo as igualdades $V_{32}=V_{56}$ e $V_{26}=V_{35}$;
+		\item[\textbf{configuração 4:}] precisamos satisfazer $N=N$ (contatos 1 e 4), $N=N+m$ (2 e 5) e $N=N-m$ (3 e 6). A solução é $m=0$, conforme obtivemos impondo a igualdade entre as ddps;
+		\item[\textbf{configuração 5:}] $N=N$ (contatos 1, 2, 4 e 5) e $N=N-m$ (3 e 6). A solução é $m=0$;
+		\item[\textbf{configuração 6:}] $N=N$ (contatos 1 e 4), $N=N+m$ (2 e 5) e $N=N-m$ (3 e 6). A solução é $m=0$.
+	\end{compactitem}
+	
+	Portanto, qualquer configuração definida deve satisfazer~\eqref{cond} para todos os contatos, e isto pode ser verificado diretamente do diagrama desenhado. Se conseguirmos isso, teremos uma situação fisicamente possível.
+	
+	%-----------------------------------------------------	
+	\clearpage\section*{Configuração 7}
+
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1 = 0$}}
+		\psfrag{2}[][]{\Large$V_2 = -\frac{n}{N\,(N+n)}\,I$}
+		\psfrag{3}[][]{\Large$V_3 = V_2$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4 = -\frac{N+2n}{N\,(N+n)}\,I$}}
+		\psfrag{5}[][]{\Large$V_5 = -\frac{1}{N}I$}
+		\psfrag{6}[][]{\Large$V_6 = V_5$}
+		\psfrag{N}[][]{\Large$N$}
+		\psfrag{N+n}[][]{\large$N+n$}
+		\psfrag{n}[][]{\Large$n$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg7.eps}}
+		\caption{\footnotesize A quantidade de estados emergentes é igual a de imergentes em qualquer um dos contatos (valores nas áreas cinzas), mas difere de um para o outro. Por exemplo: do contato 1 emergem e imergem $N$ estados; já do 2 emergem e imergem $N+n$. Isto impede o acúmulo de cargas e, por conseguinte, que $V_{32}=V_{56}$ e $V_{26}=V_{35}$.}
+	\end{figure}
+	
+	\begin{equation*}
+		T =
+		\left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N \\
+					N & 0 & 0 & 0 & n & 0	\\
+					0	& N & 0 & 0 & 0 & 0 \\	
+					0	& 0 & N & 0 & 0 & 0 \\
+					0	& n & 0 & N & 0 & 0 \\
+					0	& 0 & 0 & 0 & N & 0
+			  \end{matrix}\right)
+	\end{equation*}
+	
+	Neste caso a quantidade $K_j$ de estados que emergem do contato $j$ não é a mesma para todos os contatos:
+	$$
+	K_j = \left\{\begin{matrix}
+		N, \qquad j\in\{1,3,4,6\}; \\
+		N+n, \qquad j\in\{2,5\}.
+	\end{matrix}\right.
+	$$
+	
+	Entretanto, a quantidade de estados emergentes e imergentes em qualquer um dos contatos é sempre a mesma, o que garante $V_{32} - V_{56}$ e $V_{26}=V_{35}$. Com isso obtemos:
+	$$
+	G_H \propto N+n	\qquad\text{e}\qquad G_{xx} = 0.
+	$$
+	
+	Observe que fazendo $n=0$ recuperamos o resultado usual $G_H\propto N$ e $G_{xx} = 0$, configuração 1.
+	
+	%-----------------------------------------------------
+	\clearpage\section*{Configuração 8}
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$V_1=0$}}
+		\psfrag{2}[][]{\Large$V_2=-\frac{n}{(N+m)(N+n)}\,I$}
+		\psfrag{3}[][]{\Large$V_3=-\frac{n+m}{(N+m)(N+n)}\,I$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$V_4=-\frac{N+m+2n}{(N+m)(N+n)}\,I$}}
+		\psfrag{5}[][]{\Large$V_5=-\frac{N+m+n}{(N+n)(N+m)}\,I$}
+		\psfrag{6}[][]{\Large$V_6=-\frac{1}{N+m}\,I$}
+		\psfrag{N+m}[][]{$N+m$}
+		\psfrag{N+m+n}[][]{$N+m+n$}
+		\psfrag{N}[][]{\Large$N$}
+		\psfrag{n}[][]{\Large$n$}
+		\psfrag{m}[][]{\Large$m$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg8.eps}}
+	\end{figure}
+
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N+m \\
+					N+m & 0 & 0 & 0 & n & 0	\\
+					0	& N & 0 & 0 & m & 0 \\	
+					0	& 0 & N+m & 0 & 0 & 0 \\
+					0	& n & 0 & N+m & 0 & 0 \\
+					0	& m & 0 & 0 & N & 0
+			  \end{matrix}\right)
+	\end{equation*}	
+	
+	Similarmente ao caso anterior, a quantidade $K_j$ de estados que emergem do contato $j$ não é a mesma para todos os contatos:
+	$$
+	K_j = \left\{\begin{matrix}
+		N+m, \qquad j\in\{1,3,4,6\}; \\
+		N+m+n, \qquad j\in\{2,5\}.
+	\end{matrix}\right.
+	$$	
+	
+	Entretanto, a quantidade de estados emergentes e imergentes num contato qualquer é sempre a mesma, o que garante $V_{32} - V_{56}$ e $V_{26}=V_{35}$. Com isso obtemos:
+	$$
+	G_H \propto \frac{(N+m)(N+n)}{N}	\qquad\text{e}\qquad G_{xx} \propto -\frac{(N+m)(N+n)}{m}.
+	$$
+	
+	\begin{compactitem}
+		\item Fazendo $m=0$ encontramos $G_H\propto N+n$ e $G_{xx}=0$ (config.~7);
+		\item Fazendo $n=0$ encontramos $G_H\propto N+m$ e $G_{xx} = -N(N+m)/m$ (config.~3)\rlap{.}\footnote{Isto fica claro quando fazemos a substituição $\mathcal{N} = N+m$: $G_H\propto \mathcal{N}$ e $G_{xx} \propto -\mathcal{N}(\mathcal{N}-m)/m$.} Além disso, este resultado confere com aquele apresentado na seção 6.12 da referência~\cite{Barnes}, uma vez identificada as transformações $N+m \to N$, $m \to N - M$ e $N \to M$ (os símbolos à esquerda representam a nomenclatura utilizada aqui; os da direita referem-se àqueles utilizados na referência~\cite{Barnes});
+		\item Fazendo $m=n=0$ encontramos $G_H \propto N$ e $G_{xx} = 0$ (config.~1).
+	\end{compactitem}
+	
+	Portanto, esta é a configuração \textbf{possível} mais geral até o momento.
+		
+	%-----------------------------------------------------
+	\clearpage\section*{Configuração 5 (revista)}
+	\begin{figure}[htb]
+		\centering
+		\psfrag{1}[r][r]{\rotatebox{90}{\Large$v_1=0$}}
+		\psfrag{2}[][]{\Large$v_2=0$}
+		\psfrag{3}[][]{\Large$v_3=-\frac{2n}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}\,I$}
+		\psfrag{4}[l][l]{\rotatebox{90}{\Large$v_4=-\frac{2}{2\left(N-n\right)-m}I$}}
+		\psfrag{5}[][]{\Large$v_5=v_4$}
+		\psfrag{6}[][]{\Large$v_6=-\frac{2\left[N-n-m\right]}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}\,I$}
+		\resizebox{0.9\textwidth}{!}{\includegraphics{figuras/bH-6terminais-cfg5-revista.eps}}
+		\caption{\footnotesize Aqui nós não exigimos que a quantidade de contatos emergentes e imergentes fossem iguais nos contatos 1 e 4, ligados ao reservatório. Isto porque o reservatório deve ser capaz de suprir qualquer desbalanceamento de estados que ocorrer (o mesmo não pode ser dito dos contatos de medida).}
+	\end{figure}
+
+	\begin{equation*}
+		T = \left(\begin{matrix}
+					0 & 0 & 0 & 0 & 0 & N-m \\
+					N & 0 & 0 & 0 & 0 & 0	\\
+					0	& N-(n+m) & 0 & 0 & n & 0 \\	
+					0	& 0 & N-m & 0 & 0 & 0 \\
+					0	& 0 & 0 & N & 0 & 0 \\
+					0	& n & 0 & 0 & N-(n+m) & 0
+			  \end{matrix}\right)
+	\end{equation*}
+	e a solução é
+	$$
+	R_{xx} = -\frac{2n}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}	\qquad\text{e}\qquad
+	R_{xy} = \frac{2\left(N-n-m\right)}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}.
+	$$
+	
+	Note que...
+	\begin{compactitem}
+		\item	... fazendo $m=0$ obtemos $R_{xx} = n/N\left(N-n\right)$ ($\equiv (N-M)/NM$ na notação de~\cite{Gusev:1998}) e $R_{xy} = 1/N$;
+		\item ... fazendo $m=n=0$ obtemos $R_{xx} = 0$ e $R_{xy} = 1/N$.		
+	\end{compactitem}
+	
+	Convém observar que nas configurações anteriores eu impunha a referência de tensão $V_1 = 0$ diretamente na equação de Landauer-Büttiker, mas aqui isso não era possível (não sei porque). Para resolver isso deixei $V_1$ genérico e obtive, através do método de Cramer (a matriz inversa ficou muito grande):
+	\begin{eqnarray*}
+		V_1 &=& \frac{1}{2\left(N-n\right)-m}I \\
+		V_2 &=& V_1 \\
+		V_3 &=& \frac{N-m-2n}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}I \\
+		V_4 &=& -\frac{1}{2\left(N-n\right)-m}I \\
+		V_5 &=& V_4 \\
+		V_6 &=& -\frac{N-m-2n}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}I
+	\end{eqnarray*}
+	
+	Em seguida, defini $v_i = V_i - V_1$:
+	\begin{eqnarray*}
+		v_1 = V_1 - V_1 &=& 0 \\
+		v_2 = V_2 - V_1 &=& 0 \\
+		v_3 = V_3 - V_1 &=& -\frac{2n}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}I \\
+		v_4 = V_4 - V_1 &=& -\frac{2}{2\left(N-n\right)-m}I \\
+		v_5 = V_5 - V_1 &=& v_4 \\
+		v_6 = V_6 - V_1 &=& -\frac{2\left(N-n-m\right)}{\left(N-m\right)\left[2\left(N-n\right)-m\right]}I,
+	\end{eqnarray*}	
+	de onde sairam as tensões apresentadas na figura acima.
